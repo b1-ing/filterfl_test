@@ -1,0 +1,18 @@
+﻿python.exe : 2026-10-11 22:34:02,201 epoch 1 MA=13.65 ASR=0.00 rho=0.5 detected=0 tp=0 fp=0 (46.9s)
+At line:1 char:330
++ ... est_claude; & ".venv\Scripts\python.exe" -m filterfl.run --config con ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (2026-10-11 22:3...=0 fp=0 (46.9s):String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+2026-10-11 22:34:41,930 epoch 2 MA=18.94 ASR=11.99 rho=0.5 detected=0 tp=0 fp=0 (39.7s)
+2026-10-11 22:35:12,837 epoch 3 MA=22.03 ASR=0.00 rho=0.5 detected=2 tp=0 fp=2 (30.9s)
+2026-10-11 22:35:52,462 epoch 4 MA=28.92 ASR=2.88 rho=0.5 detected=2 tp=0 fp=2 (39.6s)
+2026-10-11 22:36:27,304 epoch 5 MA=25.55 ASR=5.19 rho=0.5 detected=0 tp=0 fp=0 (34.8s)
+2026-10-11 22:37:02,493 epoch 6 MA=23.33 ASR=18.38 rho=0.5 detected=1 tp=0 fp=1 (35.2s)
+2026-10-11 22:37:35,817 epoch 7 MA=28.31 ASR=0.08 rho=0.5 detected=0 tp=0 fp=0 (33.3s)
+2026-10-11 22:38:17,742 epoch 8 MA=29.13 ASR=29.96 rho=0.5 detected=0 tp=0 fp=0 (41.9s)
+2026-10-11 22:39:02,538 epoch 9 MA=32.34 ASR=1.18 rho=0.5 detected=1 tp=1 fp=0 (44.8s)
+2026-10-11 22:39:53,112 epoch 10 MA=24.93 ASR=0.01 rho=0.5 detected=1 tp=0 fp=1 (50.6s)
+Files already downloaded and verified
+Files already downloaded and verified

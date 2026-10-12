@@ -1,0 +1,27 @@
+Files already downloaded and verified
+Files already downloaded and verified
+
+=== ResNet8 (BatchNorm, matched pretraining) ===
+sampled: [36, 1, 61, 27, 99, 19, 91, 86, 65, 35]  malicious: [36, 99]
+pretrain clean acc (after 15 benign rounds): 34.66%
+post-attack-round global clean acc: 34.41%
+  probe_mode=train: attacker pred=0 conf=0.6093 flagged=YES
+  probe_mode= eval: attacker pred=0 conf=0.5745 flagged=YES
+Files already downloaded and verified
+Files already downloaded and verified
+
+=== ResNet8GroupNorm ===
+sampled: [36, 1, 61, 27, 99, 19, 91, 86, 65, 35]  malicious: [36, 99]
+pretrain clean acc (after 15 benign rounds): 22.60%
+post-attack-round global clean acc: 25.35%
+  probe_mode=train: attacker pred=0 conf=0.6292 flagged=YES
+  probe_mode= eval: attacker pred=0 conf=0.6292 flagged=YES
+Files already downloaded and verified
+Files already downloaded and verified
+
+=== ResNet8NoNorm (matched pretraining) ===
+sampled: [36, 1, 61, 27, 99, 19, 91, 86, 65, 35]  malicious: [36, 99]
+pretrain clean acc (after 15 benign rounds): 18.51%
+post-attack-round global clean acc: 18.19%
+  probe_mode=train: attacker pred=0 conf=0.2050 flagged=no
+  probe_mode= eval: attacker pred=0 conf=0.2050 flagged=no

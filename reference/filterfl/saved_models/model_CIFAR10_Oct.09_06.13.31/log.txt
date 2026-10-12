@@ -1,0 +1,2018 @@
+current path: saved_models/model_CIFAR10_Oct.09_06.13.31
+Loading data
+reading data done
+build_classes_dict done
+train loaders done
+get poison test loader
+load data done
+ResNet(
+  (conv1): Conv2d(3, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+  (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (layer1): Sequential(
+    (0): BasicBlock(
+      (conv1): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential()
+    )
+  )
+  (layer2): Sequential(
+    (0): BasicBlock(
+      (conv1): Conv2d(128, 256, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential(
+        (0): Conv2d(128, 256, kernel_size=(1, 1), stride=(2, 2), bias=False)
+        (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+  )
+  (layer3): Sequential(
+    (0): BasicBlock(
+      (conv1): Conv2d(256, 512, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (shortcut): Sequential(
+        (0): Conv2d(256, 512, kernel_size=(1, 1), stride=(2, 2), bias=False)
+        (1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+  )
+  (avgpool): AdaptiveAvgPool2d(output_size=(1, 1))
+  (linear1): Linear(in_features=512, out_features=10, bias=True)
+)
+create model done
+Poisoned following participants: [34, 50, 36, 99, 54, 60, 45, 47, 69, 84]
+Server Epoch:1 choose agents : [68, 88, 21, 24, 47, 13, 73, 46, 82, 55].
+___Local_Train , g_epoch   1, l_epoch   1, local model 68,  Average loss: 2.1107, Accuracy: 176/679 (25.9205%)
+___Local_Train , g_epoch   1, l_epoch   2, local model 68,  Average loss: 1.7808, Accuracy: 278/679 (40.9426%)
+___Local_Train , g_epoch   1, l_epoch   1, local model 88,  Average loss: 2.2408, Accuracy: 75/394 (19.0355%)
+___Local_Train , g_epoch   1, l_epoch   2, local model 88,  Average loss: 1.9212, Accuracy: 129/394 (32.7411%)
+___Local_Train , g_epoch   1, l_epoch   1, local model 21,  Average loss: 2.0626, Accuracy: 150/527 (28.4630%)
+___Local_Train , g_epoch   1, l_epoch   2, local model 21,  Average loss: 1.6676, Accuracy: 214/527 (40.6072%)
+___Local_Train , g_epoch   1, l_epoch   1, local model 24,  Average loss: 2.2162, Accuracy: 113/513 (22.0273%)
+___Local_Train , g_epoch   1, l_epoch   2, local model 24,  Average loss: 1.9132, Accuracy: 180/513 (35.0877%)
+___Local_Train , g_epoch   1, l_epoch   1, local model 47,  Average loss: 2.2396, Accuracy: 66/344 (19.1860%)
+___Local_Train , g_epoch   1, l_epoch   2, local model 47,  Average loss: 1.6442, Accuracy: 182/344 (52.9070%)
+___Local_Train , g_epoch   1, l_epoch   3, local model 47,  Average loss: 1.6949, Accuracy: 182/344 (52.9070%)
+___Local_Train , g_epoch   1, l_epoch   4, local model 47,  Average loss: 1.5070, Accuracy: 182/344 (52.9070%)
+___Local_Train , g_epoch   1, l_epoch   5, local model 47,  Average loss: 1.5118, Accuracy: 173/344 (50.2907%)
+___Local_Train , g_epoch   1, l_epoch   6, local model 47,  Average loss: 1.3560, Accuracy: 188/344 (54.6512%)
+___Local_Train , g_epoch   1, l_epoch   1, local model 13,  Average loss: 2.0592, Accuracy: 136/565 (24.0708%)
+___Local_Train , g_epoch   1, l_epoch   2, local model 13,  Average loss: 1.7071, Accuracy: 253/565 (44.7788%)
+___Local_Train , g_epoch   1, l_epoch   1, local model 73,  Average loss: 2.2773, Accuracy: 98/510 (19.2157%)
+___Local_Train , g_epoch   1, l_epoch   2, local model 73,  Average loss: 1.9569, Accuracy: 188/510 (36.8627%)
+___Local_Train , g_epoch   1, l_epoch   1, local model 46,  Average loss: 2.1542, Accuracy: 122/532 (22.9323%)
+___Local_Train , g_epoch   1, l_epoch   2, local model 46,  Average loss: 1.8151, Accuracy: 181/532 (34.0226%)
+___Local_Train , g_epoch   1, l_epoch   1, local model 82,  Average loss: 2.1890, Accuracy: 194/794 (24.4332%)
+___Local_Train , g_epoch   1, l_epoch   2, local model 82,  Average loss: 1.8906, Accuracy: 302/794 (38.0353%)
+___Local_Train , g_epoch   1, l_epoch   1, local model 55,  Average loss: 1.9277, Accuracy: 194/596 (32.5503%)
+___Local_Train , g_epoch   1, l_epoch   2, local model 55,  Average loss: 1.5128, Accuracy: 296/596 (49.6644%)
+68, 9, 0.22927217185497284
+88, 9, 0.29760152101516724
+21, 0, 0.24484124779701233
+24, 7, 0.23943185806274414
+47, 0, 0.6740352511405945
+13, 9, 0.31616222858428955
+73, 9, 0.25272777676582336
+46, 0, 0.24453651905059814
+82, 3, 0.2712990641593933
+55, 8, 0.24252904951572418
+47
+count_all_attack: 1, count_all_defense: 1, count_correct_defense: 1
+___Global_Test_Poison:False  Average loss: 2.2609 Accuracy: 1912/10000 (19.12%)
+___Global_Test_Poison:True  Average loss: 2.2632 Accuracy: 1372/9000 (15.24%)
+Epoch 1 completed in 33.75 seconds
+Server Epoch:2 choose agents : [6, 90, 58, 96, 68, 8, 66, 85, 61, 35].
+___Local_Train , g_epoch   2, l_epoch   1, local model 6,  Average loss: 1.6859, Accuracy: 262/623 (42.0546%)
+___Local_Train , g_epoch   2, l_epoch   2, local model 6,  Average loss: 1.4023, Accuracy: 333/623 (53.4510%)
+___Local_Train , g_epoch   2, l_epoch   1, local model 90,  Average loss: 2.0898, Accuracy: 74/249 (29.7189%)
+___Local_Train , g_epoch   2, l_epoch   2, local model 90,  Average loss: 1.7532, Accuracy: 111/249 (44.5783%)
+___Local_Train , g_epoch   2, l_epoch   1, local model 58,  Average loss: 1.9191, Accuracy: 178/541 (32.9020%)
+___Local_Train , g_epoch   2, l_epoch   2, local model 58,  Average loss: 1.6827, Accuracy: 250/541 (46.2107%)
+___Local_Train , g_epoch   2, l_epoch   1, local model 96,  Average loss: 1.7519, Accuracy: 185/445 (41.5730%)
+___Local_Train , g_epoch   2, l_epoch   2, local model 96,  Average loss: 1.5361, Accuracy: 204/445 (45.8427%)
+___Local_Train , g_epoch   2, l_epoch   1, local model 68,  Average loss: 1.7263, Accuracy: 285/679 (41.9735%)
+___Local_Train , g_epoch   2, l_epoch   2, local model 68,  Average loss: 1.5961, Accuracy: 296/679 (43.5935%)
+___Local_Train , g_epoch   2, l_epoch   1, local model 8,  Average loss: 2.0934, Accuracy: 124/456 (27.1930%)
+___Local_Train , g_epoch   2, l_epoch   2, local model 8,  Average loss: 1.8394, Accuracy: 140/456 (30.7018%)
+___Local_Train , g_epoch   2, l_epoch   1, local model 66,  Average loss: 1.9366, Accuracy: 293/799 (36.6708%)
+___Local_Train , g_epoch   2, l_epoch   2, local model 66,  Average loss: 1.7556, Accuracy: 318/799 (39.7998%)
+___Local_Train , g_epoch   2, l_epoch   1, local model 85,  Average loss: 1.9791, Accuracy: 183/560 (32.6786%)
+___Local_Train , g_epoch   2, l_epoch   2, local model 85,  Average loss: 1.8454, Accuracy: 210/560 (37.5000%)
+___Local_Train , g_epoch   2, l_epoch   1, local model 61,  Average loss: 2.0118, Accuracy: 198/638 (31.0345%)
+___Local_Train , g_epoch   2, l_epoch   2, local model 61,  Average loss: 1.8074, Accuracy: 235/638 (36.8339%)
+___Local_Train , g_epoch   2, l_epoch   1, local model 35,  Average loss: 1.8498, Accuracy: 163/484 (33.6777%)
+___Local_Train , g_epoch   2, l_epoch   2, local model 35,  Average loss: 1.5300, Accuracy: 234/484 (48.3471%)
+6, 9, 0.27265095710754395
+90, 9, 0.5416350960731506
+58, 1, 0.28749874234199524
+96, 0, 0.4430556297302246
+68, 9, 0.23791521787643433
+8, 2, 0.2755674123764038
+66, 3, 0.34692198038101196
+85, 0, 0.23010940849781036
+61, 7, 0.22861754894256592
+35, 9, 0.392937570810318
+count_all_attack: 1, count_all_defense: 1, count_correct_defense: 1
+___Global_Test_Poison:False  Average loss: 2.2085 Accuracy: 1529/10000 (15.29%)
+___Global_Test_Poison:True  Average loss: 2.7111 Accuracy: 1/9000 (0.01%)
+Epoch 2 completed in 38.69 seconds
+Server Epoch:3 choose agents : [98, 61, 27, 21, 79, 40, 53, 42, 1, 47].
+___Local_Train , g_epoch   3, l_epoch   1, local model 98,  Average loss: 1.6847, Accuracy: 228/598 (38.1271%)
+___Local_Train , g_epoch   3, l_epoch   2, local model 98,  Average loss: 1.4973, Accuracy: 265/598 (44.3144%)
+___Local_Train , g_epoch   3, l_epoch   1, local model 61,  Average loss: 1.7936, Accuracy: 218/638 (34.1693%)
+___Local_Train , g_epoch   3, l_epoch   2, local model 61,  Average loss: 1.6963, Accuracy: 256/638 (40.1254%)
+___Local_Train , g_epoch   3, l_epoch   1, local model 27,  Average loss: 1.8954, Accuracy: 132/424 (31.1321%)
+___Local_Train , g_epoch   3, l_epoch   2, local model 27,  Average loss: 1.6213, Accuracy: 175/424 (41.2736%)
+___Local_Train , g_epoch   3, l_epoch   1, local model 21,  Average loss: 1.7804, Accuracy: 196/527 (37.1917%)
+___Local_Train , g_epoch   3, l_epoch   2, local model 21,  Average loss: 1.5770, Accuracy: 253/527 (48.0076%)
+___Local_Train , g_epoch   3, l_epoch   1, local model 79,  Average loss: 1.7721, Accuracy: 167/465 (35.9140%)
+___Local_Train , g_epoch   3, l_epoch   2, local model 79,  Average loss: 1.7062, Accuracy: 177/465 (38.0645%)
+___Local_Train , g_epoch   3, l_epoch   1, local model 40,  Average loss: 1.7350, Accuracy: 292/719 (40.6120%)
+___Local_Train , g_epoch   3, l_epoch   2, local model 40,  Average loss: 1.4891, Accuracy: 384/719 (53.4075%)
+___Local_Train , g_epoch   3, l_epoch   1, local model 53,  Average loss: 1.7761, Accuracy: 194/592 (32.7703%)
+___Local_Train , g_epoch   3, l_epoch   2, local model 53,  Average loss: 1.5879, Accuracy: 224/592 (37.8378%)
+___Local_Train , g_epoch   3, l_epoch   1, local model 42,  Average loss: 2.0438, Accuracy: 76/302 (25.1656%)
+___Local_Train , g_epoch   3, l_epoch   2, local model 42,  Average loss: 1.7355, Accuracy: 125/302 (41.3907%)
+___Local_Train , g_epoch   3, l_epoch   1, local model 1,  Average loss: 1.7772, Accuracy: 216/574 (37.6307%)
+___Local_Train , g_epoch   3, l_epoch   2, local model 1,  Average loss: 1.6332, Accuracy: 259/574 (45.1220%)
+___Local_Train , g_epoch   3, l_epoch   1, local model 47,  Average loss: 2.4523, Accuracy: 50/344 (14.5349%)
+___Local_Train , g_epoch   3, l_epoch   2, local model 47,  Average loss: 1.6194, Accuracy: 178/344 (51.7442%)
+___Local_Train , g_epoch   3, l_epoch   3, local model 47,  Average loss: 1.6567, Accuracy: 182/344 (52.9070%)
+___Local_Train , g_epoch   3, l_epoch   4, local model 47,  Average loss: 1.4601, Accuracy: 170/344 (49.4186%)
+___Local_Train , g_epoch   3, l_epoch   5, local model 47,  Average loss: 1.5439, Accuracy: 155/344 (45.0581%)
+___Local_Train , g_epoch   3, l_epoch   6, local model 47,  Average loss: 1.2907, Accuracy: 200/344 (58.1395%)
+98, 2, 0.32416045665740967
+61, 7, 0.23614832758903503
+27, 2, 0.35856032371520996
+21, 0, 0.3190228343009949
+79, 2, 0.21996618807315826
+40, 7, 0.42580652236938477
+53, 4, 0.4148448705673218
+42, 3, 0.4798174798488617
+1, 9, 0.27631664276123047
+47, 0, 0.7367013692855835
+47
+count_all_attack: 2, count_all_defense: 2, count_correct_defense: 2
+___Global_Test_Poison:False  Average loss: 2.2479 Accuracy: 1577/10000 (15.77%)
+___Global_Test_Poison:True  Average loss: 2.9300 Accuracy: 632/9000 (7.02%)
+Epoch 3 completed in 44.82 seconds
+Server Epoch:4 choose agents : [15, 11, 41, 82, 18, 47, 46, 40, 26, 48].
+___Local_Train , g_epoch   4, l_epoch   1, local model 15,  Average loss: 1.7451, Accuracy: 215/515 (41.7476%)
+___Local_Train , g_epoch   4, l_epoch   2, local model 15,  Average loss: 1.9022, Accuracy: 201/515 (39.0291%)
+___Local_Train , g_epoch   4, l_epoch   1, local model 11,  Average loss: 1.7170, Accuracy: 209/610 (34.2623%)
+___Local_Train , g_epoch   4, l_epoch   2, local model 11,  Average loss: 1.6669, Accuracy: 239/610 (39.1803%)
+___Local_Train , g_epoch   4, l_epoch   1, local model 41,  Average loss: 1.7681, Accuracy: 198/554 (35.7401%)
+___Local_Train , g_epoch   4, l_epoch   2, local model 41,  Average loss: 1.4863, Accuracy: 231/554 (41.6968%)
+___Local_Train , g_epoch   4, l_epoch   1, local model 82,  Average loss: 1.8432, Accuracy: 272/794 (34.2569%)
+___Local_Train , g_epoch   4, l_epoch   2, local model 82,  Average loss: 1.6824, Accuracy: 332/794 (41.8136%)
+___Local_Train , g_epoch   4, l_epoch   1, local model 18,  Average loss: 1.8252, Accuracy: 155/475 (32.6316%)
+___Local_Train , g_epoch   4, l_epoch   2, local model 18,  Average loss: 1.6273, Accuracy: 181/475 (38.1053%)
+___Local_Train , g_epoch   4, l_epoch   1, local model 47,  Average loss: 2.1324, Accuracy: 120/344 (34.8837%)
+___Local_Train , g_epoch   4, l_epoch   2, local model 47,  Average loss: 1.5529, Accuracy: 173/344 (50.2907%)
+___Local_Train , g_epoch   4, l_epoch   3, local model 47,  Average loss: 1.6155, Accuracy: 180/344 (52.3256%)
+___Local_Train , g_epoch   4, l_epoch   4, local model 47,  Average loss: 1.3784, Accuracy: 185/344 (53.7791%)
+___Local_Train , g_epoch   4, l_epoch   5, local model 47,  Average loss: 1.4816, Accuracy: 147/344 (42.7326%)
+___Local_Train , g_epoch   4, l_epoch   6, local model 47,  Average loss: 1.3211, Accuracy: 192/344 (55.8140%)
+___Local_Train , g_epoch   4, l_epoch   1, local model 46,  Average loss: 1.8820, Accuracy: 190/532 (35.7143%)
+___Local_Train , g_epoch   4, l_epoch   2, local model 46,  Average loss: 1.6193, Accuracy: 211/532 (39.6617%)
+___Local_Train , g_epoch   4, l_epoch   1, local model 40,  Average loss: 1.5980, Accuracy: 332/719 (46.1752%)
+___Local_Train , g_epoch   4, l_epoch   2, local model 40,  Average loss: 1.3899, Accuracy: 382/719 (53.1293%)
+___Local_Train , g_epoch   4, l_epoch   1, local model 26,  Average loss: 1.9815, Accuracy: 91/373 (24.3968%)
+___Local_Train , g_epoch   4, l_epoch   2, local model 26,  Average loss: 1.4718, Accuracy: 172/373 (46.1126%)
+___Local_Train , g_epoch   4, l_epoch   1, local model 48,  Average loss: 1.8384, Accuracy: 174/515 (33.7864%)
+___Local_Train , g_epoch   4, l_epoch   2, local model 48,  Average loss: 1.8954, Accuracy: 231/515 (44.8544%)
+15, 6, 0.38161996006965637
+11, 2, 0.30008864402770996
+41, 3, 0.2607932686805725
+82, 3, 0.32480692863464355
+18, 2, 0.1621989607810974
+47, 0, 0.7360091805458069
+46, 0, 0.2949672043323517
+40, 7, 0.3563920557498932
+26, 9, 0.49863550066947937
+48, 3, 0.33597755432128906
+47
+count_all_attack: 3, count_all_defense: 3, count_correct_defense: 3
+___Global_Test_Poison:False  Average loss: 1.9496 Accuracy: 2605/10000 (26.05%)
+___Global_Test_Poison:True  Average loss: 2.6050 Accuracy: 505/9000 (5.61%)
+Epoch 4 completed in 44.49 seconds
+Server Epoch:5 choose agents : [4, 93, 81, 96, 56, 48, 12, 54, 73, 76].
+___Local_Train , g_epoch   5, l_epoch   1, local model 4,  Average loss: 1.7960, Accuracy: 127/354 (35.8757%)
+___Local_Train , g_epoch   5, l_epoch   2, local model 4,  Average loss: 1.5458, Accuracy: 163/354 (46.0452%)
+___Local_Train , g_epoch   5, l_epoch   1, local model 93,  Average loss: 1.9080, Accuracy: 86/304 (28.2895%)
+___Local_Train , g_epoch   5, l_epoch   2, local model 93,  Average loss: 1.5865, Accuracy: 131/304 (43.0921%)
+___Local_Train , g_epoch   5, l_epoch   1, local model 81,  Average loss: 1.9128, Accuracy: 182/552 (32.9710%)
+___Local_Train , g_epoch   5, l_epoch   2, local model 81,  Average loss: 1.5993, Accuracy: 247/552 (44.7464%)
+___Local_Train , g_epoch   5, l_epoch   1, local model 96,  Average loss: 1.8186, Accuracy: 149/445 (33.4831%)
+___Local_Train , g_epoch   5, l_epoch   2, local model 96,  Average loss: 1.5143, Accuracy: 222/445 (49.8876%)
+___Local_Train , g_epoch   5, l_epoch   1, local model 56,  Average loss: 1.7624, Accuracy: 234/612 (38.2353%)
+___Local_Train , g_epoch   5, l_epoch   2, local model 56,  Average loss: 1.5802, Accuracy: 280/612 (45.7516%)
+___Local_Train , g_epoch   5, l_epoch   1, local model 48,  Average loss: 1.5155, Accuracy: 245/515 (47.5728%)
+___Local_Train , g_epoch   5, l_epoch   2, local model 48,  Average loss: 1.4831, Accuracy: 258/515 (50.0971%)
+___Local_Train , g_epoch   5, l_epoch   1, local model 12,  Average loss: 1.7035, Accuracy: 226/534 (42.3221%)
+___Local_Train , g_epoch   5, l_epoch   2, local model 12,  Average loss: 1.3979, Accuracy: 269/534 (50.3745%)
+___Local_Train , g_epoch   5, l_epoch   1, local model 54,  Average loss: 1.9399, Accuracy: 177/497 (35.6137%)
+___Local_Train , g_epoch   5, l_epoch   2, local model 54,  Average loss: 1.4980, Accuracy: 272/497 (54.7284%)
+___Local_Train , g_epoch   5, l_epoch   3, local model 54,  Average loss: 1.4182, Accuracy: 279/497 (56.1368%)
+___Local_Train , g_epoch   5, l_epoch   4, local model 54,  Average loss: 1.3045, Accuracy: 290/497 (58.3501%)
+___Local_Train , g_epoch   5, l_epoch   5, local model 54,  Average loss: 1.1651, Accuracy: 296/497 (59.5573%)
+___Local_Train , g_epoch   5, l_epoch   6, local model 54,  Average loss: 1.0656, Accuracy: 328/497 (65.9960%)
+___Local_Train , g_epoch   5, l_epoch   1, local model 73,  Average loss: 1.7973, Accuracy: 184/510 (36.0784%)
+___Local_Train , g_epoch   5, l_epoch   2, local model 73,  Average loss: 1.6013, Accuracy: 222/510 (43.5294%)
+___Local_Train , g_epoch   5, l_epoch   1, local model 76,  Average loss: 1.7718, Accuracy: 187/455 (41.0989%)
+___Local_Train , g_epoch   5, l_epoch   2, local model 76,  Average loss: 1.5750, Accuracy: 215/455 (47.2528%)
+4, 1, 0.5344822406768799
+93, 1, 0.32518553733825684
+81, 2, 0.38644522428512573
+96, 4, 0.34410935640335083
+56, 8, 0.190230131149292
+48, 3, 0.4210655391216278
+12, 1, 0.28570985794067383
+54, 0, 0.634313702583313
+73, 0, 0.22456789016723633
+76, 0, 0.3178572952747345
+54
+count_all_attack: 4, count_all_defense: 4, count_correct_defense: 4
+___Global_Test_Poison:False  Average loss: 1.9211 Accuracy: 2540/10000 (25.40%)
+___Global_Test_Poison:True  Average loss: 2.8022 Accuracy: 761/9000 (8.46%)
+Epoch 5 completed in 43.49 seconds
+Server Epoch:6 choose agents : [81, 86, 22, 60, 1, 49, 29, 56, 64, 68].
+___Local_Train , g_epoch   6, l_epoch   1, local model 81,  Average loss: 1.7304, Accuracy: 206/552 (37.3188%)
+___Local_Train , g_epoch   6, l_epoch   2, local model 81,  Average loss: 1.5078, Accuracy: 262/552 (47.4638%)
+___Local_Train , g_epoch   6, l_epoch   1, local model 86,  Average loss: 1.9177, Accuracy: 139/495 (28.0808%)
+___Local_Train , g_epoch   6, l_epoch   2, local model 86,  Average loss: 1.7078, Accuracy: 184/495 (37.1717%)
+___Local_Train , g_epoch   6, l_epoch   1, local model 22,  Average loss: 1.8654, Accuracy: 134/373 (35.9249%)
+___Local_Train , g_epoch   6, l_epoch   2, local model 22,  Average loss: 1.3164, Accuracy: 244/373 (65.4156%)
+___Local_Train , g_epoch   6, l_epoch   1, local model 60,  Average loss: 1.9319, Accuracy: 131/462 (28.3550%)
+___Local_Train , g_epoch   6, l_epoch   2, local model 60,  Average loss: 1.3537, Accuracy: 230/462 (49.7836%)
+___Local_Train , g_epoch   6, l_epoch   3, local model 60,  Average loss: 1.3466, Accuracy: 232/462 (50.2164%)
+___Local_Train , g_epoch   6, l_epoch   4, local model 60,  Average loss: 1.2647, Accuracy: 246/462 (53.2468%)
+___Local_Train , g_epoch   6, l_epoch   5, local model 60,  Average loss: 1.2156, Accuracy: 241/462 (52.1645%)
+___Local_Train , g_epoch   6, l_epoch   6, local model 60,  Average loss: 1.1403, Accuracy: 278/462 (60.1732%)
+___Local_Train , g_epoch   6, l_epoch   1, local model 1,  Average loss: 1.6269, Accuracy: 253/574 (44.0767%)
+___Local_Train , g_epoch   6, l_epoch   2, local model 1,  Average loss: 1.5478, Accuracy: 263/574 (45.8188%)
+___Local_Train , g_epoch   6, l_epoch   1, local model 49,  Average loss: 1.9852, Accuracy: 58/283 (20.4947%)
+___Local_Train , g_epoch   6, l_epoch   2, local model 49,  Average loss: 1.3536, Accuracy: 147/283 (51.9435%)
+___Local_Train , g_epoch   6, l_epoch   1, local model 29,  Average loss: 1.7239, Accuracy: 225/645 (34.8837%)
+___Local_Train , g_epoch   6, l_epoch   2, local model 29,  Average loss: 1.7256, Accuracy: 225/645 (34.8837%)
+___Local_Train , g_epoch   6, l_epoch   1, local model 56,  Average loss: 1.5829, Accuracy: 272/612 (44.4444%)
+___Local_Train , g_epoch   6, l_epoch   2, local model 56,  Average loss: 1.5148, Accuracy: 291/612 (47.5490%)
+___Local_Train , g_epoch   6, l_epoch   1, local model 64,  Average loss: 1.6490, Accuracy: 248/552 (44.9275%)
+___Local_Train , g_epoch   6, l_epoch   2, local model 64,  Average loss: 1.4315, Accuracy: 264/552 (47.8261%)
+___Local_Train , g_epoch   6, l_epoch   1, local model 68,  Average loss: 1.5812, Accuracy: 297/679 (43.7408%)
+___Local_Train , g_epoch   6, l_epoch   2, local model 68,  Average loss: 1.5104, Accuracy: 334/679 (49.1900%)
+81, 4, 0.31045201420783997
+86, 5, 0.26787039637565613
+22, 5, 0.9441490173339844
+60, 0, 0.5910568833351135
+1, 4, 0.2214997410774231
+49, 2, 0.5794845819473267
+29, 7, 0.28220388293266296
+56, 4, 0.24081265926361084
+64, 3, 0.2926419973373413
+68, 0, 0.25687944889068604
+60
+count_all_attack: 5, count_all_defense: 5, count_correct_defense: 5
+___Global_Test_Poison:False  Average loss: 1.8409 Accuracy: 3085/10000 (30.85%)
+___Global_Test_Poison:True  Average loss: 2.7190 Accuracy: 998/9000 (11.09%)
+Epoch 6 completed in 43.63 seconds
+Server Epoch:7 choose agents : [63, 73, 92, 76, 77, 20, 69, 61, 42, 51].
+___Local_Train , g_epoch   7, l_epoch   1, local model 63,  Average loss: 1.9158, Accuracy: 160/449 (35.6347%)
+___Local_Train , g_epoch   7, l_epoch   2, local model 63,  Average loss: 1.4073, Accuracy: 210/449 (46.7706%)
+___Local_Train , g_epoch   7, l_epoch   1, local model 73,  Average loss: 1.6952, Accuracy: 197/510 (38.6275%)
+___Local_Train , g_epoch   7, l_epoch   2, local model 73,  Average loss: 1.5379, Accuracy: 236/510 (46.2745%)
+___Local_Train , g_epoch   7, l_epoch   1, local model 92,  Average loss: 1.6833, Accuracy: 186/456 (40.7895%)
+___Local_Train , g_epoch   7, l_epoch   2, local model 92,  Average loss: 1.5551, Accuracy: 220/456 (48.2456%)
+___Local_Train , g_epoch   7, l_epoch   1, local model 76,  Average loss: 1.8115, Accuracy: 168/455 (36.9231%)
+___Local_Train , g_epoch   7, l_epoch   2, local model 76,  Average loss: 1.6000, Accuracy: 228/455 (50.1099%)
+___Local_Train , g_epoch   7, l_epoch   1, local model 77,  Average loss: 1.8062, Accuracy: 106/327 (32.4159%)
+___Local_Train , g_epoch   7, l_epoch   2, local model 77,  Average loss: 1.4955, Accuracy: 142/327 (43.4251%)
+___Local_Train , g_epoch   7, l_epoch   1, local model 20,  Average loss: 1.6555, Accuracy: 143/329 (43.4650%)
+___Local_Train , g_epoch   7, l_epoch   2, local model 20,  Average loss: 1.2885, Accuracy: 167/329 (50.7599%)
+___Local_Train , g_epoch   7, l_epoch   1, local model 69,  Average loss: 2.3883, Accuracy: 106/463 (22.8942%)
+___Local_Train , g_epoch   7, l_epoch   2, local model 69,  Average loss: 1.4255, Accuracy: 251/463 (54.2117%)
+___Local_Train , g_epoch   7, l_epoch   3, local model 69,  Average loss: 1.4077, Accuracy: 232/463 (50.1080%)
+___Local_Train , g_epoch   7, l_epoch   4, local model 69,  Average loss: 1.2028, Accuracy: 246/463 (53.1317%)
+___Local_Train , g_epoch   7, l_epoch   5, local model 69,  Average loss: 1.0757, Accuracy: 268/463 (57.8834%)
+___Local_Train , g_epoch   7, l_epoch   6, local model 69,  Average loss: 1.0232, Accuracy: 264/463 (57.0194%)
+___Local_Train , g_epoch   7, l_epoch   1, local model 61,  Average loss: 1.6817, Accuracy: 251/638 (39.3417%)
+___Local_Train , g_epoch   7, l_epoch   2, local model 61,  Average loss: 1.5905, Accuracy: 260/638 (40.7523%)
+___Local_Train , g_epoch   7, l_epoch   1, local model 42,  Average loss: 1.7268, Accuracy: 104/302 (34.4371%)
+___Local_Train , g_epoch   7, l_epoch   2, local model 42,  Average loss: 1.5818, Accuracy: 136/302 (45.0331%)
+___Local_Train , g_epoch   7, l_epoch   1, local model 51,  Average loss: 1.6674, Accuracy: 289/678 (42.6254%)
+___Local_Train , g_epoch   7, l_epoch   2, local model 51,  Average loss: 1.5474, Accuracy: 299/678 (44.1003%)
+63, 9, 0.4582347273826599
+73, 9, 0.2512756586074829
+92, 6, 0.25935161113739014
+76, 0, 0.3271705210208893
+77, 4, 0.5489902496337891
+20, 0, 0.3877522051334381
+69, 0, 0.6697679758071899
+61, 7, 0.2451377511024475
+42, 3, 0.42565304040908813
+51, 2, 0.2565578818321228
+69
+count_all_attack: 6, count_all_defense: 6, count_correct_defense: 6
+___Global_Test_Poison:False  Average loss: 1.8190 Accuracy: 2896/10000 (28.96%)
+___Global_Test_Poison:True  Average loss: 2.4575 Accuracy: 2273/9000 (25.26%)
+Epoch 7 completed in 43.67 seconds
+Server Epoch:8 choose agents : [41, 32, 65, 23, 4, 75, 40, 60, 46, 8].
+___Local_Train , g_epoch   8, l_epoch   1, local model 41,  Average loss: 1.7199, Accuracy: 203/554 (36.6426%)
+___Local_Train , g_epoch   8, l_epoch   2, local model 41,  Average loss: 1.4382, Accuracy: 233/554 (42.0578%)
+___Local_Train , g_epoch   8, l_epoch   1, local model 32,  Average loss: 1.6881, Accuracy: 335/772 (43.3938%)
+___Local_Train , g_epoch   8, l_epoch   2, local model 32,  Average loss: 1.7824, Accuracy: 299/772 (38.7306%)
+___Local_Train , g_epoch   8, l_epoch   1, local model 65,  Average loss: 1.6570, Accuracy: 120/344 (34.8837%)
+___Local_Train , g_epoch   8, l_epoch   2, local model 65,  Average loss: 1.3910, Accuracy: 164/344 (47.6744%)
+___Local_Train , g_epoch   8, l_epoch   1, local model 23,  Average loss: 1.7231, Accuracy: 182/491 (37.0672%)
+___Local_Train , g_epoch   8, l_epoch   2, local model 23,  Average loss: 1.4223, Accuracy: 244/491 (49.6945%)
+___Local_Train , g_epoch   8, l_epoch   1, local model 4,  Average loss: 1.6478, Accuracy: 124/354 (35.0282%)
+___Local_Train , g_epoch   8, l_epoch   2, local model 4,  Average loss: 1.4013, Accuracy: 183/354 (51.6949%)
+___Local_Train , g_epoch   8, l_epoch   1, local model 75,  Average loss: 1.6938, Accuracy: 190/456 (41.6667%)
+___Local_Train , g_epoch   8, l_epoch   2, local model 75,  Average loss: 1.4521, Accuracy: 269/456 (58.9912%)
+___Local_Train , g_epoch   8, l_epoch   1, local model 40,  Average loss: 1.5239, Accuracy: 357/719 (49.6523%)
+___Local_Train , g_epoch   8, l_epoch   2, local model 40,  Average loss: 1.3656, Accuracy: 390/719 (54.2420%)
+___Local_Train , g_epoch   8, l_epoch   1, local model 60,  Average loss: 1.8651, Accuracy: 159/462 (34.4156%)
+___Local_Train , g_epoch   8, l_epoch   2, local model 60,  Average loss: 1.3666, Accuracy: 231/462 (50.0000%)
+___Local_Train , g_epoch   8, l_epoch   3, local model 60,  Average loss: 1.2496, Accuracy: 211/462 (45.6710%)
+___Local_Train , g_epoch   8, l_epoch   4, local model 60,  Average loss: 1.2067, Accuracy: 239/462 (51.7316%)
+___Local_Train , g_epoch   8, l_epoch   5, local model 60,  Average loss: 1.1043, Accuracy: 248/462 (53.6797%)
+___Local_Train , g_epoch   8, l_epoch   6, local model 60,  Average loss: 1.1762, Accuracy: 258/462 (55.8442%)
+___Local_Train , g_epoch   8, l_epoch   1, local model 46,  Average loss: 1.6915, Accuracy: 196/532 (36.8421%)
+___Local_Train , g_epoch   8, l_epoch   2, local model 46,  Average loss: 1.5707, Accuracy: 211/532 (39.6617%)
+___Local_Train , g_epoch   8, l_epoch   1, local model 8,  Average loss: 1.6202, Accuracy: 167/456 (36.6228%)
+___Local_Train , g_epoch   8, l_epoch   2, local model 8,  Average loss: 1.4953, Accuracy: 222/456 (48.6842%)
+41, 3, 0.29351237416267395
+32, 5, 0.39789268374443054
+65, 5, 0.2791908383369446
+23, 7, 0.335647851228714
+4, 1, 0.46471965312957764
+75, 6, 0.7429574131965637
+40, 7, 0.44401904940605164
+60, 0, 0.5581259727478027
+46, 7, 0.22884784638881683
+8, 2, 0.4014226794242859
+60
+count_all_attack: 7, count_all_defense: 7, count_correct_defense: 7
+___Global_Test_Poison:False  Average loss: 2.0036 Accuracy: 2680/10000 (26.80%)
+___Global_Test_Poison:True  Average loss: 3.1520 Accuracy: 1535/9000 (17.06%)
+Epoch 8 completed in 44.58 seconds
+Server Epoch:9 choose agents : [11, 16, 90, 54, 79, 34, 20, 35, 62, 27].
+___Local_Train , g_epoch   9, l_epoch   1, local model 11,  Average loss: 1.7345, Accuracy: 207/610 (33.9344%)
+___Local_Train , g_epoch   9, l_epoch   2, local model 11,  Average loss: 1.5552, Accuracy: 281/610 (46.0656%)
+___Local_Train , g_epoch   9, l_epoch   1, local model 16,  Average loss: 1.9828, Accuracy: 125/463 (26.9978%)
+___Local_Train , g_epoch   9, l_epoch   2, local model 16,  Average loss: 1.6682, Accuracy: 183/463 (39.5248%)
+___Local_Train , g_epoch   9, l_epoch   1, local model 90,  Average loss: 2.3145, Accuracy: 37/249 (14.8594%)
+___Local_Train , g_epoch   9, l_epoch   2, local model 90,  Average loss: 1.5121, Accuracy: 130/249 (52.2088%)
+___Local_Train , g_epoch   9, l_epoch   1, local model 54,  Average loss: 1.9820, Accuracy: 166/497 (33.4004%)
+___Local_Train , g_epoch   9, l_epoch   2, local model 54,  Average loss: 1.4409, Accuracy: 277/497 (55.7344%)
+___Local_Train , g_epoch   9, l_epoch   3, local model 54,  Average loss: 1.3564, Accuracy: 281/497 (56.5392%)
+___Local_Train , g_epoch   9, l_epoch   4, local model 54,  Average loss: 1.2608, Accuracy: 268/497 (53.9235%)
+___Local_Train , g_epoch   9, l_epoch   5, local model 54,  Average loss: 1.1414, Accuracy: 290/497 (58.3501%)
+___Local_Train , g_epoch   9, l_epoch   6, local model 54,  Average loss: 1.0572, Accuracy: 323/497 (64.9899%)
+___Local_Train , g_epoch   9, l_epoch   1, local model 79,  Average loss: 1.7308, Accuracy: 163/465 (35.0538%)
+___Local_Train , g_epoch   9, l_epoch   2, local model 79,  Average loss: 1.5424, Accuracy: 209/465 (44.9462%)
+___Local_Train , g_epoch   9, l_epoch   1, local model 34,  Average loss: 1.8304, Accuracy: 248/633 (39.1785%)
+___Local_Train , g_epoch   9, l_epoch   2, local model 34,  Average loss: 1.5693, Accuracy: 352/633 (55.6082%)
+___Local_Train , g_epoch   9, l_epoch   3, local model 34,  Average loss: 1.4177, Accuracy: 338/633 (53.3965%)
+___Local_Train , g_epoch   9, l_epoch   4, local model 34,  Average loss: 1.2923, Accuracy: 363/633 (57.3460%)
+___Local_Train , g_epoch   9, l_epoch   5, local model 34,  Average loss: 1.2401, Accuracy: 370/633 (58.4518%)
+___Local_Train , g_epoch   9, l_epoch   6, local model 34,  Average loss: 1.1446, Accuracy: 391/633 (61.7694%)
+___Local_Train , g_epoch   9, l_epoch   1, local model 20,  Average loss: 1.4919, Accuracy: 160/329 (48.6322%)
+___Local_Train , g_epoch   9, l_epoch   2, local model 20,  Average loss: 1.2619, Accuracy: 174/329 (52.8875%)
+___Local_Train , g_epoch   9, l_epoch   1, local model 35,  Average loss: 1.8889, Accuracy: 173/484 (35.7438%)
+___Local_Train , g_epoch   9, l_epoch   2, local model 35,  Average loss: 1.4620, Accuracy: 248/484 (51.2397%)
+___Local_Train , g_epoch   9, l_epoch   1, local model 62,  Average loss: 1.6785, Accuracy: 187/504 (37.1032%)
+___Local_Train , g_epoch   9, l_epoch   2, local model 62,  Average loss: 1.5100, Accuracy: 209/504 (41.4683%)
+___Local_Train , g_epoch   9, l_epoch   1, local model 27,  Average loss: 1.8673, Accuracy: 144/424 (33.9623%)
+___Local_Train , g_epoch   9, l_epoch   2, local model 27,  Average loss: 1.3626, Accuracy: 204/424 (48.1132%)
+11, 2, 0.3121251165866852
+16, 4, 0.25601857900619507
+90, 9, 0.554257869720459
+54, 0, 0.5878229141235352
+79, 2, 0.2012856900691986
+34, 0, 0.6198607087135315
+20, 0, 0.38549917936325073
+35, 9, 0.5253151655197144
+62, 3, 0.24391676485538483
+27, 2, 0.26682406663894653
+54
+34
+count_all_attack: 9, count_all_defense: 9, count_correct_defense: 9
+___Global_Test_Poison:False  Average loss: 1.7565 Accuracy: 3137/10000 (31.37%)
+___Global_Test_Poison:True  Average loss: 3.2049 Accuracy: 46/9000 (0.51%)
+Epoch 9 completed in 47.83 seconds
+Server Epoch:10 choose agents : [16, 50, 14, 7, 27, 82, 57, 77, 8, 26].
+___Local_Train , g_epoch  10, l_epoch   1, local model 16,  Average loss: 1.6563, Accuracy: 174/463 (37.5810%)
+___Local_Train , g_epoch  10, l_epoch   2, local model 16,  Average loss: 1.4771, Accuracy: 209/463 (45.1404%)
+___Local_Train , g_epoch  10, l_epoch   1, local model 50,  Average loss: 2.2025, Accuracy: 83/297 (27.9461%)
+___Local_Train , g_epoch  10, l_epoch   2, local model 50,  Average loss: 1.5034, Accuracy: 130/297 (43.7710%)
+___Local_Train , g_epoch  10, l_epoch   3, local model 50,  Average loss: 1.4398, Accuracy: 151/297 (50.8418%)
+___Local_Train , g_epoch  10, l_epoch   4, local model 50,  Average loss: 1.3811, Accuracy: 138/297 (46.4646%)
+___Local_Train , g_epoch  10, l_epoch   5, local model 50,  Average loss: 1.2659, Accuracy: 157/297 (52.8619%)
+___Local_Train , g_epoch  10, l_epoch   6, local model 50,  Average loss: 1.1752, Accuracy: 169/297 (56.9024%)
+___Local_Train , g_epoch  10, l_epoch   1, local model 14,  Average loss: 1.4524, Accuracy: 233/450 (51.7778%)
+___Local_Train , g_epoch  10, l_epoch   2, local model 14,  Average loss: 1.1803, Accuracy: 269/450 (59.7778%)
+___Local_Train , g_epoch  10, l_epoch   1, local model 7,  Average loss: 1.6799, Accuracy: 135/350 (38.5714%)
+___Local_Train , g_epoch  10, l_epoch   2, local model 7,  Average loss: 1.3086, Accuracy: 194/350 (55.4286%)
+___Local_Train , g_epoch  10, l_epoch   1, local model 27,  Average loss: 1.6240, Accuracy: 157/424 (37.0283%)
+___Local_Train , g_epoch  10, l_epoch   2, local model 27,  Average loss: 1.3771, Accuracy: 203/424 (47.8774%)
+___Local_Train , g_epoch  10, l_epoch   1, local model 82,  Average loss: 1.5871, Accuracy: 349/794 (43.9547%)
+___Local_Train , g_epoch  10, l_epoch   2, local model 82,  Average loss: 1.5349, Accuracy: 353/794 (44.4584%)
+___Local_Train , g_epoch  10, l_epoch   1, local model 57,  Average loss: 1.6508, Accuracy: 129/351 (36.7521%)
+___Local_Train , g_epoch  10, l_epoch   2, local model 57,  Average loss: 1.4407, Accuracy: 178/351 (50.7122%)
+___Local_Train , g_epoch  10, l_epoch   1, local model 77,  Average loss: 1.7588, Accuracy: 121/327 (37.0031%)
+___Local_Train , g_epoch  10, l_epoch   2, local model 77,  Average loss: 1.4567, Accuracy: 149/327 (45.5658%)
+___Local_Train , g_epoch  10, l_epoch   1, local model 8,  Average loss: 1.5412, Accuracy: 183/456 (40.1316%)
+___Local_Train , g_epoch  10, l_epoch   2, local model 8,  Average loss: 1.4181, Accuracy: 224/456 (49.1228%)
+___Local_Train , g_epoch  10, l_epoch   1, local model 26,  Average loss: 1.6098, Accuracy: 148/373 (39.6783%)
+___Local_Train , g_epoch  10, l_epoch   2, local model 26,  Average loss: 1.2696, Accuracy: 204/373 (54.6917%)
+16, 7, 0.2389269918203354
+50, 0, 0.7006385922431946
+14, 9, 0.29431402683258057
+7, 1, 0.7290304899215698
+27, 2, 0.3149893283843994
+82, 3, 0.46032097935676575
+57, 7, 0.24993905425071716
+77, 4, 0.4334804117679596
+8, 2, 0.3697558045387268
+26, 9, 0.3756334185600281
+50
+count_all_attack: 10, count_all_defense: 10, count_correct_defense: 10
+___Global_Test_Poison:False  Average loss: 1.6526 Accuracy: 3821/10000 (38.21%)
+___Global_Test_Poison:True  Average loss: 3.6652 Accuracy: 8/9000 (0.09%)
+Epoch 10 completed in 42.48 seconds
+Server Epoch:11 choose agents : [98, 1, 89, 50, 11, 47, 10, 16, 36, 59].
+___Local_Train , g_epoch  11, l_epoch   1, local model 98,  Average loss: 1.4889, Accuracy: 270/598 (45.1505%)
+___Local_Train , g_epoch  11, l_epoch   2, local model 98,  Average loss: 1.3438, Accuracy: 285/598 (47.6589%)
+___Local_Train , g_epoch  11, l_epoch   1, local model 1,  Average loss: 1.5344, Accuracy: 251/574 (43.7282%)
+___Local_Train , g_epoch  11, l_epoch   2, local model 1,  Average loss: 1.5071, Accuracy: 291/574 (50.6969%)
+___Local_Train , g_epoch  11, l_epoch   1, local model 89,  Average loss: 1.5616, Accuracy: 297/689 (43.1059%)
+___Local_Train , g_epoch  11, l_epoch   2, local model 89,  Average loss: 1.5317, Accuracy: 307/689 (44.5573%)
+___Local_Train , g_epoch  11, l_epoch   1, local model 50,  Average loss: 2.4844, Accuracy: 56/297 (18.8552%)
+___Local_Train , g_epoch  11, l_epoch   2, local model 50,  Average loss: 1.5294, Accuracy: 138/297 (46.4646%)
+___Local_Train , g_epoch  11, l_epoch   3, local model 50,  Average loss: 1.4469, Accuracy: 148/297 (49.8316%)
+___Local_Train , g_epoch  11, l_epoch   4, local model 50,  Average loss: 1.4115, Accuracy: 157/297 (52.8619%)
+___Local_Train , g_epoch  11, l_epoch   5, local model 50,  Average loss: 1.4490, Accuracy: 139/297 (46.8013%)
+___Local_Train , g_epoch  11, l_epoch   6, local model 50,  Average loss: 1.2403, Accuracy: 170/297 (57.2391%)
+___Local_Train , g_epoch  11, l_epoch   1, local model 11,  Average loss: 1.7648, Accuracy: 210/610 (34.4262%)
+___Local_Train , g_epoch  11, l_epoch   2, local model 11,  Average loss: 1.5714, Accuracy: 264/610 (43.2787%)
+___Local_Train , g_epoch  11, l_epoch   1, local model 47,  Average loss: 2.4094, Accuracy: 81/344 (23.5465%)
+___Local_Train , g_epoch  11, l_epoch   2, local model 47,  Average loss: 1.4875, Accuracy: 164/344 (47.6744%)
+___Local_Train , g_epoch  11, l_epoch   3, local model 47,  Average loss: 1.6585, Accuracy: 181/344 (52.6163%)
+___Local_Train , g_epoch  11, l_epoch   4, local model 47,  Average loss: 1.3645, Accuracy: 196/344 (56.9767%)
+___Local_Train , g_epoch  11, l_epoch   5, local model 47,  Average loss: 1.3233, Accuracy: 180/344 (52.3256%)
+___Local_Train , g_epoch  11, l_epoch   6, local model 47,  Average loss: 1.2175, Accuracy: 204/344 (59.3023%)
+___Local_Train , g_epoch  11, l_epoch   1, local model 10,  Average loss: 1.7378, Accuracy: 115/323 (35.6037%)
+___Local_Train , g_epoch  11, l_epoch   2, local model 10,  Average loss: 1.3408, Accuracy: 175/323 (54.1796%)
+___Local_Train , g_epoch  11, l_epoch   1, local model 16,  Average loss: 1.5744, Accuracy: 200/463 (43.1965%)
+___Local_Train , g_epoch  11, l_epoch   2, local model 16,  Average loss: 1.4682, Accuracy: 210/463 (45.3564%)
+___Local_Train , g_epoch  11, l_epoch   1, local model 36,  Average loss: 2.0780, Accuracy: 197/591 (33.3333%)
+___Local_Train , g_epoch  11, l_epoch   2, local model 36,  Average loss: 1.6047, Accuracy: 324/591 (54.8223%)
+___Local_Train , g_epoch  11, l_epoch   3, local model 36,  Average loss: 1.3200, Accuracy: 319/591 (53.9763%)
+___Local_Train , g_epoch  11, l_epoch   4, local model 36,  Average loss: 1.2396, Accuracy: 333/591 (56.3452%)
+___Local_Train , g_epoch  11, l_epoch   5, local model 36,  Average loss: 1.0992, Accuracy: 347/591 (58.7140%)
+___Local_Train , g_epoch  11, l_epoch   6, local model 36,  Average loss: 1.0548, Accuracy: 375/591 (63.4518%)
+___Local_Train , g_epoch  11, l_epoch   1, local model 59,  Average loss: 1.4510, Accuracy: 311/584 (53.2534%)
+___Local_Train , g_epoch  11, l_epoch   2, local model 59,  Average loss: 1.3482, Accuracy: 340/584 (58.2192%)
+98, 2, 0.3771112561225891
+1, 3, 0.2412548065185547
+89, 9, 0.2559390068054199
+50, 0, 0.7474488615989685
+11, 2, 0.3235993981361389
+47, 0, 0.727803111076355
+10, 3, 0.6172245740890503
+16, 7, 0.23206453025341034
+36, 0, 0.5679095983505249
+59, 3, 0.29039260745048523
+50
+47
+36
+count_all_attack: 13, count_all_defense: 13, count_correct_defense: 13
+___Global_Test_Poison:False  Average loss: 1.6777 Accuracy: 3601/10000 (36.01%)
+___Global_Test_Poison:True  Average loss: 3.2330 Accuracy: 706/9000 (7.84%)
+Epoch 11 completed in 48.52 seconds
+Server Epoch:12 choose agents : [62, 83, 11, 71, 4, 7, 32, 96, 28, 69].
+___Local_Train , g_epoch  12, l_epoch   1, local model 62,  Average loss: 1.5433, Accuracy: 229/504 (45.4365%)
+___Local_Train , g_epoch  12, l_epoch   2, local model 62,  Average loss: 1.4100, Accuracy: 216/504 (42.8571%)
+___Local_Train , g_epoch  12, l_epoch   1, local model 83,  Average loss: 1.6526, Accuracy: 183/438 (41.7808%)
+___Local_Train , g_epoch  12, l_epoch   2, local model 83,  Average loss: 1.4249, Accuracy: 224/438 (51.1416%)
+___Local_Train , g_epoch  12, l_epoch   1, local model 11,  Average loss: 1.6223, Accuracy: 255/610 (41.8033%)
+___Local_Train , g_epoch  12, l_epoch   2, local model 11,  Average loss: 1.4735, Accuracy: 279/610 (45.7377%)
+___Local_Train , g_epoch  12, l_epoch   1, local model 71,  Average loss: 1.5252, Accuracy: 276/606 (45.5446%)
+___Local_Train , g_epoch  12, l_epoch   2, local model 71,  Average loss: 1.2486, Accuracy: 331/606 (54.6205%)
+___Local_Train , g_epoch  12, l_epoch   1, local model 4,  Average loss: 1.6216, Accuracy: 140/354 (39.5480%)
+___Local_Train , g_epoch  12, l_epoch   2, local model 4,  Average loss: 1.3562, Accuracy: 184/354 (51.9774%)
+___Local_Train , g_epoch  12, l_epoch   1, local model 7,  Average loss: 1.5615, Accuracy: 163/350 (46.5714%)
+___Local_Train , g_epoch  12, l_epoch   2, local model 7,  Average loss: 1.2619, Accuracy: 201/350 (57.4286%)
+___Local_Train , g_epoch  12, l_epoch   1, local model 32,  Average loss: 1.5459, Accuracy: 339/772 (43.9119%)
+___Local_Train , g_epoch  12, l_epoch   2, local model 32,  Average loss: 1.9472, Accuracy: 292/772 (37.8238%)
+___Local_Train , g_epoch  12, l_epoch   1, local model 96,  Average loss: 1.6535, Accuracy: 166/445 (37.3034%)
+___Local_Train , g_epoch  12, l_epoch   2, local model 96,  Average loss: 1.3773, Accuracy: 243/445 (54.6067%)
+___Local_Train , g_epoch  12, l_epoch   1, local model 28,  Average loss: 1.6752, Accuracy: 145/371 (39.0836%)
+___Local_Train , g_epoch  12, l_epoch   2, local model 28,  Average loss: 1.5000, Accuracy: 170/371 (45.8221%)
+___Local_Train , g_epoch  12, l_epoch   1, local model 69,  Average loss: 2.3181, Accuracy: 122/463 (26.3499%)
+___Local_Train , g_epoch  12, l_epoch   2, local model 69,  Average loss: 1.3187, Accuracy: 259/463 (55.9395%)
+___Local_Train , g_epoch  12, l_epoch   3, local model 69,  Average loss: 1.3676, Accuracy: 233/463 (50.3240%)
+___Local_Train , g_epoch  12, l_epoch   4, local model 69,  Average loss: 1.2944, Accuracy: 254/463 (54.8596%)
+___Local_Train , g_epoch  12, l_epoch   5, local model 69,  Average loss: 1.0490, Accuracy: 252/463 (54.4276%)
+___Local_Train , g_epoch  12, l_epoch   6, local model 69,  Average loss: 1.0294, Accuracy: 275/463 (59.3952%)
+62, 3, 0.33085981011390686
+83, 7, 0.4642065465450287
+11, 2, 0.2692655920982361
+71, 1, 0.4144246578216553
+4, 1, 0.5038649439811707
+7, 1, 0.7147835493087769
+32, 5, 0.2926754057407379
+96, 0, 0.44432365894317627
+28, 2, 0.3812113404273987
+69, 0, 0.6209316849708557
+69
+count_all_attack: 14, count_all_defense: 14, count_correct_defense: 14
+___Global_Test_Poison:False  Average loss: 1.8027 Accuracy: 3505/10000 (35.05%)
+___Global_Test_Poison:True  Average loss: 3.2586 Accuracy: 543/9000 (6.03%)
+Epoch 12 completed in 43.85 seconds
+Server Epoch:13 choose agents : [48, 60, 43, 51, 91, 24, 2, 78, 42, 0].
+___Local_Train , g_epoch  13, l_epoch   1, local model 48,  Average loss: 1.5889, Accuracy: 244/515 (47.3786%)
+___Local_Train , g_epoch  13, l_epoch   2, local model 48,  Average loss: 1.5292, Accuracy: 218/515 (42.3301%)
+___Local_Train , g_epoch  13, l_epoch   1, local model 60,  Average loss: 2.2126, Accuracy: 111/462 (24.0260%)
+___Local_Train , g_epoch  13, l_epoch   2, local model 60,  Average loss: 1.3812, Accuracy: 218/462 (47.1861%)
+___Local_Train , g_epoch  13, l_epoch   3, local model 60,  Average loss: 1.3857, Accuracy: 234/462 (50.6493%)
+___Local_Train , g_epoch  13, l_epoch   4, local model 60,  Average loss: 1.2250, Accuracy: 251/462 (54.3290%)
+___Local_Train , g_epoch  13, l_epoch   5, local model 60,  Average loss: 1.1909, Accuracy: 252/462 (54.5455%)
+___Local_Train , g_epoch  13, l_epoch   6, local model 60,  Average loss: 1.1316, Accuracy: 268/462 (58.0087%)
+___Local_Train , g_epoch  13, l_epoch   1, local model 43,  Average loss: 1.5328, Accuracy: 259/591 (43.8240%)
+___Local_Train , g_epoch  13, l_epoch   2, local model 43,  Average loss: 1.3422, Accuracy: 301/591 (50.9306%)
+___Local_Train , g_epoch  13, l_epoch   1, local model 51,  Average loss: 1.5545, Accuracy: 314/678 (46.3127%)
+___Local_Train , g_epoch  13, l_epoch   2, local model 51,  Average loss: 1.4376, Accuracy: 342/678 (50.4425%)
+___Local_Train , g_epoch  13, l_epoch   1, local model 91,  Average loss: 1.6585, Accuracy: 260/644 (40.3727%)
+___Local_Train , g_epoch  13, l_epoch   2, local model 91,  Average loss: 1.6766, Accuracy: 269/644 (41.7702%)
+___Local_Train , g_epoch  13, l_epoch   1, local model 24,  Average loss: 1.4670, Accuracy: 264/513 (51.4620%)
+___Local_Train , g_epoch  13, l_epoch   2, local model 24,  Average loss: 1.3930, Accuracy: 242/513 (47.1735%)
+___Local_Train , g_epoch  13, l_epoch   1, local model 2,  Average loss: 1.5226, Accuracy: 198/398 (49.7487%)
+___Local_Train , g_epoch  13, l_epoch   2, local model 2,  Average loss: 1.2701, Accuracy: 220/398 (55.2764%)
+___Local_Train , g_epoch  13, l_epoch   1, local model 78,  Average loss: 1.5475, Accuracy: 216/461 (46.8547%)
+___Local_Train , g_epoch  13, l_epoch   2, local model 78,  Average loss: 1.3635, Accuracy: 234/461 (50.7592%)
+___Local_Train , g_epoch  13, l_epoch   1, local model 42,  Average loss: 2.0149, Accuracy: 76/302 (25.1656%)
+___Local_Train , g_epoch  13, l_epoch   2, local model 42,  Average loss: 1.5412, Accuracy: 149/302 (49.3377%)
+___Local_Train , g_epoch  13, l_epoch   1, local model 0,  Average loss: 1.6196, Accuracy: 243/621 (39.1304%)
+___Local_Train , g_epoch  13, l_epoch   2, local model 0,  Average loss: 1.4141, Accuracy: 283/621 (45.5717%)
+48, 5, 0.5810853242874146
+60, 0, 0.6069414019584656
+43, 7, 0.3396047055721283
+51, 2, 0.2910107374191284
+91, 2, 0.21066084504127502
+24, 0, 0.45201513171195984
+2, 2, 0.2826980650424957
+78, 6, 0.3049619793891907
+42, 3, 0.6627215147018433
+0, 4, 0.37382039427757263
+60
+count_all_attack: 15, count_all_defense: 15, count_correct_defense: 15
+___Global_Test_Poison:False  Average loss: 1.9884 Accuracy: 2618/10000 (26.18%)
+___Global_Test_Poison:True  Average loss: 3.2695 Accuracy: 230/9000 (2.56%)
+Epoch 13 completed in 45.85 seconds
+Server Epoch:14 choose agents : [31, 59, 63, 91, 10, 11, 35, 38, 4, 65].
+___Local_Train , g_epoch  14, l_epoch   1, local model 31,  Average loss: 1.6131, Accuracy: 218/506 (43.0830%)
+___Local_Train , g_epoch  14, l_epoch   2, local model 31,  Average loss: 1.3511, Accuracy: 267/506 (52.7668%)
+___Local_Train , g_epoch  14, l_epoch   1, local model 59,  Average loss: 1.3261, Accuracy: 319/584 (54.6233%)
+___Local_Train , g_epoch  14, l_epoch   2, local model 59,  Average loss: 1.2132, Accuracy: 353/584 (60.4452%)
+___Local_Train , g_epoch  14, l_epoch   1, local model 63,  Average loss: 1.7277, Accuracy: 181/449 (40.3118%)
+___Local_Train , g_epoch  14, l_epoch   2, local model 63,  Average loss: 1.3368, Accuracy: 221/449 (49.2205%)
+___Local_Train , g_epoch  14, l_epoch   1, local model 91,  Average loss: 1.6037, Accuracy: 242/644 (37.5776%)
+___Local_Train , g_epoch  14, l_epoch   2, local model 91,  Average loss: 1.8111, Accuracy: 265/644 (41.1491%)
+___Local_Train , g_epoch  14, l_epoch   1, local model 10,  Average loss: 1.5427, Accuracy: 154/323 (47.6780%)
+___Local_Train , g_epoch  14, l_epoch   2, local model 10,  Average loss: 1.3000, Accuracy: 181/323 (56.0372%)
+___Local_Train , g_epoch  14, l_epoch   1, local model 11,  Average loss: 1.6281, Accuracy: 247/610 (40.4918%)
+___Local_Train , g_epoch  14, l_epoch   2, local model 11,  Average loss: 1.4679, Accuracy: 262/610 (42.9508%)
+___Local_Train , g_epoch  14, l_epoch   1, local model 35,  Average loss: 1.6201, Accuracy: 214/484 (44.2149%)
+___Local_Train , g_epoch  14, l_epoch   2, local model 35,  Average loss: 1.2623, Accuracy: 275/484 (56.8182%)
+___Local_Train , g_epoch  14, l_epoch   1, local model 38,  Average loss: 1.6423, Accuracy: 198/469 (42.2175%)
+___Local_Train , g_epoch  14, l_epoch   2, local model 38,  Average loss: 1.3749, Accuracy: 234/469 (49.8934%)
+___Local_Train , g_epoch  14, l_epoch   1, local model 4,  Average loss: 1.8132, Accuracy: 108/354 (30.5085%)
+___Local_Train , g_epoch  14, l_epoch   2, local model 4,  Average loss: 1.4140, Accuracy: 180/354 (50.8475%)
+___Local_Train , g_epoch  14, l_epoch   1, local model 65,  Average loss: 1.4393, Accuracy: 148/344 (43.0233%)
+___Local_Train , g_epoch  14, l_epoch   2, local model 65,  Average loss: 1.2400, Accuracy: 182/344 (52.9070%)
+31, 1, 0.4841275215148926
+59, 3, 0.34213924407958984
+63, 9, 0.4598219394683838
+91, 2, 0.22391295433044434
+10, 3, 0.5103591680526733
+11, 2, 0.2833997905254364
+35, 9, 0.5629361271858215
+38, 7, 0.3981717824935913
+4, 1, 0.557067334651947
+65, 5, 0.2709839344024658
+count_all_attack: 15, count_all_defense: 15, count_correct_defense: 15
+___Global_Test_Poison:False  Average loss: 1.5591 Accuracy: 4079/10000 (40.79%)
+___Global_Test_Poison:True  Average loss: 3.9267 Accuracy: 117/9000 (1.30%)
+Epoch 14 completed in 42.79 seconds
+Server Epoch:15 choose agents : [52, 28, 36, 10, 61, 21, 57, 31, 49, 88].
+___Local_Train , g_epoch  15, l_epoch   1, local model 52,  Average loss: 1.6048, Accuracy: 243/548 (44.3431%)
+___Local_Train , g_epoch  15, l_epoch   2, local model 52,  Average loss: 1.4072, Accuracy: 287/548 (52.3723%)
+___Local_Train , g_epoch  15, l_epoch   1, local model 28,  Average loss: 1.6324, Accuracy: 144/371 (38.8140%)
+___Local_Train , g_epoch  15, l_epoch   2, local model 28,  Average loss: 1.4820, Accuracy: 174/371 (46.9003%)
+___Local_Train , g_epoch  15, l_epoch   1, local model 36,  Average loss: 2.0331, Accuracy: 196/591 (33.1641%)
+___Local_Train , g_epoch  15, l_epoch   2, local model 36,  Average loss: 1.5553, Accuracy: 323/591 (54.6531%)
+___Local_Train , g_epoch  15, l_epoch   3, local model 36,  Average loss: 1.2809, Accuracy: 327/591 (55.3299%)
+___Local_Train , g_epoch  15, l_epoch   4, local model 36,  Average loss: 1.1618, Accuracy: 359/591 (60.7445%)
+___Local_Train , g_epoch  15, l_epoch   5, local model 36,  Average loss: 1.1170, Accuracy: 345/591 (58.3756%)
+___Local_Train , g_epoch  15, l_epoch   6, local model 36,  Average loss: 0.9993, Accuracy: 411/591 (69.5431%)
+___Local_Train , g_epoch  15, l_epoch   1, local model 10,  Average loss: 1.6883, Accuracy: 141/323 (43.6532%)
+___Local_Train , g_epoch  15, l_epoch   2, local model 10,  Average loss: 1.3087, Accuracy: 173/323 (53.5604%)
+___Local_Train , g_epoch  15, l_epoch   1, local model 61,  Average loss: 1.5807, Accuracy: 266/638 (41.6928%)
+___Local_Train , g_epoch  15, l_epoch   2, local model 61,  Average loss: 1.4276, Accuracy: 286/638 (44.8276%)
+___Local_Train , g_epoch  15, l_epoch   1, local model 21,  Average loss: 1.5231, Accuracy: 238/527 (45.1613%)
+___Local_Train , g_epoch  15, l_epoch   2, local model 21,  Average loss: 1.4694, Accuracy: 279/527 (52.9412%)
+___Local_Train , g_epoch  15, l_epoch   1, local model 57,  Average loss: 1.5475, Accuracy: 142/351 (40.4558%)
+___Local_Train , g_epoch  15, l_epoch   2, local model 57,  Average loss: 1.3703, Accuracy: 185/351 (52.7066%)
+___Local_Train , g_epoch  15, l_epoch   1, local model 31,  Average loss: 1.3582, Accuracy: 261/506 (51.5810%)
+___Local_Train , g_epoch  15, l_epoch   2, local model 31,  Average loss: 1.3128, Accuracy: 292/506 (57.7075%)
+___Local_Train , g_epoch  15, l_epoch   1, local model 49,  Average loss: 1.7531, Accuracy: 102/283 (36.0424%)
+___Local_Train , g_epoch  15, l_epoch   2, local model 49,  Average loss: 1.2366, Accuracy: 163/283 (57.5972%)
+___Local_Train , g_epoch  15, l_epoch   1, local model 88,  Average loss: 1.5026, Accuracy: 186/394 (47.2081%)
+___Local_Train , g_epoch  15, l_epoch   2, local model 88,  Average loss: 1.4659, Accuracy: 186/394 (47.2081%)
+52, 4, 0.35335826873779297
+28, 2, 0.4031200408935547
+36, 0, 0.6254364252090454
+10, 3, 0.6481623649597168
+61, 2, 0.22249597311019897
+21, 0, 0.3853701651096344
+57, 7, 0.23487791419029236
+31, 1, 0.46067535877227783
+49, 2, 0.5862439870834351
+88, 9, 0.29072174429893494
+36
+count_all_attack: 16, count_all_defense: 16, count_correct_defense: 16
+___Global_Test_Poison:False  Average loss: 1.6546 Accuracy: 3770/10000 (37.70%)
+___Global_Test_Poison:True  Average loss: 3.5738 Accuracy: 621/9000 (6.90%)
+Epoch 15 completed in 44.41 seconds
+Server Epoch:16 choose agents : [54, 71, 64, 15, 61, 28, 32, 77, 59, 65].
+___Local_Train , g_epoch  16, l_epoch   1, local model 54,  Average loss: 2.0781, Accuracy: 168/497 (33.8028%)
+___Local_Train , g_epoch  16, l_epoch   2, local model 54,  Average loss: 1.4917, Accuracy: 261/497 (52.5151%)
+___Local_Train , g_epoch  16, l_epoch   3, local model 54,  Average loss: 1.4102, Accuracy: 284/497 (57.1429%)
+___Local_Train , g_epoch  16, l_epoch   4, local model 54,  Average loss: 1.2269, Accuracy: 300/497 (60.3622%)
+___Local_Train , g_epoch  16, l_epoch   5, local model 54,  Average loss: 1.0323, Accuracy: 325/497 (65.3923%)
+___Local_Train , g_epoch  16, l_epoch   6, local model 54,  Average loss: 1.0259, Accuracy: 331/497 (66.5996%)
+___Local_Train , g_epoch  16, l_epoch   1, local model 71,  Average loss: 1.4691, Accuracy: 298/606 (49.1749%)
+___Local_Train , g_epoch  16, l_epoch   2, local model 71,  Average loss: 1.2372, Accuracy: 352/606 (58.0858%)
+___Local_Train , g_epoch  16, l_epoch   1, local model 64,  Average loss: 1.5618, Accuracy: 252/552 (45.6522%)
+___Local_Train , g_epoch  16, l_epoch   2, local model 64,  Average loss: 1.3150, Accuracy: 295/552 (53.4420%)
+___Local_Train , g_epoch  16, l_epoch   1, local model 15,  Average loss: 1.4525, Accuracy: 256/515 (49.7087%)
+___Local_Train , g_epoch  16, l_epoch   2, local model 15,  Average loss: 1.5205, Accuracy: 244/515 (47.3786%)
+___Local_Train , g_epoch  16, l_epoch   1, local model 61,  Average loss: 1.5052, Accuracy: 297/638 (46.5517%)
+___Local_Train , g_epoch  16, l_epoch   2, local model 61,  Average loss: 1.4132, Accuracy: 294/638 (46.0815%)
+___Local_Train , g_epoch  16, l_epoch   1, local model 28,  Average loss: 1.4897, Accuracy: 174/371 (46.9003%)
+___Local_Train , g_epoch  16, l_epoch   2, local model 28,  Average loss: 1.3729, Accuracy: 196/371 (52.8302%)
+___Local_Train , g_epoch  16, l_epoch   1, local model 32,  Average loss: 1.3941, Accuracy: 401/772 (51.9430%)
+___Local_Train , g_epoch  16, l_epoch   2, local model 32,  Average loss: 1.3183, Accuracy: 421/772 (54.5337%)
+___Local_Train , g_epoch  16, l_epoch   1, local model 77,  Average loss: 1.8281, Accuracy: 105/327 (32.1101%)
+___Local_Train , g_epoch  16, l_epoch   2, local model 77,  Average loss: 1.4046, Accuracy: 154/327 (47.0948%)
+___Local_Train , g_epoch  16, l_epoch   1, local model 59,  Average loss: 1.4371, Accuracy: 279/584 (47.7740%)
+___Local_Train , g_epoch  16, l_epoch   2, local model 59,  Average loss: 1.3500, Accuracy: 337/584 (57.7055%)
+___Local_Train , g_epoch  16, l_epoch   1, local model 65,  Average loss: 1.4785, Accuracy: 149/344 (43.3140%)
+___Local_Train , g_epoch  16, l_epoch   2, local model 65,  Average loss: 1.2382, Accuracy: 183/344 (53.1977%)
+54, 0, 0.6608684062957764
+71, 1, 0.42729371786117554
+64, 2, 0.3141101896762848
+15, 6, 0.3189865052700043
+61, 7, 0.27855774760246277
+28, 2, 0.3951040804386139
+32, 5, 0.3855542540550232
+77, 4, 0.5328866839408875
+59, 3, 0.37188801169395447
+65, 3, 0.23406080901622772
+54
+count_all_attack: 17, count_all_defense: 17, count_correct_defense: 17
+___Global_Test_Poison:False  Average loss: 1.5898 Accuracy: 4034/10000 (40.34%)
+___Global_Test_Poison:True  Average loss: 3.6068 Accuracy: 701/9000 (7.79%)
+Epoch 16 completed in 43.89 seconds
+Server Epoch:17 choose agents : [2, 71, 36, 1, 61, 27, 99, 19, 91, 86].
+___Local_Train , g_epoch  17, l_epoch   1, local model 2,  Average loss: 1.3904, Accuracy: 206/398 (51.7588%)
+___Local_Train , g_epoch  17, l_epoch   2, local model 2,  Average loss: 1.0398, Accuracy: 254/398 (63.8191%)
+___Local_Train , g_epoch  17, l_epoch   1, local model 71,  Average loss: 1.3759, Accuracy: 337/606 (55.6106%)
+___Local_Train , g_epoch  17, l_epoch   2, local model 71,  Average loss: 1.1114, Accuracy: 362/606 (59.7360%)
+___Local_Train , g_epoch  17, l_epoch   1, local model 36,  Average loss: 2.0374, Accuracy: 213/591 (36.0406%)
+___Local_Train , g_epoch  17, l_epoch   2, local model 36,  Average loss: 1.5047, Accuracy: 329/591 (55.6684%)
+___Local_Train , g_epoch  17, l_epoch   3, local model 36,  Average loss: 1.2686, Accuracy: 322/591 (54.4839%)
+___Local_Train , g_epoch  17, l_epoch   4, local model 36,  Average loss: 1.1180, Accuracy: 345/591 (58.3756%)
+___Local_Train , g_epoch  17, l_epoch   5, local model 36,  Average loss: 1.0364, Accuracy: 368/591 (62.2673%)
+___Local_Train , g_epoch  17, l_epoch   6, local model 36,  Average loss: 0.9165, Accuracy: 403/591 (68.1895%)
+___Local_Train , g_epoch  17, l_epoch   1, local model 1,  Average loss: 1.4371, Accuracy: 277/574 (48.2578%)
+___Local_Train , g_epoch  17, l_epoch   2, local model 1,  Average loss: 1.3320, Accuracy: 307/574 (53.4843%)
+___Local_Train , g_epoch  17, l_epoch   1, local model 61,  Average loss: 1.5687, Accuracy: 286/638 (44.8276%)
+___Local_Train , g_epoch  17, l_epoch   2, local model 61,  Average loss: 1.4388, Accuracy: 314/638 (49.2163%)
+___Local_Train , g_epoch  17, l_epoch   1, local model 27,  Average loss: 1.4771, Accuracy: 179/424 (42.2170%)
+___Local_Train , g_epoch  17, l_epoch   2, local model 27,  Average loss: 1.2487, Accuracy: 218/424 (51.4151%)
+___Local_Train , g_epoch  17, l_epoch   1, local model 99,  Average loss: 2.2404, Accuracy: 138/472 (29.2373%)
+___Local_Train , g_epoch  17, l_epoch   2, local model 99,  Average loss: 1.4392, Accuracy: 253/472 (53.6017%)
+___Local_Train , g_epoch  17, l_epoch   3, local model 99,  Average loss: 1.4659, Accuracy: 254/472 (53.8136%)
+___Local_Train , g_epoch  17, l_epoch   4, local model 99,  Average loss: 1.2510, Accuracy: 240/472 (50.8475%)
+___Local_Train , g_epoch  17, l_epoch   5, local model 99,  Average loss: 1.1086, Accuracy: 270/472 (57.2034%)
+___Local_Train , g_epoch  17, l_epoch   6, local model 99,  Average loss: 1.0994, Accuracy: 275/472 (58.2627%)
+___Local_Train , g_epoch  17, l_epoch   1, local model 19,  Average loss: 1.3872, Accuracy: 330/614 (53.7459%)
+___Local_Train , g_epoch  17, l_epoch   2, local model 19,  Average loss: 1.0713, Accuracy: 378/614 (61.5635%)
+___Local_Train , g_epoch  17, l_epoch   1, local model 91,  Average loss: 1.5243, Accuracy: 284/644 (44.0994%)
+___Local_Train , g_epoch  17, l_epoch   2, local model 91,  Average loss: 1.6573, Accuracy: 247/644 (38.3540%)
+___Local_Train , g_epoch  17, l_epoch   1, local model 86,  Average loss: 1.5558, Accuracy: 218/495 (44.0404%)
+___Local_Train , g_epoch  17, l_epoch   2, local model 86,  Average loss: 1.4338, Accuracy: 228/495 (46.0606%)
+2, 1, 0.3182462751865387
+71, 9, 0.4287179112434387
+36, 0, 0.6050242185592651
+1, 3, 0.2340707629919052
+61, 4, 0.23055526614189148
+27, 2, 0.31208986043930054
+99, 0, 0.6639107465744019
+19, 3, 0.43546801805496216
+91, 4, 0.18208849430084229
+86, 7, 0.32201340794563293
+36
+99
+count_all_attack: 19, count_all_defense: 19, count_correct_defense: 19
+___Global_Test_Poison:False  Average loss: 1.5019 Accuracy: 4364/10000 (43.64%)
+___Global_Test_Poison:True  Average loss: 4.2617 Accuracy: 73/9000 (0.81%)
+Epoch 17 completed in 37.12 seconds
+Server Epoch:18 choose agents : [65, 35, 93, 3, 94, 86, 84, 23, 25, 53].
+___Local_Train , g_epoch  18, l_epoch   1, local model 65,  Average loss: 1.4920, Accuracy: 151/344 (43.8953%)
+___Local_Train , g_epoch  18, l_epoch   2, local model 65,  Average loss: 1.2216, Accuracy: 189/344 (54.9419%)
+___Local_Train , g_epoch  18, l_epoch   1, local model 35,  Average loss: 1.4197, Accuracy: 264/484 (54.5455%)
+___Local_Train , g_epoch  18, l_epoch   2, local model 35,  Average loss: 1.1630, Accuracy: 291/484 (60.1240%)
+___Local_Train , g_epoch  18, l_epoch   1, local model 93,  Average loss: 1.6750, Accuracy: 129/304 (42.4342%)
+___Local_Train , g_epoch  18, l_epoch   2, local model 93,  Average loss: 1.4037, Accuracy: 152/304 (50.0000%)
+___Local_Train , g_epoch  18, l_epoch   1, local model 3,  Average loss: 1.4003, Accuracy: 272/512 (53.1250%)
+___Local_Train , g_epoch  18, l_epoch   2, local model 3,  Average loss: 1.2706, Accuracy: 295/512 (57.6172%)
+___Local_Train , g_epoch  18, l_epoch   1, local model 94,  Average loss: 1.5934, Accuracy: 264/518 (50.9652%)
+___Local_Train , g_epoch  18, l_epoch   2, local model 94,  Average loss: 1.2795, Accuracy: 308/518 (59.4595%)
+___Local_Train , g_epoch  18, l_epoch   1, local model 86,  Average loss: 1.4934, Accuracy: 237/495 (47.8788%)
+___Local_Train , g_epoch  18, l_epoch   2, local model 86,  Average loss: 1.3895, Accuracy: 229/495 (46.2626%)
+___Local_Train , g_epoch  18, l_epoch   1, local model 84,  Average loss: 2.5915, Accuracy: 81/353 (22.9462%)
+___Local_Train , g_epoch  18, l_epoch   2, local model 84,  Average loss: 1.5711, Accuracy: 161/353 (45.6091%)
+___Local_Train , g_epoch  18, l_epoch   3, local model 84,  Average loss: 1.7224, Accuracy: 183/353 (51.8414%)
+___Local_Train , g_epoch  18, l_epoch   4, local model 84,  Average loss: 1.5289, Accuracy: 174/353 (49.2918%)
+___Local_Train , g_epoch  18, l_epoch   5, local model 84,  Average loss: 1.5191, Accuracy: 160/353 (45.3258%)
+___Local_Train , g_epoch  18, l_epoch   6, local model 84,  Average loss: 1.2055, Accuracy: 197/353 (55.8074%)
+___Local_Train , g_epoch  18, l_epoch   1, local model 23,  Average loss: 1.4381, Accuracy: 240/491 (48.8798%)
+___Local_Train , g_epoch  18, l_epoch   2, local model 23,  Average loss: 1.1917, Accuracy: 286/491 (58.2485%)
+___Local_Train , g_epoch  18, l_epoch   1, local model 25,  Average loss: 1.6548, Accuracy: 173/423 (40.8983%)
+___Local_Train , g_epoch  18, l_epoch   2, local model 25,  Average loss: 1.4154, Accuracy: 225/423 (53.1915%)
+___Local_Train , g_epoch  18, l_epoch   1, local model 53,  Average loss: 1.6659, Accuracy: 220/592 (37.1622%)
+___Local_Train , g_epoch  18, l_epoch   2, local model 53,  Average loss: 1.3860, Accuracy: 291/592 (49.1554%)
+65, 5, 0.21964505314826965
+35, 9, 0.5459848642349243
+93, 1, 0.3389255702495575
+3, 9, 0.5304310321807861
+94, 1, 0.2928623557090759
+86, 7, 0.31950893998146057
+84, 0, 0.695303201675415
+23, 5, 0.29530060291290283
+25, 0, 0.45746564865112305
+53, 2, 0.4631260931491852
+84
+count_all_attack: 20, count_all_defense: 20, count_correct_defense: 20
+___Global_Test_Poison:False  Average loss: 1.6360 Accuracy: 3763/10000 (37.63%)
+___Global_Test_Poison:True  Average loss: 3.2559 Accuracy: 831/9000 (9.23%)
+Epoch 18 completed in 34.54 seconds
+Server Epoch:19 choose agents : [89, 39, 16, 63, 25, 78, 82, 64, 35, 27].
+___Local_Train , g_epoch  19, l_epoch   1, local model 89,  Average loss: 1.4973, Accuracy: 293/689 (42.5254%)
+___Local_Train , g_epoch  19, l_epoch   2, local model 89,  Average loss: 1.4080, Accuracy: 346/689 (50.2177%)
+___Local_Train , g_epoch  19, l_epoch   1, local model 39,  Average loss: 1.4217, Accuracy: 198/416 (47.5962%)
+___Local_Train , g_epoch  19, l_epoch   2, local model 39,  Average loss: 1.3197, Accuracy: 215/416 (51.6827%)
+___Local_Train , g_epoch  19, l_epoch   1, local model 16,  Average loss: 1.6598, Accuracy: 178/463 (38.4449%)
+___Local_Train , g_epoch  19, l_epoch   2, local model 16,  Average loss: 1.3685, Accuracy: 224/463 (48.3801%)
+___Local_Train , g_epoch  19, l_epoch   1, local model 63,  Average loss: 1.4894, Accuracy: 214/449 (47.6615%)
+___Local_Train , g_epoch  19, l_epoch   2, local model 63,  Average loss: 1.2439, Accuracy: 239/449 (53.2294%)
+___Local_Train , g_epoch  19, l_epoch   1, local model 25,  Average loss: 1.3633, Accuracy: 224/423 (52.9551%)
+___Local_Train , g_epoch  19, l_epoch   2, local model 25,  Average loss: 1.2534, Accuracy: 246/423 (58.1560%)
+___Local_Train , g_epoch  19, l_epoch   1, local model 78,  Average loss: 1.5812, Accuracy: 206/461 (44.6855%)
+___Local_Train , g_epoch  19, l_epoch   2, local model 78,  Average loss: 1.3628, Accuracy: 233/461 (50.5423%)
+___Local_Train , g_epoch  19, l_epoch   1, local model 82,  Average loss: 1.5171, Accuracy: 369/794 (46.4735%)
+___Local_Train , g_epoch  19, l_epoch   2, local model 82,  Average loss: 1.5347, Accuracy: 344/794 (43.3249%)
+___Local_Train , g_epoch  19, l_epoch   1, local model 64,  Average loss: 1.6203, Accuracy: 230/552 (41.6667%)
+___Local_Train , g_epoch  19, l_epoch   2, local model 64,  Average loss: 1.3030, Accuracy: 297/552 (53.8043%)
+___Local_Train , g_epoch  19, l_epoch   1, local model 35,  Average loss: 1.2367, Accuracy: 277/484 (57.2314%)
+___Local_Train , g_epoch  19, l_epoch   2, local model 35,  Average loss: 1.0989, Accuracy: 296/484 (61.1570%)
+___Local_Train , g_epoch  19, l_epoch   1, local model 27,  Average loss: 1.6779, Accuracy: 155/424 (36.5566%)
+___Local_Train , g_epoch  19, l_epoch   2, local model 27,  Average loss: 1.2839, Accuracy: 212/424 (50.0000%)
+89, 9, 0.2643539011478424
+39, 9, 0.31833067536354065
+16, 3, 0.2164616584777832
+63, 9, 0.517845869064331
+25, 2, 0.3715135157108307
+78, 6, 0.3147231638431549
+82, 3, 0.23701873421669006
+64, 2, 0.32837358117103577
+35, 9, 0.5818125009536743
+27, 2, 0.29932892322540283
+count_all_attack: 20, count_all_defense: 20, count_correct_defense: 20
+___Global_Test_Poison:False  Average loss: 1.6027 Accuracy: 3972/10000 (39.72%)
+___Global_Test_Poison:True  Average loss: 4.2743 Accuracy: 107/9000 (1.19%)
+Epoch 19 completed in 34.23 seconds
+Server Epoch:20 choose agents : [28, 92, 0, 3, 8, 65, 75, 86, 19, 23].
+___Local_Train , g_epoch  20, l_epoch   1, local model 28,  Average loss: 1.6039, Accuracy: 161/371 (43.3962%)
+___Local_Train , g_epoch  20, l_epoch   2, local model 28,  Average loss: 1.3988, Accuracy: 185/371 (49.8652%)
+___Local_Train , g_epoch  20, l_epoch   1, local model 92,  Average loss: 1.4293, Accuracy: 222/456 (48.6842%)
+___Local_Train , g_epoch  20, l_epoch   2, local model 92,  Average loss: 1.2819, Accuracy: 266/456 (58.3333%)
+___Local_Train , g_epoch  20, l_epoch   1, local model 0,  Average loss: 1.5152, Accuracy: 277/621 (44.6055%)
+___Local_Train , g_epoch  20, l_epoch   2, local model 0,  Average loss: 1.3245, Accuracy: 296/621 (47.6651%)
+___Local_Train , g_epoch  20, l_epoch   1, local model 3,  Average loss: 1.2889, Accuracy: 284/512 (55.4688%)
+___Local_Train , g_epoch  20, l_epoch   2, local model 3,  Average loss: 1.2155, Accuracy: 301/512 (58.7891%)
+___Local_Train , g_epoch  20, l_epoch   1, local model 8,  Average loss: 1.4241, Accuracy: 217/456 (47.5877%)
+___Local_Train , g_epoch  20, l_epoch   2, local model 8,  Average loss: 1.2522, Accuracy: 247/456 (54.1667%)
+___Local_Train , g_epoch  20, l_epoch   1, local model 65,  Average loss: 1.5148, Accuracy: 152/344 (44.1860%)
+___Local_Train , g_epoch  20, l_epoch   2, local model 65,  Average loss: 1.1987, Accuracy: 184/344 (53.4884%)
+___Local_Train , g_epoch  20, l_epoch   1, local model 75,  Average loss: 1.4456, Accuracy: 237/456 (51.9737%)
+___Local_Train , g_epoch  20, l_epoch   2, local model 75,  Average loss: 1.1370, Accuracy: 294/456 (64.4737%)
+___Local_Train , g_epoch  20, l_epoch   1, local model 86,  Average loss: 1.6273, Accuracy: 205/495 (41.4141%)
+___Local_Train , g_epoch  20, l_epoch   2, local model 86,  Average loss: 1.4539, Accuracy: 233/495 (47.0707%)
+___Local_Train , g_epoch  20, l_epoch   1, local model 19,  Average loss: 1.4659, Accuracy: 318/614 (51.7915%)
+___Local_Train , g_epoch  20, l_epoch   2, local model 19,  Average loss: 1.2017, Accuracy: 364/614 (59.2834%)
+___Local_Train , g_epoch  20, l_epoch   1, local model 23,  Average loss: 1.5453, Accuracy: 213/491 (43.3809%)
+___Local_Train , g_epoch  20, l_epoch   2, local model 23,  Average loss: 1.2476, Accuracy: 282/491 (57.4338%)
+28, 2, 0.4429769515991211
+92, 6, 0.30071938037872314
+0, 4, 0.37244802713394165
+3, 9, 0.49495476484298706
+8, 2, 0.44494307041168213
+65, 5, 0.23822292685508728
+75, 6, 0.8334722518920898
+86, 7, 0.40798044204711914
+19, 3, 0.5226008892059326
+23, 7, 0.3666621446609497
+count_all_attack: 20, count_all_defense: 20, count_correct_defense: 20
+___Global_Test_Poison:False  Average loss: 1.7410 Accuracy: 3628/10000 (36.28%)
+___Global_Test_Poison:True  Average loss: 4.4012 Accuracy: 89/9000 (0.99%)
+Epoch 20 completed in 33.29 seconds
+Server Epoch:21 choose agents : [50, 13, 6, 11, 7, 55, 62, 0, 94, 18].
+___Local_Train , g_epoch  21, l_epoch   1, local model 50,  Average loss: 2.5147, Accuracy: 73/297 (24.5791%)
+___Local_Train , g_epoch  21, l_epoch   2, local model 50,  Average loss: 1.4757, Accuracy: 136/297 (45.7912%)
+___Local_Train , g_epoch  21, l_epoch   3, local model 50,  Average loss: 1.5215, Accuracy: 149/297 (50.1684%)
+___Local_Train , g_epoch  21, l_epoch   4, local model 50,  Average loss: 1.3177, Accuracy: 158/297 (53.1987%)
+___Local_Train , g_epoch  21, l_epoch   5, local model 50,  Average loss: 1.5461, Accuracy: 139/297 (46.8013%)
+___Local_Train , g_epoch  21, l_epoch   6, local model 50,  Average loss: 1.1537, Accuracy: 178/297 (59.9327%)
+___Local_Train , g_epoch  21, l_epoch   1, local model 13,  Average loss: 1.6809, Accuracy: 248/565 (43.8938%)
+___Local_Train , g_epoch  21, l_epoch   2, local model 13,  Average loss: 1.2766, Accuracy: 308/565 (54.5133%)
+___Local_Train , g_epoch  21, l_epoch   1, local model 6,  Average loss: 1.2807, Accuracy: 366/623 (58.7480%)
+___Local_Train , g_epoch  21, l_epoch   2, local model 6,  Average loss: 1.2121, Accuracy: 383/623 (61.4767%)
+___Local_Train , g_epoch  21, l_epoch   1, local model 11,  Average loss: 1.4802, Accuracy: 270/610 (44.2623%)
+___Local_Train , g_epoch  21, l_epoch   2, local model 11,  Average loss: 1.3737, Accuracy: 305/610 (50.0000%)
+___Local_Train , g_epoch  21, l_epoch   1, local model 7,  Average loss: 1.7064, Accuracy: 144/350 (41.1429%)
+___Local_Train , g_epoch  21, l_epoch   2, local model 7,  Average loss: 1.1612, Accuracy: 219/350 (62.5714%)
+___Local_Train , g_epoch  21, l_epoch   1, local model 55,  Average loss: 1.4230, Accuracy: 310/596 (52.0134%)
+___Local_Train , g_epoch  21, l_epoch   2, local model 55,  Average loss: 1.1133, Accuracy: 358/596 (60.0671%)
+___Local_Train , g_epoch  21, l_epoch   1, local model 62,  Average loss: 1.5253, Accuracy: 197/504 (39.0873%)
+___Local_Train , g_epoch  21, l_epoch   2, local model 62,  Average loss: 1.3966, Accuracy: 237/504 (47.0238%)
+___Local_Train , g_epoch  21, l_epoch   1, local model 0,  Average loss: 1.4944, Accuracy: 264/621 (42.5121%)
+___Local_Train , g_epoch  21, l_epoch   2, local model 0,  Average loss: 1.2646, Accuracy: 314/621 (50.5636%)
+___Local_Train , g_epoch  21, l_epoch   1, local model 94,  Average loss: 1.6632, Accuracy: 245/518 (47.2973%)
+___Local_Train , g_epoch  21, l_epoch   2, local model 94,  Average loss: 1.3328, Accuracy: 316/518 (61.0039%)
+___Local_Train , g_epoch  21, l_epoch   1, local model 18,  Average loss: 1.5098, Accuracy: 206/475 (43.3684%)
+___Local_Train , g_epoch  21, l_epoch   2, local model 18,  Average loss: 1.3529, Accuracy: 228/475 (48.0000%)
+50, 0, 0.7128528356552124
+13, 9, 0.4341801404953003
+6, 9, 0.5818610191345215
+11, 2, 0.3177403509616852
+7, 1, 0.8180132508277893
+55, 8, 0.4849807024002075
+62, 3, 0.2701508402824402
+0, 2, 0.36985236406326294
+94, 8, 0.5377728939056396
+18, 4, 0.29915910959243774
+50
+count_all_attack: 21, count_all_defense: 21, count_correct_defense: 21
+___Global_Test_Poison:False  Average loss: 1.5444 Accuracy: 4074/10000 (40.74%)
+___Global_Test_Poison:True  Average loss: 4.1831 Accuracy: 53/9000 (0.59%)
+Epoch 21 completed in 38.12 seconds
+Server Epoch:22 choose agents : [42, 78, 84, 96, 99, 43, 81, 39, 27, 8].
+___Local_Train , g_epoch  22, l_epoch   1, local model 42,  Average loss: 1.8063, Accuracy: 111/302 (36.7550%)
+___Local_Train , g_epoch  22, l_epoch   2, local model 42,  Average loss: 1.4715, Accuracy: 154/302 (50.9934%)
+___Local_Train , g_epoch  22, l_epoch   1, local model 78,  Average loss: 1.6503, Accuracy: 188/461 (40.7809%)
+___Local_Train , g_epoch  22, l_epoch   2, local model 78,  Average loss: 1.2821, Accuracy: 245/461 (53.1453%)
+___Local_Train , g_epoch  22, l_epoch   1, local model 84,  Average loss: 2.4098, Accuracy: 69/353 (19.5467%)
+___Local_Train , g_epoch  22, l_epoch   2, local model 84,  Average loss: 1.5271, Accuracy: 167/353 (47.3088%)
+___Local_Train , g_epoch  22, l_epoch   3, local model 84,  Average loss: 1.5484, Accuracy: 190/353 (53.8244%)
+___Local_Train , g_epoch  22, l_epoch   4, local model 84,  Average loss: 1.4695, Accuracy: 191/353 (54.1076%)
+___Local_Train , g_epoch  22, l_epoch   5, local model 84,  Average loss: 1.3742, Accuracy: 175/353 (49.5751%)
+___Local_Train , g_epoch  22, l_epoch   6, local model 84,  Average loss: 1.3034, Accuracy: 200/353 (56.6572%)
+___Local_Train , g_epoch  22, l_epoch   1, local model 96,  Average loss: 1.5250, Accuracy: 199/445 (44.7191%)
+___Local_Train , g_epoch  22, l_epoch   2, local model 96,  Average loss: 1.2638, Accuracy: 230/445 (51.6854%)
+___Local_Train , g_epoch  22, l_epoch   1, local model 99,  Average loss: 2.1543, Accuracy: 142/472 (30.0847%)
+___Local_Train , g_epoch  22, l_epoch   2, local model 99,  Average loss: 1.4298, Accuracy: 269/472 (56.9915%)
+___Local_Train , g_epoch  22, l_epoch   3, local model 99,  Average loss: 1.3829, Accuracy: 275/472 (58.2627%)
+___Local_Train , g_epoch  22, l_epoch   4, local model 99,  Average loss: 1.2986, Accuracy: 220/472 (46.6102%)
+___Local_Train , g_epoch  22, l_epoch   5, local model 99,  Average loss: 1.1076, Accuracy: 271/472 (57.4153%)
+___Local_Train , g_epoch  22, l_epoch   6, local model 99,  Average loss: 1.0834, Accuracy: 265/472 (56.1441%)
+___Local_Train , g_epoch  22, l_epoch   1, local model 43,  Average loss: 1.3585, Accuracy: 299/591 (50.5922%)
+___Local_Train , g_epoch  22, l_epoch   2, local model 43,  Average loss: 1.1936, Accuracy: 336/591 (56.8528%)
+___Local_Train , g_epoch  22, l_epoch   1, local model 81,  Average loss: 1.6037, Accuracy: 232/552 (42.0290%)
+___Local_Train , g_epoch  22, l_epoch   2, local model 81,  Average loss: 1.3866, Accuracy: 276/552 (50.0000%)
+___Local_Train , g_epoch  22, l_epoch   1, local model 39,  Average loss: 1.4109, Accuracy: 201/416 (48.3173%)
+___Local_Train , g_epoch  22, l_epoch   2, local model 39,  Average loss: 1.2115, Accuracy: 221/416 (53.1250%)
+___Local_Train , g_epoch  22, l_epoch   1, local model 27,  Average loss: 1.4306, Accuracy: 195/424 (45.9906%)
+___Local_Train , g_epoch  22, l_epoch   2, local model 27,  Average loss: 1.1668, Accuracy: 230/424 (54.2453%)
+___Local_Train , g_epoch  22, l_epoch   1, local model 8,  Average loss: 1.4237, Accuracy: 207/456 (45.3947%)
+___Local_Train , g_epoch  22, l_epoch   2, local model 8,  Average loss: 1.2202, Accuracy: 259/456 (56.7982%)
+42, 3, 0.5427129864692688
+78, 6, 0.32993248105049133
+84, 0, 0.7332292199134827
+96, 0, 0.36712899804115295
+99, 0, 0.6859510540962219
+43, 7, 0.258522629737854
+81, 2, 0.28639382123947144
+39, 0, 0.23817263543605804
+27, 2, 0.2894417345523834
+8, 2, 0.46932077407836914
+84
+99
+count_all_attack: 23, count_all_defense: 23, count_correct_defense: 23
+___Global_Test_Poison:False  Average loss: 1.6208 Accuracy: 3982/10000 (39.82%)
+___Global_Test_Poison:True  Average loss: 3.7483 Accuracy: 645/9000 (7.17%)
+Epoch 22 completed in 37.20 seconds
+Server Epoch:23 choose agents : [60, 45, 66, 92, 84, 96, 18, 68, 48, 91].
+___Local_Train , g_epoch  23, l_epoch   1, local model 60,  Average loss: 2.0163, Accuracy: 160/462 (34.6320%)
+___Local_Train , g_epoch  23, l_epoch   2, local model 60,  Average loss: 1.2850, Accuracy: 243/462 (52.5974%)
+___Local_Train , g_epoch  23, l_epoch   3, local model 60,  Average loss: 1.2405, Accuracy: 240/462 (51.9481%)
+___Local_Train , g_epoch  23, l_epoch   4, local model 60,  Average loss: 1.2532, Accuracy: 215/462 (46.5368%)
+___Local_Train , g_epoch  23, l_epoch   5, local model 60,  Average loss: 1.1379, Accuracy: 257/462 (55.6277%)
+___Local_Train , g_epoch  23, l_epoch   6, local model 60,  Average loss: 1.0489, Accuracy: 281/462 (60.8225%)
+___Local_Train , g_epoch  23, l_epoch   1, local model 45,  Average loss: 2.0650, Accuracy: 127/443 (28.6682%)
+___Local_Train , g_epoch  23, l_epoch   2, local model 45,  Average loss: 1.4225, Accuracy: 239/443 (53.9503%)
+___Local_Train , g_epoch  23, l_epoch   3, local model 45,  Average loss: 1.3127, Accuracy: 244/443 (55.0790%)
+___Local_Train , g_epoch  23, l_epoch   4, local model 45,  Average loss: 1.2858, Accuracy: 224/443 (50.5643%)
+___Local_Train , g_epoch  23, l_epoch   5, local model 45,  Average loss: 1.1278, Accuracy: 254/443 (57.3363%)
+___Local_Train , g_epoch  23, l_epoch   6, local model 45,  Average loss: 1.0811, Accuracy: 265/443 (59.8194%)
+___Local_Train , g_epoch  23, l_epoch   1, local model 66,  Average loss: 1.4593, Accuracy: 408/799 (51.0638%)
+___Local_Train , g_epoch  23, l_epoch   2, local model 66,  Average loss: 1.3978, Accuracy: 398/799 (49.8123%)
+___Local_Train , g_epoch  23, l_epoch   1, local model 92,  Average loss: 1.4327, Accuracy: 210/456 (46.0526%)
+___Local_Train , g_epoch  23, l_epoch   2, local model 92,  Average loss: 1.3204, Accuracy: 259/456 (56.7982%)
+___Local_Train , g_epoch  23, l_epoch   1, local model 84,  Average loss: 2.1675, Accuracy: 91/353 (25.7790%)
+___Local_Train , g_epoch  23, l_epoch   2, local model 84,  Average loss: 1.5022, Accuracy: 172/353 (48.7252%)
+___Local_Train , g_epoch  23, l_epoch   3, local model 84,  Average loss: 1.4578, Accuracy: 185/353 (52.4079%)
+___Local_Train , g_epoch  23, l_epoch   4, local model 84,  Average loss: 1.3437, Accuracy: 187/353 (52.9745%)
+___Local_Train , g_epoch  23, l_epoch   5, local model 84,  Average loss: 1.2169, Accuracy: 190/353 (53.8244%)
+___Local_Train , g_epoch  23, l_epoch   6, local model 84,  Average loss: 1.1916, Accuracy: 199/353 (56.3739%)
+___Local_Train , g_epoch  23, l_epoch   1, local model 96,  Average loss: 1.4511, Accuracy: 218/445 (48.9888%)
+___Local_Train , g_epoch  23, l_epoch   2, local model 96,  Average loss: 1.2965, Accuracy: 259/445 (58.2022%)
+___Local_Train , g_epoch  23, l_epoch   1, local model 18,  Average loss: 1.5067, Accuracy: 194/475 (40.8421%)
+___Local_Train , g_epoch  23, l_epoch   2, local model 18,  Average loss: 1.2976, Accuracy: 250/475 (52.6316%)
+___Local_Train , g_epoch  23, l_epoch   1, local model 68,  Average loss: 1.2674, Accuracy: 374/679 (55.0810%)
+___Local_Train , g_epoch  23, l_epoch   2, local model 68,  Average loss: 1.1701, Accuracy: 413/679 (60.8247%)
+___Local_Train , g_epoch  23, l_epoch   1, local model 48,  Average loss: 1.5042, Accuracy: 224/515 (43.4951%)
+___Local_Train , g_epoch  23, l_epoch   2, local model 48,  Average loss: 1.5398, Accuracy: 276/515 (53.5922%)
+___Local_Train , g_epoch  23, l_epoch   1, local model 91,  Average loss: 1.4021, Accuracy: 322/644 (50.0000%)
+___Local_Train , g_epoch  23, l_epoch   2, local model 91,  Average loss: 1.5283, Accuracy: 294/644 (45.6522%)
+60, 0, 0.5439022183418274
+45, 0, 0.6442968845367432
+66, 3, 0.36714833974838257
+92, 6, 0.29471588134765625
+84, 0, 0.6968669891357422
+96, 4, 0.38603681325912476
+18, 4, 0.2654918432235718
+68, 9, 0.2341521680355072
+48, 5, 0.55214524269104
+91, 3, 0.3037267327308655
+60
+45
+84
+count_all_attack: 26, count_all_defense: 26, count_correct_defense: 26
+___Global_Test_Poison:False  Average loss: 1.4695 Accuracy: 4567/10000 (45.67%)
+___Global_Test_Poison:True  Average loss: 4.0765 Accuracy: 544/9000 (6.04%)
+Epoch 23 completed in 38.90 seconds
+Server Epoch:24 choose agents : [76, 22, 52, 12, 60, 58, 38, 86, 71, 81].
+___Local_Train , g_epoch  24, l_epoch   1, local model 76,  Average loss: 1.4784, Accuracy: 223/455 (49.0110%)
+___Local_Train , g_epoch  24, l_epoch   2, local model 76,  Average loss: 1.2851, Accuracy: 256/455 (56.2637%)
+___Local_Train , g_epoch  24, l_epoch   1, local model 22,  Average loss: 1.3225, Accuracy: 216/373 (57.9088%)
+___Local_Train , g_epoch  24, l_epoch   2, local model 22,  Average loss: 1.0009, Accuracy: 267/373 (71.5818%)
+___Local_Train , g_epoch  24, l_epoch   1, local model 52,  Average loss: 1.3862, Accuracy: 291/548 (53.1022%)
+___Local_Train , g_epoch  24, l_epoch   2, local model 52,  Average loss: 1.2563, Accuracy: 312/548 (56.9343%)
+___Local_Train , g_epoch  24, l_epoch   1, local model 12,  Average loss: 1.4894, Accuracy: 258/534 (48.3146%)
+___Local_Train , g_epoch  24, l_epoch   2, local model 12,  Average loss: 1.2360, Accuracy: 294/534 (55.0562%)
+___Local_Train , g_epoch  24, l_epoch   1, local model 60,  Average loss: 2.2312, Accuracy: 154/462 (33.3333%)
+___Local_Train , g_epoch  24, l_epoch   2, local model 60,  Average loss: 1.3165, Accuracy: 224/462 (48.4848%)
+___Local_Train , g_epoch  24, l_epoch   3, local model 60,  Average loss: 1.2499, Accuracy: 239/462 (51.7316%)
+___Local_Train , g_epoch  24, l_epoch   4, local model 60,  Average loss: 1.2048, Accuracy: 228/462 (49.3507%)
+___Local_Train , g_epoch  24, l_epoch   5, local model 60,  Average loss: 1.1122, Accuracy: 261/462 (56.4935%)
+___Local_Train , g_epoch  24, l_epoch   6, local model 60,  Average loss: 1.0921, Accuracy: 255/462 (55.1948%)
+___Local_Train , g_epoch  24, l_epoch   1, local model 58,  Average loss: 1.4055, Accuracy: 281/541 (51.9408%)
+___Local_Train , g_epoch  24, l_epoch   2, local model 58,  Average loss: 1.2131, Accuracy: 320/541 (59.1497%)
+___Local_Train , g_epoch  24, l_epoch   1, local model 38,  Average loss: 1.4512, Accuracy: 224/469 (47.7612%)
+___Local_Train , g_epoch  24, l_epoch   2, local model 38,  Average loss: 1.2178, Accuracy: 262/469 (55.8635%)
+___Local_Train , g_epoch  24, l_epoch   1, local model 86,  Average loss: 1.4585, Accuracy: 240/495 (48.4849%)
+___Local_Train , g_epoch  24, l_epoch   2, local model 86,  Average loss: 1.3530, Accuracy: 250/495 (50.5051%)
+___Local_Train , g_epoch  24, l_epoch   1, local model 71,  Average loss: 1.4645, Accuracy: 308/606 (50.8251%)
+___Local_Train , g_epoch  24, l_epoch   2, local model 71,  Average loss: 1.1775, Accuracy: 362/606 (59.7360%)
+___Local_Train , g_epoch  24, l_epoch   1, local model 81,  Average loss: 1.4801, Accuracy: 246/552 (44.5652%)
+___Local_Train , g_epoch  24, l_epoch   2, local model 81,  Average loss: 1.3238, Accuracy: 286/552 (51.8116%)
+76, 0, 0.47020137310028076
+22, 5, 0.8870323300361633
+52, 4, 0.38628560304641724
+12, 8, 0.4056107699871063
+60, 0, 0.5424606204032898
+58, 1, 0.3334701657295227
+38, 7, 0.3360331058502197
+86, 7, 0.31381386518478394
+71, 9, 0.4427002966403961
+81, 2, 0.2997603118419647
+60
+count_all_attack: 27, count_all_defense: 27, count_correct_defense: 27
+___Global_Test_Poison:False  Average loss: 1.4784 Accuracy: 4411/10000 (44.11%)
+___Global_Test_Poison:True  Average loss: 4.5243 Accuracy: 55/9000 (0.61%)
+Epoch 24 completed in 36.19 seconds
+Server Epoch:25 choose agents : [13, 19, 74, 1, 2, 9, 5, 15, 33, 90].
+___Local_Train , g_epoch  25, l_epoch   1, local model 13,  Average loss: 1.4613, Accuracy: 272/565 (48.1416%)
+___Local_Train , g_epoch  25, l_epoch   2, local model 13,  Average loss: 1.2171, Accuracy: 321/565 (56.8142%)
+___Local_Train , g_epoch  25, l_epoch   1, local model 19,  Average loss: 1.3847, Accuracy: 327/614 (53.2573%)
+___Local_Train , g_epoch  25, l_epoch   2, local model 19,  Average loss: 1.0570, Accuracy: 380/614 (61.8892%)
+___Local_Train , g_epoch  25, l_epoch   1, local model 74,  Average loss: 1.6630, Accuracy: 248/611 (40.5892%)
+___Local_Train , g_epoch  25, l_epoch   2, local model 74,  Average loss: 1.4904, Accuracy: 257/611 (42.0622%)
+___Local_Train , g_epoch  25, l_epoch   1, local model 1,  Average loss: 1.3881, Accuracy: 284/574 (49.4774%)
+___Local_Train , g_epoch  25, l_epoch   2, local model 1,  Average loss: 1.2986, Accuracy: 326/574 (56.7944%)
+___Local_Train , g_epoch  25, l_epoch   1, local model 2,  Average loss: 1.4137, Accuracy: 197/398 (49.4975%)
+___Local_Train , g_epoch  25, l_epoch   2, local model 2,  Average loss: 1.2722, Accuracy: 221/398 (55.5276%)
+___Local_Train , g_epoch  25, l_epoch   1, local model 9,  Average loss: 1.1363, Accuracy: 439/670 (65.5224%)
+___Local_Train , g_epoch  25, l_epoch   2, local model 9,  Average loss: 1.1201, Accuracy: 424/670 (63.2836%)
+___Local_Train , g_epoch  25, l_epoch   1, local model 5,  Average loss: 1.3175, Accuracy: 337/607 (55.5189%)
+___Local_Train , g_epoch  25, l_epoch   2, local model 5,  Average loss: 1.2271, Accuracy: 359/607 (59.1433%)
+___Local_Train , g_epoch  25, l_epoch   1, local model 15,  Average loss: 1.3794, Accuracy: 272/515 (52.8155%)
+___Local_Train , g_epoch  25, l_epoch   2, local model 15,  Average loss: 1.4317, Accuracy: 272/515 (52.8155%)
+___Local_Train , g_epoch  25, l_epoch   1, local model 33,  Average loss: 1.8073, Accuracy: 97/273 (35.5311%)
+___Local_Train , g_epoch  25, l_epoch   2, local model 33,  Average loss: 1.3856, Accuracy: 134/273 (49.0842%)
+___Local_Train , g_epoch  25, l_epoch   1, local model 90,  Average loss: 1.5537, Accuracy: 104/249 (41.7671%)
+___Local_Train , g_epoch  25, l_epoch   2, local model 90,  Average loss: 1.2106, Accuracy: 142/249 (57.0281%)
+13, 9, 0.36462777853012085
+19, 5, 0.46439820528030396
+74, 4, 0.43556851148605347
+1, 4, 0.2232893407344818
+2, 2, 0.4477265775203705
+9, 1, 0.49683138728141785
+5, 4, 0.3903704285621643
+15, 6, 0.4348047077655792
+33, 5, 0.46090367436408997
+90, 9, 0.49704086780548096
+count_all_attack: 27, count_all_defense: 27, count_correct_defense: 27
+___Global_Test_Poison:False  Average loss: 1.4992 Accuracy: 4596/10000 (45.96%)
+___Global_Test_Poison:True  Average loss: 3.8443 Accuracy: 744/9000 (8.27%)
+Epoch 25 completed in 34.87 seconds
+Server Epoch:26 choose agents : [54, 60, 88, 26, 53, 41, 37, 71, 81, 2].
+___Local_Train , g_epoch  26, l_epoch   1, local model 54,  Average loss: 2.0365, Accuracy: 182/497 (36.6197%)
+___Local_Train , g_epoch  26, l_epoch   2, local model 54,  Average loss: 1.4347, Accuracy: 276/497 (55.5332%)
+___Local_Train , g_epoch  26, l_epoch   3, local model 54,  Average loss: 1.3607, Accuracy: 292/497 (58.7525%)
+___Local_Train , g_epoch  26, l_epoch   4, local model 54,  Average loss: 1.1492, Accuracy: 299/497 (60.1610%)
+___Local_Train , g_epoch  26, l_epoch   5, local model 54,  Average loss: 1.0040, Accuracy: 333/497 (67.0020%)
+___Local_Train , g_epoch  26, l_epoch   6, local model 54,  Average loss: 0.9059, Accuracy: 341/497 (68.6117%)
+___Local_Train , g_epoch  26, l_epoch   1, local model 60,  Average loss: 2.2121, Accuracy: 132/462 (28.5714%)
+___Local_Train , g_epoch  26, l_epoch   2, local model 60,  Average loss: 1.3391, Accuracy: 228/462 (49.3507%)
+___Local_Train , g_epoch  26, l_epoch   3, local model 60,  Average loss: 1.2638, Accuracy: 249/462 (53.8961%)
+___Local_Train , g_epoch  26, l_epoch   4, local model 60,  Average loss: 1.1599, Accuracy: 255/462 (55.1948%)
+___Local_Train , g_epoch  26, l_epoch   5, local model 60,  Average loss: 1.1538, Accuracy: 250/462 (54.1126%)
+___Local_Train , g_epoch  26, l_epoch   6, local model 60,  Average loss: 1.0917, Accuracy: 258/462 (55.8442%)
+___Local_Train , g_epoch  26, l_epoch   1, local model 88,  Average loss: 1.5204, Accuracy: 187/394 (47.4619%)
+___Local_Train , g_epoch  26, l_epoch   2, local model 88,  Average loss: 1.3572, Accuracy: 197/394 (50.0000%)
+___Local_Train , g_epoch  26, l_epoch   1, local model 26,  Average loss: 1.5686, Accuracy: 180/373 (48.2574%)
+___Local_Train , g_epoch  26, l_epoch   2, local model 26,  Average loss: 1.1092, Accuracy: 232/373 (62.1984%)
+___Local_Train , g_epoch  26, l_epoch   1, local model 53,  Average loss: 1.5639, Accuracy: 262/592 (44.2568%)
+___Local_Train , g_epoch  26, l_epoch   2, local model 53,  Average loss: 1.3000, Accuracy: 292/592 (49.3243%)
+___Local_Train , g_epoch  26, l_epoch   1, local model 41,  Average loss: 1.4393, Accuracy: 251/554 (45.3069%)
+___Local_Train , g_epoch  26, l_epoch   2, local model 41,  Average loss: 1.2658, Accuracy: 291/554 (52.5271%)
+___Local_Train , g_epoch  26, l_epoch   1, local model 37,  Average loss: 1.5023, Accuracy: 213/450 (47.3333%)
+___Local_Train , g_epoch  26, l_epoch   2, local model 37,  Average loss: 1.2788, Accuracy: 249/450 (55.3333%)
+___Local_Train , g_epoch  26, l_epoch   1, local model 71,  Average loss: 1.3082, Accuracy: 341/606 (56.2706%)
+___Local_Train , g_epoch  26, l_epoch   2, local model 71,  Average loss: 1.0229, Accuracy: 403/606 (66.5017%)
+___Local_Train , g_epoch  26, l_epoch   1, local model 81,  Average loss: 1.5637, Accuracy: 253/552 (45.8333%)
+___Local_Train , g_epoch  26, l_epoch   2, local model 81,  Average loss: 1.3467, Accuracy: 290/552 (52.5362%)
+___Local_Train , g_epoch  26, l_epoch   1, local model 2,  Average loss: 1.3599, Accuracy: 198/398 (49.7487%)
+___Local_Train , g_epoch  26, l_epoch   2, local model 2,  Average loss: 1.0073, Accuracy: 260/398 (65.3266%)
+54, 0, 0.7062135338783264
+60, 0, 0.5424752235412598
+88, 9, 0.3016584813594818
+26, 7, 0.4169876277446747
+53, 4, 0.44615331292152405
+41, 2, 0.3296530842781067
+37, 3, 0.27104315161705017
+71, 9, 0.4176284074783325
+81, 2, 0.31805872917175293
+2, 2, 0.33846646547317505
+54
+60
+count_all_attack: 29, count_all_defense: 29, count_correct_defense: 29
+___Global_Test_Poison:False  Average loss: 1.4875 Accuracy: 4352/10000 (43.52%)
+___Global_Test_Poison:True  Average loss: 3.7624 Accuracy: 132/9000 (1.47%)
+Epoch 26 completed in 37.17 seconds
+Server Epoch:27 choose agents : [95, 32, 71, 67, 84, 47, 82, 57, 38, 75].
+___Local_Train , g_epoch  27, l_epoch   1, local model 95,  Average loss: 1.3895, Accuracy: 321/690 (46.5217%)
+___Local_Train , g_epoch  27, l_epoch   2, local model 95,  Average loss: 1.1500, Accuracy: 390/690 (56.5217%)
+___Local_Train , g_epoch  27, l_epoch   1, local model 32,  Average loss: 1.3514, Accuracy: 416/772 (53.8860%)
+___Local_Train , g_epoch  27, l_epoch   2, local model 32,  Average loss: 1.1953, Accuracy: 461/772 (59.7150%)
+___Local_Train , g_epoch  27, l_epoch   1, local model 71,  Average loss: 1.2289, Accuracy: 350/606 (57.7558%)
+___Local_Train , g_epoch  27, l_epoch   2, local model 71,  Average loss: 1.0709, Accuracy: 389/606 (64.1914%)
+___Local_Train , g_epoch  27, l_epoch   1, local model 67,  Average loss: 1.3269, Accuracy: 260/499 (52.1042%)
+___Local_Train , g_epoch  27, l_epoch   2, local model 67,  Average loss: 1.2102, Accuracy: 282/499 (56.5130%)
+___Local_Train , g_epoch  27, l_epoch   1, local model 84,  Average loss: 2.4964, Accuracy: 88/353 (24.9292%)
+___Local_Train , g_epoch  27, l_epoch   2, local model 84,  Average loss: 1.5091, Accuracy: 172/353 (48.7252%)
+___Local_Train , g_epoch  27, l_epoch   3, local model 84,  Average loss: 1.6378, Accuracy: 183/353 (51.8414%)
+___Local_Train , g_epoch  27, l_epoch   4, local model 84,  Average loss: 1.4144, Accuracy: 188/353 (53.2578%)
+___Local_Train , g_epoch  27, l_epoch   5, local model 84,  Average loss: 1.3860, Accuracy: 163/353 (46.1756%)
+___Local_Train , g_epoch  27, l_epoch   6, local model 84,  Average loss: 1.2270, Accuracy: 190/353 (53.8244%)
+___Local_Train , g_epoch  27, l_epoch   1, local model 47,  Average loss: 2.4911, Accuracy: 70/344 (20.3488%)
+___Local_Train , g_epoch  27, l_epoch   2, local model 47,  Average loss: 1.4486, Accuracy: 171/344 (49.7093%)
+___Local_Train , g_epoch  27, l_epoch   3, local model 47,  Average loss: 1.5856, Accuracy: 182/344 (52.9070%)
+___Local_Train , g_epoch  27, l_epoch   4, local model 47,  Average loss: 1.3785, Accuracy: 195/344 (56.6860%)
+___Local_Train , g_epoch  27, l_epoch   5, local model 47,  Average loss: 1.3313, Accuracy: 176/344 (51.1628%)
+___Local_Train , g_epoch  27, l_epoch   6, local model 47,  Average loss: 1.1204, Accuracy: 220/344 (63.9535%)
+___Local_Train , g_epoch  27, l_epoch   1, local model 82,  Average loss: 1.4304, Accuracy: 378/794 (47.6071%)
+___Local_Train , g_epoch  27, l_epoch   2, local model 82,  Average loss: 1.3700, Accuracy: 391/794 (49.2443%)
+___Local_Train , g_epoch  27, l_epoch   1, local model 57,  Average loss: 1.3449, Accuracy: 179/351 (50.9972%)
+___Local_Train , g_epoch  27, l_epoch   2, local model 57,  Average loss: 1.2481, Accuracy: 206/351 (58.6895%)
+___Local_Train , g_epoch  27, l_epoch   1, local model 38,  Average loss: 1.3480, Accuracy: 240/469 (51.1727%)
+___Local_Train , g_epoch  27, l_epoch   2, local model 38,  Average loss: 1.0896, Accuracy: 300/469 (63.9659%)
+___Local_Train , g_epoch  27, l_epoch   1, local model 75,  Average loss: 1.3942, Accuracy: 249/456 (54.6053%)
+___Local_Train , g_epoch  27, l_epoch   2, local model 75,  Average loss: 1.1420, Accuracy: 296/456 (64.9123%)
+95, 9, 0.3579305410385132
+32, 2, 0.2904471457004547
+71, 9, 0.43585360050201416
+67, 5, 0.31342506408691406
+84, 0, 0.7192589640617371
+47, 0, 0.7298302054405212
+82, 3, 0.31938251852989197
+57, 5, 0.22606642544269562
+38, 3, 0.27626046538352966
+75, 6, 0.8951415419578552
+84
+47
+count_all_attack: 31, count_all_defense: 31, count_correct_defense: 31
+___Global_Test_Poison:False  Average loss: 1.4391 Accuracy: 4594/10000 (45.94%)
+___Global_Test_Poison:True  Average loss: 4.2292 Accuracy: 207/9000 (2.30%)
+Epoch 27 completed in 36.94 seconds
+Server Epoch:28 choose agents : [73, 64, 9, 37, 69, 41, 43, 92, 51, 36].
+___Local_Train , g_epoch  28, l_epoch   1, local model 73,  Average loss: 1.3616, Accuracy: 255/510 (50.0000%)
+___Local_Train , g_epoch  28, l_epoch   2, local model 73,  Average loss: 1.2228, Accuracy: 281/510 (55.0980%)
+___Local_Train , g_epoch  28, l_epoch   1, local model 64,  Average loss: 1.5396, Accuracy: 246/552 (44.5652%)
+___Local_Train , g_epoch  28, l_epoch   2, local model 64,  Average loss: 1.2786, Accuracy: 313/552 (56.7029%)
+___Local_Train , g_epoch  28, l_epoch   1, local model 9,  Average loss: 1.1073, Accuracy: 431/670 (64.3284%)
+___Local_Train , g_epoch  28, l_epoch   2, local model 9,  Average loss: 0.9593, Accuracy: 457/670 (68.2090%)
+___Local_Train , g_epoch  28, l_epoch   1, local model 37,  Average loss: 1.5287, Accuracy: 198/450 (44.0000%)
+___Local_Train , g_epoch  28, l_epoch   2, local model 37,  Average loss: 1.3528, Accuracy: 242/450 (53.7778%)
+___Local_Train , g_epoch  28, l_epoch   1, local model 69,  Average loss: 2.5212, Accuracy: 103/463 (22.2462%)
+___Local_Train , g_epoch  28, l_epoch   2, local model 69,  Average loss: 1.3804, Accuracy: 253/463 (54.6436%)
+___Local_Train , g_epoch  28, l_epoch   3, local model 69,  Average loss: 1.2382, Accuracy: 246/463 (53.1317%)
+___Local_Train , g_epoch  28, l_epoch   4, local model 69,  Average loss: 1.2458, Accuracy: 252/463 (54.4276%)
+___Local_Train , g_epoch  28, l_epoch   5, local model 69,  Average loss: 1.1246, Accuracy: 256/463 (55.2916%)
+___Local_Train , g_epoch  28, l_epoch   6, local model 69,  Average loss: 0.9576, Accuracy: 260/463 (56.1555%)
+___Local_Train , g_epoch  28, l_epoch   1, local model 41,  Average loss: 1.5939, Accuracy: 246/554 (44.4043%)
+___Local_Train , g_epoch  28, l_epoch   2, local model 41,  Average loss: 1.2581, Accuracy: 289/554 (52.1661%)
+___Local_Train , g_epoch  28, l_epoch   1, local model 43,  Average loss: 1.2925, Accuracy: 321/591 (54.3147%)
+___Local_Train , g_epoch  28, l_epoch   2, local model 43,  Average loss: 1.1151, Accuracy: 354/591 (59.8985%)
+___Local_Train , g_epoch  28, l_epoch   1, local model 92,  Average loss: 1.2537, Accuracy: 277/456 (60.7456%)
+___Local_Train , g_epoch  28, l_epoch   2, local model 92,  Average loss: 1.1437, Accuracy: 280/456 (61.4035%)
+___Local_Train , g_epoch  28, l_epoch   1, local model 51,  Average loss: 1.3653, Accuracy: 331/678 (48.8201%)
+___Local_Train , g_epoch  28, l_epoch   2, local model 51,  Average loss: 1.2089, Accuracy: 378/678 (55.7522%)
+___Local_Train , g_epoch  28, l_epoch   1, local model 36,  Average loss: 2.1056, Accuracy: 221/591 (37.3942%)
+___Local_Train , g_epoch  28, l_epoch   2, local model 36,  Average loss: 1.5260, Accuracy: 327/591 (55.3299%)
+___Local_Train , g_epoch  28, l_epoch   3, local model 36,  Average loss: 1.2528, Accuracy: 356/591 (60.2369%)
+___Local_Train , g_epoch  28, l_epoch   4, local model 36,  Average loss: 1.1070, Accuracy: 351/591 (59.3909%)
+___Local_Train , g_epoch  28, l_epoch   5, local model 36,  Average loss: 1.0044, Accuracy: 357/591 (60.4061%)
+___Local_Train , g_epoch  28, l_epoch   6, local model 36,  Average loss: 0.8818, Accuracy: 409/591 (69.2047%)
+73, 0, 0.24683572351932526
+64, 2, 0.33676600456237793
+9, 1, 0.5290761590003967
+37, 0, 0.2633584439754486
+69, 0, 0.5461433529853821
+41, 2, 0.3827352821826935
+43, 7, 0.28126755356788635
+92, 6, 0.259510338306427
+51, 1, 0.27630797028541565
+36, 0, 0.6331610679626465
+69
+36
+count_all_attack: 33, count_all_defense: 33, count_correct_defense: 33
+___Global_Test_Poison:False  Average loss: 1.6419 Accuracy: 3911/10000 (39.11%)
+___Global_Test_Poison:True  Average loss: 3.1509 Accuracy: 1038/9000 (11.53%)
+Epoch 28 completed in 38.30 seconds
+Server Epoch:29 choose agents : [64, 78, 19, 76, 99, 97, 87, 21, 62, 66].
+___Local_Train , g_epoch  29, l_epoch   1, local model 64,  Average loss: 1.3421, Accuracy: 284/552 (51.4493%)
+___Local_Train , g_epoch  29, l_epoch   2, local model 64,  Average loss: 1.1567, Accuracy: 313/552 (56.7029%)
+___Local_Train , g_epoch  29, l_epoch   1, local model 78,  Average loss: 1.2684, Accuracy: 251/461 (54.4469%)
+___Local_Train , g_epoch  29, l_epoch   2, local model 78,  Average loss: 1.1076, Accuracy: 284/461 (61.6052%)
+___Local_Train , g_epoch  29, l_epoch   1, local model 19,  Average loss: 1.3546, Accuracy: 320/614 (52.1173%)
+___Local_Train , g_epoch  29, l_epoch   2, local model 19,  Average loss: 0.9963, Accuracy: 392/614 (63.8436%)
+___Local_Train , g_epoch  29, l_epoch   1, local model 76,  Average loss: 1.4394, Accuracy: 234/455 (51.4286%)
+___Local_Train , g_epoch  29, l_epoch   2, local model 76,  Average loss: 1.2560, Accuracy: 264/455 (58.0220%)
+___Local_Train , g_epoch  29, l_epoch   1, local model 99,  Average loss: 2.1389, Accuracy: 160/472 (33.8983%)
+___Local_Train , g_epoch  29, l_epoch   2, local model 99,  Average loss: 1.3547, Accuracy: 263/472 (55.7203%)
+___Local_Train , g_epoch  29, l_epoch   3, local model 99,  Average loss: 1.2048, Accuracy: 272/472 (57.6271%)
+___Local_Train , g_epoch  29, l_epoch   4, local model 99,  Average loss: 1.1608, Accuracy: 260/472 (55.0847%)
+___Local_Train , g_epoch  29, l_epoch   5, local model 99,  Average loss: 1.1269, Accuracy: 269/472 (56.9915%)
+___Local_Train , g_epoch  29, l_epoch   6, local model 99,  Average loss: 1.0502, Accuracy: 279/472 (59.1102%)
+___Local_Train , g_epoch  29, l_epoch   1, local model 97,  Average loss: 1.4294, Accuracy: 236/497 (47.4849%)
+___Local_Train , g_epoch  29, l_epoch   2, local model 97,  Average loss: 1.2075, Accuracy: 272/497 (54.7284%)
+___Local_Train , g_epoch  29, l_epoch   1, local model 87,  Average loss: 1.3643, Accuracy: 238/455 (52.3077%)
+___Local_Train , g_epoch  29, l_epoch   2, local model 87,  Average loss: 1.1048, Accuracy: 278/455 (61.0989%)
+___Local_Train , g_epoch  29, l_epoch   1, local model 21,  Average loss: 1.2063, Accuracy: 302/527 (57.3055%)
+___Local_Train , g_epoch  29, l_epoch   2, local model 21,  Average loss: 1.3298, Accuracy: 307/527 (58.2543%)
+___Local_Train , g_epoch  29, l_epoch   1, local model 62,  Average loss: 1.3630, Accuracy: 249/504 (49.4048%)
+___Local_Train , g_epoch  29, l_epoch   2, local model 62,  Average loss: 1.2355, Accuracy: 276/504 (54.7619%)
+___Local_Train , g_epoch  29, l_epoch   1, local model 66,  Average loss: 1.4608, Accuracy: 395/799 (49.4368%)
+___Local_Train , g_epoch  29, l_epoch   2, local model 66,  Average loss: 1.3110, Accuracy: 425/799 (53.1915%)
+64, 3, 0.3794010281562805
+78, 6, 0.3606768250465393
+19, 5, 0.45651212334632874
+76, 0, 0.3782990574836731
+99, 0, 0.680046558380127
+97, 4, 0.43705493211746216
+87, 0, 0.6002517342567444
+21, 0, 0.4206852614879608
+62, 3, 0.2832600474357605
+66, 3, 0.48802119493484497
+99
+87
+count_all_attack: 34, count_all_defense: 35, count_correct_defense: 34
+___Global_Test_Poison:False  Average loss: 1.4649 Accuracy: 4538/10000 (45.38%)
+___Global_Test_Poison:True  Average loss: 3.7754 Accuracy: 656/9000 (7.29%)
+Epoch 29 completed in 36.91 seconds
+Server Epoch:30 choose agents : [41, 35, 89, 2, 15, 33, 24, 91, 46, 45].
+___Local_Train , g_epoch  30, l_epoch   1, local model 41,  Average loss: 1.3824, Accuracy: 268/554 (48.3755%)
+___Local_Train , g_epoch  30, l_epoch   2, local model 41,  Average loss: 1.1940, Accuracy: 285/554 (51.4440%)
+___Local_Train , g_epoch  30, l_epoch   1, local model 35,  Average loss: 1.4911, Accuracy: 242/484 (50.0000%)
+___Local_Train , g_epoch  30, l_epoch   2, local model 35,  Average loss: 1.0152, Accuracy: 302/484 (62.3967%)
+___Local_Train , g_epoch  30, l_epoch   1, local model 89,  Average loss: 1.4238, Accuracy: 334/689 (48.4761%)
+___Local_Train , g_epoch  30, l_epoch   2, local model 89,  Average loss: 1.3507, Accuracy: 383/689 (55.5878%)
+___Local_Train , g_epoch  30, l_epoch   1, local model 2,  Average loss: 1.5227, Accuracy: 187/398 (46.9849%)
+___Local_Train , g_epoch  30, l_epoch   2, local model 2,  Average loss: 1.2084, Accuracy: 234/398 (58.7940%)
+___Local_Train , g_epoch  30, l_epoch   1, local model 15,  Average loss: 1.3509, Accuracy: 271/515 (52.6214%)
+___Local_Train , g_epoch  30, l_epoch   2, local model 15,  Average loss: 1.3587, Accuracy: 292/515 (56.6990%)
+___Local_Train , g_epoch  30, l_epoch   1, local model 33,  Average loss: 1.4405, Accuracy: 112/273 (41.0256%)
+___Local_Train , g_epoch  30, l_epoch   2, local model 33,  Average loss: 1.3067, Accuracy: 149/273 (54.5788%)
+___Local_Train , g_epoch  30, l_epoch   1, local model 24,  Average loss: 1.3428, Accuracy: 269/513 (52.4366%)
+___Local_Train , g_epoch  30, l_epoch   2, local model 24,  Average loss: 1.2255, Accuracy: 283/513 (55.1657%)
+___Local_Train , g_epoch  30, l_epoch   1, local model 91,  Average loss: 1.4060, Accuracy: 317/644 (49.2236%)
+___Local_Train , g_epoch  30, l_epoch   2, local model 91,  Average loss: 1.6166, Accuracy: 287/644 (44.5652%)
+___Local_Train , g_epoch  30, l_epoch   1, local model 46,  Average loss: 1.4082, Accuracy: 264/532 (49.6241%)
+___Local_Train , g_epoch  30, l_epoch   2, local model 46,  Average loss: 1.3095, Accuracy: 277/532 (52.0677%)
+___Local_Train , g_epoch  30, l_epoch   1, local model 45,  Average loss: 2.2007, Accuracy: 145/443 (32.7314%)
+___Local_Train , g_epoch  30, l_epoch   2, local model 45,  Average loss: 1.4003, Accuracy: 247/443 (55.7562%)
+___Local_Train , g_epoch  30, l_epoch   3, local model 45,  Average loss: 1.3941, Accuracy: 240/443 (54.1761%)
+___Local_Train , g_epoch  30, l_epoch   4, local model 45,  Average loss: 1.2950, Accuracy: 231/443 (52.1445%)
+___Local_Train , g_epoch  30, l_epoch   5, local model 45,  Average loss: 1.1625, Accuracy: 267/443 (60.2709%)
+___Local_Train , g_epoch  30, l_epoch   6, local model 45,  Average loss: 1.0487, Accuracy: 271/443 (61.1738%)
+41, 2, 0.3320807218551636
+35, 9, 0.6188724040985107
+89, 9, 0.2973679304122925
+2, 2, 0.46690788865089417
+15, 6, 0.35302412509918213
+33, 5, 0.427702397108078
+24, 4, 0.25340431928634644
+91, 8, 0.17356976866722107
+46, 0, 0.2724158763885498
+45, 0, 0.6800020933151245
+45
+count_all_attack: 35, count_all_defense: 36, count_correct_defense: 35
+___Global_Test_Poison:False  Average loss: 1.4310 Accuracy: 4744/10000 (47.44%)
+___Global_Test_Poison:True  Average loss: 3.3856 Accuracy: 714/9000 (7.93%)
+Epoch 30 completed in 35.73 seconds
+Server Epoch:31 choose agents : [25, 46, 71, 90, 27, 73, 67, 95, 10, 55].
+___Local_Train , g_epoch  31, l_epoch   1, local model 25,  Average loss: 1.3087, Accuracy: 226/423 (53.4279%)
+___Local_Train , g_epoch  31, l_epoch   2, local model 25,  Average loss: 1.1543, Accuracy: 250/423 (59.1017%)
+___Local_Train , g_epoch  31, l_epoch   1, local model 46,  Average loss: 1.4250, Accuracy: 247/532 (46.4286%)
+___Local_Train , g_epoch  31, l_epoch   2, local model 46,  Average loss: 1.3050, Accuracy: 268/532 (50.3759%)
+___Local_Train , g_epoch  31, l_epoch   1, local model 71,  Average loss: 1.2193, Accuracy: 370/606 (61.0561%)
+___Local_Train , g_epoch  31, l_epoch   2, local model 71,  Average loss: 0.9626, Accuracy: 399/606 (65.8416%)
+___Local_Train , g_epoch  31, l_epoch   1, local model 90,  Average loss: 1.5147, Accuracy: 105/249 (42.1687%)
+___Local_Train , g_epoch  31, l_epoch   2, local model 90,  Average loss: 1.1728, Accuracy: 142/249 (57.0281%)
+___Local_Train , g_epoch  31, l_epoch   1, local model 27,  Average loss: 1.3849, Accuracy: 205/424 (48.3491%)
+___Local_Train , g_epoch  31, l_epoch   2, local model 27,  Average loss: 1.1313, Accuracy: 240/424 (56.6038%)
+___Local_Train , g_epoch  31, l_epoch   1, local model 73,  Average loss: 1.3074, Accuracy: 267/510 (52.3529%)
+___Local_Train , g_epoch  31, l_epoch   2, local model 73,  Average loss: 1.1848, Accuracy: 281/510 (55.0980%)
+___Local_Train , g_epoch  31, l_epoch   1, local model 67,  Average loss: 1.2535, Accuracy: 282/499 (56.5130%)
+___Local_Train , g_epoch  31, l_epoch   2, local model 67,  Average loss: 1.1366, Accuracy: 297/499 (59.5190%)
+___Local_Train , g_epoch  31, l_epoch   1, local model 95,  Average loss: 1.4127, Accuracy: 326/690 (47.2464%)
+___Local_Train , g_epoch  31, l_epoch   2, local model 95,  Average loss: 1.2078, Accuracy: 381/690 (55.2174%)
+___Local_Train , g_epoch  31, l_epoch   1, local model 10,  Average loss: 1.5175, Accuracy: 140/323 (43.3437%)
+___Local_Train , g_epoch  31, l_epoch   2, local model 10,  Average loss: 1.2520, Accuracy: 178/323 (55.1084%)
+___Local_Train , g_epoch  31, l_epoch   1, local model 55,  Average loss: 1.2577, Accuracy: 342/596 (57.3825%)
+___Local_Train , g_epoch  31, l_epoch   2, local model 55,  Average loss: 1.0223, Accuracy: 382/596 (64.0940%)
+25, 2, 0.42176541686058044
+46, 0, 0.21863910555839539
+71, 1, 0.49645647406578064
+90, 9, 0.49033406376838684
+27, 2, 0.33905792236328125
+73, 0, 0.2102326899766922
+67, 5, 0.31586623191833496
+95, 9, 0.5077078342437744
+10, 3, 0.7622737884521484
+55, 8, 0.41158944368362427
+count_all_attack: 35, count_all_defense: 36, count_correct_defense: 35
+___Global_Test_Poison:False  Average loss: 1.3821 Accuracy: 4867/10000 (48.67%)
+___Global_Test_Poison:True  Average loss: 4.4510 Accuracy: 132/9000 (1.47%)
+Epoch 31 completed in 34.40 seconds
+Server Epoch:32 choose agents : [62, 72, 96, 99, 45, 61, 15, 93, 49, 22].
+___Local_Train , g_epoch  32, l_epoch   1, local model 62,  Average loss: 1.4217, Accuracy: 245/504 (48.6111%)
+___Local_Train , g_epoch  32, l_epoch   2, local model 62,  Average loss: 1.2218, Accuracy: 263/504 (52.1825%)
+___Local_Train , g_epoch  32, l_epoch   1, local model 72,  Average loss: 1.4305, Accuracy: 183/388 (47.1649%)
+___Local_Train , g_epoch  32, l_epoch   2, local model 72,  Average loss: 1.4979, Accuracy: 183/388 (47.1649%)
+___Local_Train , g_epoch  32, l_epoch   1, local model 96,  Average loss: 1.5189, Accuracy: 218/445 (48.9888%)
+___Local_Train , g_epoch  32, l_epoch   2, local model 96,  Average loss: 1.1899, Accuracy: 257/445 (57.7528%)
+___Local_Train , g_epoch  32, l_epoch   1, local model 99,  Average loss: 2.1185, Accuracy: 165/472 (34.9576%)
+___Local_Train , g_epoch  32, l_epoch   2, local model 99,  Average loss: 1.4609, Accuracy: 262/472 (55.5085%)
+___Local_Train , g_epoch  32, l_epoch   3, local model 99,  Average loss: 1.4027, Accuracy: 259/472 (54.8729%)
+___Local_Train , g_epoch  32, l_epoch   4, local model 99,  Average loss: 1.1744, Accuracy: 237/472 (50.2119%)
+___Local_Train , g_epoch  32, l_epoch   5, local model 99,  Average loss: 1.0993, Accuracy: 263/472 (55.7203%)
+___Local_Train , g_epoch  32, l_epoch   6, local model 99,  Average loss: 1.0366, Accuracy: 285/472 (60.3814%)
+___Local_Train , g_epoch  32, l_epoch   1, local model 45,  Average loss: 2.1879, Accuracy: 135/443 (30.4740%)
+___Local_Train , g_epoch  32, l_epoch   2, local model 45,  Average loss: 1.5230, Accuracy: 226/443 (51.0158%)
+___Local_Train , g_epoch  32, l_epoch   3, local model 45,  Average loss: 1.5059, Accuracy: 241/443 (54.4018%)
+___Local_Train , g_epoch  32, l_epoch   4, local model 45,  Average loss: 1.1509, Accuracy: 256/443 (57.7878%)
+___Local_Train , g_epoch  32, l_epoch   5, local model 45,  Average loss: 1.0967, Accuracy: 271/443 (61.1738%)
+___Local_Train , g_epoch  32, l_epoch   6, local model 45,  Average loss: 1.0422, Accuracy: 267/443 (60.2709%)
+___Local_Train , g_epoch  32, l_epoch   1, local model 61,  Average loss: 1.3910, Accuracy: 333/638 (52.1944%)
+___Local_Train , g_epoch  32, l_epoch   2, local model 61,  Average loss: 1.2748, Accuracy: 346/638 (54.2320%)
+___Local_Train , g_epoch  32, l_epoch   1, local model 15,  Average loss: 1.3916, Accuracy: 263/515 (51.0680%)
+___Local_Train , g_epoch  32, l_epoch   2, local model 15,  Average loss: 1.5890, Accuracy: 261/515 (50.6796%)
+___Local_Train , g_epoch  32, l_epoch   1, local model 93,  Average loss: 1.4066, Accuracy: 156/304 (51.3158%)
+___Local_Train , g_epoch  32, l_epoch   2, local model 93,  Average loss: 1.1267, Accuracy: 177/304 (58.2237%)
+___Local_Train , g_epoch  32, l_epoch   1, local model 49,  Average loss: 1.5865, Accuracy: 109/283 (38.5159%)
+___Local_Train , g_epoch  32, l_epoch   2, local model 49,  Average loss: 1.0096, Accuracy: 194/283 (68.5512%)
+___Local_Train , g_epoch  32, l_epoch   1, local model 22,  Average loss: 1.6153, Accuracy: 151/373 (40.4826%)
+___Local_Train , g_epoch  32, l_epoch   2, local model 22,  Average loss: 1.0777, Accuracy: 260/373 (69.7051%)
+62, 3, 0.28435325622558594
+72, 5, 0.30595481395721436
+96, 0, 0.3811922073364258
+99, 0, 0.7581163644790649
+45, 0, 0.7865138053894043
+61, 7, 0.2934056222438812
+15, 6, 0.5818194150924683
+93, 1, 0.267865926027298
+49, 2, 0.7057660222053528
+22, 5, 0.9492149949073792
+99
+45
+count_all_attack: 37, count_all_defense: 38, count_correct_defense: 37
+___Global_Test_Poison:False  Average loss: 1.5297 Accuracy: 4475/10000 (44.75%)
+___Global_Test_Poison:True  Average loss: 3.9189 Accuracy: 366/9000 (4.07%)
+Epoch 32 completed in 43.59 seconds
+Server Epoch:33 choose agents : [10, 31, 25, 46, 53, 45, 13, 42, 62, 34].
+___Local_Train , g_epoch  33, l_epoch   1, local model 10,  Average loss: 1.7619, Accuracy: 124/323 (38.3901%)
+___Local_Train , g_epoch  33, l_epoch   2, local model 10,  Average loss: 1.2385, Accuracy: 181/323 (56.0372%)
+___Local_Train , g_epoch  33, l_epoch   1, local model 31,  Average loss: 1.4488, Accuracy: 253/506 (50.0000%)
+___Local_Train , g_epoch  33, l_epoch   2, local model 31,  Average loss: 1.2414, Accuracy: 288/506 (56.9170%)
+___Local_Train , g_epoch  33, l_epoch   1, local model 25,  Average loss: 1.3741, Accuracy: 213/423 (50.3546%)
+___Local_Train , g_epoch  33, l_epoch   2, local model 25,  Average loss: 1.1671, Accuracy: 234/423 (55.3191%)
+___Local_Train , g_epoch  33, l_epoch   1, local model 46,  Average loss: 1.3904, Accuracy: 251/532 (47.1805%)
+___Local_Train , g_epoch  33, l_epoch   2, local model 46,  Average loss: 1.2411, Accuracy: 279/532 (52.4436%)
+___Local_Train , g_epoch  33, l_epoch   1, local model 53,  Average loss: 1.5445, Accuracy: 251/592 (42.3987%)
+___Local_Train , g_epoch  33, l_epoch   2, local model 53,  Average loss: 1.3876, Accuracy: 281/592 (47.4662%)
+___Local_Train , g_epoch  33, l_epoch   1, local model 45,  Average loss: 2.1847, Accuracy: 123/443 (27.7652%)
+___Local_Train , g_epoch  33, l_epoch   2, local model 45,  Average loss: 1.4784, Accuracy: 240/443 (54.1761%)
+___Local_Train , g_epoch  33, l_epoch   3, local model 45,  Average loss: 1.3928, Accuracy: 246/443 (55.5305%)
+___Local_Train , g_epoch  33, l_epoch   4, local model 45,  Average loss: 1.2560, Accuracy: 226/443 (51.0158%)
+___Local_Train , g_epoch  33, l_epoch   5, local model 45,  Average loss: 1.0801, Accuracy: 279/443 (62.9797%)
+___Local_Train , g_epoch  33, l_epoch   6, local model 45,  Average loss: 1.0540, Accuracy: 261/443 (58.9165%)
+___Local_Train , g_epoch  33, l_epoch   1, local model 13,  Average loss: 1.3829, Accuracy: 293/565 (51.8584%)
+___Local_Train , g_epoch  33, l_epoch   2, local model 13,  Average loss: 1.1595, Accuracy: 336/565 (59.4690%)
+___Local_Train , g_epoch  33, l_epoch   1, local model 42,  Average loss: 1.7074, Accuracy: 116/302 (38.4106%)
+___Local_Train , g_epoch  33, l_epoch   2, local model 42,  Average loss: 1.3206, Accuracy: 159/302 (52.6490%)
+___Local_Train , g_epoch  33, l_epoch   1, local model 62,  Average loss: 1.4536, Accuracy: 238/504 (47.2222%)
+___Local_Train , g_epoch  33, l_epoch   2, local model 62,  Average loss: 1.2701, Accuracy: 264/504 (52.3810%)
+___Local_Train , g_epoch  33, l_epoch   1, local model 34,  Average loss: 1.9177, Accuracy: 244/633 (38.5466%)
+___Local_Train , g_epoch  33, l_epoch   2, local model 34,  Average loss: 1.5423, Accuracy: 349/633 (55.1343%)
+___Local_Train , g_epoch  33, l_epoch   3, local model 34,  Average loss: 1.2507, Accuracy: 340/633 (53.7125%)
+___Local_Train , g_epoch  33, l_epoch   4, local model 34,  Average loss: 1.1275, Accuracy: 380/633 (60.0316%)
+___Local_Train , g_epoch  33, l_epoch   5, local model 34,  Average loss: 1.0685, Accuracy: 402/633 (63.5071%)
+___Local_Train , g_epoch  33, l_epoch   6, local model 34,  Average loss: 0.9710, Accuracy: 409/633 (64.6130%)
+10, 3, 0.8059236407279968
+31, 1, 0.5286883115768433
+25, 0, 0.3951765298843384
+46, 4, 0.21066749095916748
+53, 2, 0.4526728391647339
+45, 0, 0.7276379466056824
+13, 9, 0.4351823329925537
+42, 3, 0.722175121307373
+62, 3, 0.3379044830799103
+34, 0, 0.6645120978355408
+45
+34
+count_all_attack: 39, count_all_defense: 40, count_correct_defense: 39
+___Global_Test_Poison:False  Average loss: 1.4156 Accuracy: 4516/10000 (45.16%)
+___Global_Test_Poison:True  Average loss: 3.1213 Accuracy: 1356/9000 (15.07%)
+Epoch 33 completed in 50.04 seconds
+Server Epoch:34 choose agents : [35, 22, 95, 53, 18, 0, 82, 34, 33, 47].
+___Local_Train , g_epoch  34, l_epoch   1, local model 35,  Average loss: 1.3299, Accuracy: 268/484 (55.3719%)
+___Local_Train , g_epoch  34, l_epoch   2, local model 35,  Average loss: 1.0545, Accuracy: 321/484 (66.3223%)
+___Local_Train , g_epoch  34, l_epoch   1, local model 22,  Average loss: 1.5548, Accuracy: 154/373 (41.2869%)
+___Local_Train , g_epoch  34, l_epoch   2, local model 22,  Average loss: 0.9523, Accuracy: 267/373 (71.5818%)
+___Local_Train , g_epoch  34, l_epoch   1, local model 95,  Average loss: 1.2780, Accuracy: 368/690 (53.3333%)
+___Local_Train , g_epoch  34, l_epoch   2, local model 95,  Average loss: 1.1006, Accuracy: 403/690 (58.4058%)
+___Local_Train , g_epoch  34, l_epoch   1, local model 53,  Average loss: 1.5427, Accuracy: 257/592 (43.4122%)
+___Local_Train , g_epoch  34, l_epoch   2, local model 53,  Average loss: 1.2924, Accuracy: 307/592 (51.8581%)
+___Local_Train , g_epoch  34, l_epoch   1, local model 18,  Average loss: 1.3634, Accuracy: 222/475 (46.7368%)
+___Local_Train , g_epoch  34, l_epoch   2, local model 18,  Average loss: 1.2029, Accuracy: 266/475 (56.0000%)
+___Local_Train , g_epoch  34, l_epoch   1, local model 0,  Average loss: 1.3850, Accuracy: 295/621 (47.5040%)
+___Local_Train , g_epoch  34, l_epoch   2, local model 0,  Average loss: 1.2568, Accuracy: 334/621 (53.7842%)
+___Local_Train , g_epoch  34, l_epoch   1, local model 82,  Average loss: 1.2816, Accuracy: 429/794 (54.0302%)
+___Local_Train , g_epoch  34, l_epoch   2, local model 82,  Average loss: 1.3284, Accuracy: 405/794 (51.0076%)
+___Local_Train , g_epoch  34, l_epoch   1, local model 34,  Average loss: 1.8580, Accuracy: 233/633 (36.8088%)
+___Local_Train , g_epoch  34, l_epoch   2, local model 34,  Average loss: 1.4502, Accuracy: 357/633 (56.3981%)
+___Local_Train , g_epoch  34, l_epoch   3, local model 34,  Average loss: 1.2133, Accuracy: 365/633 (57.6619%)
+___Local_Train , g_epoch  34, l_epoch   4, local model 34,  Average loss: 1.1062, Accuracy: 403/633 (63.6651%)
+___Local_Train , g_epoch  34, l_epoch   5, local model 34,  Average loss: 1.0244, Accuracy: 400/633 (63.1912%)
+___Local_Train , g_epoch  34, l_epoch   6, local model 34,  Average loss: 0.9745, Accuracy: 423/633 (66.8246%)
+___Local_Train , g_epoch  34, l_epoch   1, local model 33,  Average loss: 1.5924, Accuracy: 114/273 (41.7582%)
+___Local_Train , g_epoch  34, l_epoch   2, local model 33,  Average loss: 1.3699, Accuracy: 142/273 (52.0147%)
+___Local_Train , g_epoch  34, l_epoch   1, local model 47,  Average loss: 2.0789, Accuracy: 107/344 (31.1047%)
+___Local_Train , g_epoch  34, l_epoch   2, local model 47,  Average loss: 1.3651, Accuracy: 181/344 (52.6163%)
+___Local_Train , g_epoch  34, l_epoch   3, local model 47,  Average loss: 1.3816, Accuracy: 187/344 (54.3605%)
+___Local_Train , g_epoch  34, l_epoch   4, local model 47,  Average loss: 1.3104, Accuracy: 191/344 (55.5233%)
+___Local_Train , g_epoch  34, l_epoch   5, local model 47,  Average loss: 1.1258, Accuracy: 204/344 (59.3023%)
+___Local_Train , g_epoch  34, l_epoch   6, local model 47,  Average loss: 1.0476, Accuracy: 215/344 (62.5000%)
+35, 9, 0.594081699848175
+22, 5, 0.9264364242553711
+95, 9, 0.43706610798835754
+53, 4, 0.46887511014938354
+18, 2, 0.2911756634712219
+0, 4, 0.3864139914512634
+82, 3, 0.39907410740852356
+34, 0, 0.7009585499763489
+33, 5, 0.5271965265274048
+47, 0, 0.6557119488716125
+34
+47
+count_all_attack: 41, count_all_defense: 42, count_correct_defense: 41
+___Global_Test_Poison:False  Average loss: 1.3928 Accuracy: 4623/10000 (46.23%)
+___Global_Test_Poison:True  Average loss: 4.3625 Accuracy: 74/9000 (0.82%)
+Epoch 34 completed in 43.96 seconds
+Server Epoch:35 choose agents : [74, 60, 34, 79, 4, 1, 0, 87, 98, 19].
+___Local_Train , g_epoch  35, l_epoch   1, local model 74,  Average loss: 1.3851, Accuracy: 302/611 (49.4272%)
+___Local_Train , g_epoch  35, l_epoch   2, local model 74,  Average loss: 1.2717, Accuracy: 326/611 (53.3552%)
+___Local_Train , g_epoch  35, l_epoch   1, local model 60,  Average loss: 2.3930, Accuracy: 135/462 (29.2208%)
+___Local_Train , g_epoch  35, l_epoch   2, local model 60,  Average loss: 1.3323, Accuracy: 243/462 (52.5974%)
+___Local_Train , g_epoch  35, l_epoch   3, local model 60,  Average loss: 1.2725, Accuracy: 256/462 (55.4113%)
+___Local_Train , g_epoch  35, l_epoch   4, local model 60,  Average loss: 1.2647, Accuracy: 237/462 (51.2987%)
+___Local_Train , g_epoch  35, l_epoch   5, local model 60,  Average loss: 1.0682, Accuracy: 244/462 (52.8139%)
+___Local_Train , g_epoch  35, l_epoch   6, local model 60,  Average loss: 1.0022, Accuracy: 260/462 (56.2771%)
+___Local_Train , g_epoch  35, l_epoch   1, local model 34,  Average loss: 2.1463, Accuracy: 229/633 (36.1769%)
+___Local_Train , g_epoch  35, l_epoch   2, local model 34,  Average loss: 1.6725, Accuracy: 351/633 (55.4502%)
+___Local_Train , g_epoch  35, l_epoch   3, local model 34,  Average loss: 1.3521, Accuracy: 353/633 (55.7662%)
+___Local_Train , g_epoch  35, l_epoch   4, local model 34,  Average loss: 1.1944, Accuracy: 364/633 (57.5040%)
+___Local_Train , g_epoch  35, l_epoch   5, local model 34,  Average loss: 1.0549, Accuracy: 388/633 (61.2954%)
+___Local_Train , g_epoch  35, l_epoch   6, local model 34,  Average loss: 0.9874, Accuracy: 412/633 (65.0869%)
+___Local_Train , g_epoch  35, l_epoch   1, local model 79,  Average loss: 1.4065, Accuracy: 220/465 (47.3118%)
+___Local_Train , g_epoch  35, l_epoch   2, local model 79,  Average loss: 1.2297, Accuracy: 238/465 (51.1828%)
+___Local_Train , g_epoch  35, l_epoch   1, local model 4,  Average loss: 1.3438, Accuracy: 194/354 (54.8023%)
+___Local_Train , g_epoch  35, l_epoch   2, local model 4,  Average loss: 1.1073, Accuracy: 220/354 (62.1469%)
+___Local_Train , g_epoch  35, l_epoch   1, local model 1,  Average loss: 1.3396, Accuracy: 280/574 (48.7805%)
+___Local_Train , g_epoch  35, l_epoch   2, local model 1,  Average loss: 1.2796, Accuracy: 331/574 (57.6655%)
+___Local_Train , g_epoch  35, l_epoch   1, local model 0,  Average loss: 1.2931, Accuracy: 310/621 (49.9195%)
+___Local_Train , g_epoch  35, l_epoch   2, local model 0,  Average loss: 1.1228, Accuracy: 356/621 (57.3269%)
+___Local_Train , g_epoch  35, l_epoch   1, local model 87,  Average loss: 1.5559, Accuracy: 199/455 (43.7363%)
+___Local_Train , g_epoch  35, l_epoch   2, local model 87,  Average loss: 1.1670, Accuracy: 268/455 (58.9011%)
+___Local_Train , g_epoch  35, l_epoch   1, local model 98,  Average loss: 1.2491, Accuracy: 332/598 (55.5184%)
+___Local_Train , g_epoch  35, l_epoch   2, local model 98,  Average loss: 1.1496, Accuracy: 326/598 (54.5150%)
+___Local_Train , g_epoch  35, l_epoch   1, local model 19,  Average loss: 1.2523, Accuracy: 377/614 (61.4007%)
+___Local_Train , g_epoch  35, l_epoch   2, local model 19,  Average loss: 1.0300, Accuracy: 366/614 (59.6091%)
+74, 2, 0.3565564751625061
+60, 0, 0.5404162406921387
+34, 0, 0.7450367212295532
+79, 2, 0.29000091552734375
+4, 1, 0.5480631589889526
+1, 3, 0.23895062506198883
+0, 4, 0.3789284825325012
+87, 0, 0.6876870393753052
+98, 4, 0.3785853087902069
+19, 5, 0.6161115169525146
+60
+34
+87
+count_all_attack: 43, count_all_defense: 45, count_correct_defense: 43
+___Global_Test_Poison:False  Average loss: 1.4246 Accuracy: 4659/10000 (46.59%)
+___Global_Test_Poison:True  Average loss: 4.5519 Accuracy: 88/9000 (0.98%)
+Epoch 35 completed in 53.02 seconds
+Server Epoch:36 choose agents : [12, 67, 51, 54, 38, 26, 81, 56, 85, 29].
+___Local_Train , g_epoch  36, l_epoch   1, local model 12,  Average loss: 1.1884, Accuracy: 334/534 (62.5468%)
+___Local_Train , g_epoch  36, l_epoch   2, local model 12,  Average loss: 0.9998, Accuracy: 347/534 (64.9813%)
+___Local_Train , g_epoch  36, l_epoch   1, local model 67,  Average loss: 1.3053, Accuracy: 262/499 (52.5050%)
+___Local_Train , g_epoch  36, l_epoch   2, local model 67,  Average loss: 1.1256, Accuracy: 310/499 (62.1242%)
+___Local_Train , g_epoch  36, l_epoch   1, local model 51,  Average loss: 1.2498, Accuracy: 387/678 (57.0796%)
+___Local_Train , g_epoch  36, l_epoch   2, local model 51,  Average loss: 1.1381, Accuracy: 400/678 (58.9971%)
+___Local_Train , g_epoch  36, l_epoch   1, local model 54,  Average loss: 2.3494, Accuracy: 159/497 (31.9920%)
+___Local_Train , g_epoch  36, l_epoch   2, local model 54,  Average loss: 1.4448, Accuracy: 274/497 (55.1308%)
+___Local_Train , g_epoch  36, l_epoch   3, local model 54,  Average loss: 1.3617, Accuracy: 294/497 (59.1549%)
+___Local_Train , g_epoch  36, l_epoch   4, local model 54,  Average loss: 1.1201, Accuracy: 311/497 (62.5755%)
+___Local_Train , g_epoch  36, l_epoch   5, local model 54,  Average loss: 0.9400, Accuracy: 332/497 (66.8008%)
+___Local_Train , g_epoch  36, l_epoch   6, local model 54,  Average loss: 0.9128, Accuracy: 339/497 (68.2093%)
+___Local_Train , g_epoch  36, l_epoch   1, local model 38,  Average loss: 1.2702, Accuracy: 272/469 (57.9957%)
+___Local_Train , g_epoch  36, l_epoch   2, local model 38,  Average loss: 1.1129, Accuracy: 286/469 (60.9808%)
+___Local_Train , g_epoch  36, l_epoch   1, local model 26,  Average loss: 1.4458, Accuracy: 190/373 (50.9383%)
+___Local_Train , g_epoch  36, l_epoch   2, local model 26,  Average loss: 1.0400, Accuracy: 243/373 (65.1475%)
+___Local_Train , g_epoch  36, l_epoch   1, local model 81,  Average loss: 1.4274, Accuracy: 259/552 (46.9203%)
+___Local_Train , g_epoch  36, l_epoch   2, local model 81,  Average loss: 1.2116, Accuracy: 306/552 (55.4348%)
+___Local_Train , g_epoch  36, l_epoch   1, local model 56,  Average loss: 1.2438, Accuracy: 346/612 (56.5359%)
+___Local_Train , g_epoch  36, l_epoch   2, local model 56,  Average loss: 1.1599, Accuracy: 359/612 (58.6601%)
+___Local_Train , g_epoch  36, l_epoch   1, local model 85,  Average loss: 1.3178, Accuracy: 304/560 (54.2857%)
+___Local_Train , g_epoch  36, l_epoch   2, local model 85,  Average loss: 1.2294, Accuracy: 308/560 (55.0000%)
+___Local_Train , g_epoch  36, l_epoch   1, local model 29,  Average loss: 1.4018, Accuracy: 314/645 (48.6822%)
+___Local_Train , g_epoch  36, l_epoch   2, local model 29,  Average loss: 1.6971, Accuracy: 278/645 (43.1008%)
+12, 1, 0.3484797775745392
+67, 5, 0.36714857816696167
+51, 2, 0.26415979862213135
+54, 0, 0.7304893136024475
+38, 7, 0.30733853578567505
+26, 9, 0.39890459179878235
+81, 4, 0.31298065185546875
+56, 4, 0.24271440505981445
+85, 0, 0.2701559066772461
+29, 7, 0.39761728048324585
+54
+count_all_attack: 44, count_all_defense: 46, count_correct_defense: 44
+___Global_Test_Poison:False  Average loss: 1.3494 Accuracy: 5022/10000 (50.22%)
+___Global_Test_Poison:True  Average loss: 4.2609 Accuracy: 123/9000 (1.37%)
+Epoch 36 completed in 48.72 seconds
+Server Epoch:37 choose agents : [56, 97, 39, 78, 65, 34, 44, 70, 14, 86].
+___Local_Train , g_epoch  37, l_epoch   1, local model 56,  Average loss: 1.2479, Accuracy: 351/612 (57.3529%)
+___Local_Train , g_epoch  37, l_epoch   2, local model 56,  Average loss: 1.1717, Accuracy: 356/612 (58.1699%)
+___Local_Train , g_epoch  37, l_epoch   1, local model 97,  Average loss: 1.3545, Accuracy: 253/497 (50.9054%)
+___Local_Train , g_epoch  37, l_epoch   2, local model 97,  Average loss: 1.1424, Accuracy: 297/497 (59.7585%)
+___Local_Train , g_epoch  37, l_epoch   1, local model 39,  Average loss: 1.3357, Accuracy: 207/416 (49.7596%)
+___Local_Train , g_epoch  37, l_epoch   2, local model 39,  Average loss: 1.1946, Accuracy: 235/416 (56.4904%)
+___Local_Train , g_epoch  37, l_epoch   1, local model 78,  Average loss: 1.4003, Accuracy: 242/461 (52.4946%)
+___Local_Train , g_epoch  37, l_epoch   2, local model 78,  Average loss: 1.0687, Accuracy: 282/461 (61.1714%)
+___Local_Train , g_epoch  37, l_epoch   1, local model 65,  Average loss: 1.4476, Accuracy: 169/344 (49.1279%)
+___Local_Train , g_epoch  37, l_epoch   2, local model 65,  Average loss: 1.1143, Accuracy: 211/344 (61.3372%)
+___Local_Train , g_epoch  37, l_epoch   1, local model 34,  Average loss: 2.0285, Accuracy: 230/633 (36.3349%)
+___Local_Train , g_epoch  37, l_epoch   2, local model 34,  Average loss: 1.5675, Accuracy: 357/633 (56.3981%)
+___Local_Train , g_epoch  37, l_epoch   3, local model 34,  Average loss: 1.2965, Accuracy: 355/633 (56.0821%)
+___Local_Train , g_epoch  37, l_epoch   4, local model 34,  Average loss: 1.1424, Accuracy: 390/633 (61.6114%)
+___Local_Train , g_epoch  37, l_epoch   5, local model 34,  Average loss: 1.0258, Accuracy: 405/633 (63.9810%)
+___Local_Train , g_epoch  37, l_epoch   6, local model 34,  Average loss: 0.9727, Accuracy: 415/633 (65.5608%)
+___Local_Train , g_epoch  37, l_epoch   1, local model 44,  Average loss: 1.4303, Accuracy: 176/369 (47.6965%)
+___Local_Train , g_epoch  37, l_epoch   2, local model 44,  Average loss: 0.9866, Accuracy: 241/369 (65.3117%)
+___Local_Train , g_epoch  37, l_epoch   1, local model 70,  Average loss: 1.3274, Accuracy: 299/561 (53.2977%)
+___Local_Train , g_epoch  37, l_epoch   2, local model 70,  Average loss: 1.1874, Accuracy: 320/561 (57.0410%)
+___Local_Train , g_epoch  37, l_epoch   1, local model 14,  Average loss: 1.2322, Accuracy: 254/450 (56.4444%)
+___Local_Train , g_epoch  37, l_epoch   2, local model 14,  Average loss: 0.9011, Accuracy: 317/450 (70.4444%)
+___Local_Train , g_epoch  37, l_epoch   1, local model 86,  Average loss: 1.4244, Accuracy: 253/495 (51.1111%)
+___Local_Train , g_epoch  37, l_epoch   2, local model 86,  Average loss: 1.2449, Accuracy: 273/495 (55.1515%)
+56, 4, 0.2785295844078064
+97, 4, 0.32225292921066284
+39, 0, 0.26876378059387207
+78, 6, 0.34543946385383606
+65, 5, 0.2705150842666626
+34, 0, 0.702141523361206
+44, 4, 0.6701528429985046
+70, 4, 0.2971060872077942
+14, 9, 0.3193708062171936
+86, 5, 0.26938968896865845
+34
+count_all_attack: 45, count_all_defense: 47, count_correct_defense: 45
+___Global_Test_Poison:False  Average loss: 1.5820 Accuracy: 4547/10000 (45.47%)
+___Global_Test_Poison:True  Average loss: 4.4113 Accuracy: 467/9000 (5.19%)
+Epoch 37 completed in 48.57 seconds
+Server Epoch:38 choose agents : [9, 68, 74, 98, 66, 26, 97, 83, 43, 24].
+___Local_Train , g_epoch  38, l_epoch   1, local model 9,  Average loss: 1.3550, Accuracy: 360/670 (53.7313%)
+___Local_Train , g_epoch  38, l_epoch   2, local model 9,  Average loss: 1.1839, Accuracy: 430/670 (64.1791%)
+___Local_Train , g_epoch  38, l_epoch   1, local model 68,  Average loss: 1.1484, Accuracy: 408/679 (60.0884%)
+___Local_Train , g_epoch  38, l_epoch   2, local model 68,  Average loss: 1.0509, Accuracy: 433/679 (63.7703%)
+___Local_Train , g_epoch  38, l_epoch   1, local model 74,  Average loss: 1.4533, Accuracy: 290/611 (47.4632%)
+___Local_Train , g_epoch  38, l_epoch   2, local model 74,  Average loss: 1.3492, Accuracy: 294/611 (48.1178%)
+___Local_Train , g_epoch  38, l_epoch   1, local model 98,  Average loss: 1.3517, Accuracy: 309/598 (51.6722%)
+___Local_Train , g_epoch  38, l_epoch   2, local model 98,  Average loss: 1.1345, Accuracy: 347/598 (58.0268%)
+___Local_Train , g_epoch  38, l_epoch   1, local model 66,  Average loss: 1.3873, Accuracy: 418/799 (52.3154%)
+___Local_Train , g_epoch  38, l_epoch   2, local model 66,  Average loss: 1.3349, Accuracy: 429/799 (53.6921%)
+___Local_Train , g_epoch  38, l_epoch   1, local model 26,  Average loss: 1.4751, Accuracy: 176/373 (47.1850%)
+___Local_Train , g_epoch  38, l_epoch   2, local model 26,  Average loss: 0.9717, Accuracy: 251/373 (67.2922%)
+___Local_Train , g_epoch  38, l_epoch   1, local model 97,  Average loss: 1.2297, Accuracy: 282/497 (56.7404%)
+___Local_Train , g_epoch  38, l_epoch   2, local model 97,  Average loss: 1.1083, Accuracy: 302/497 (60.7646%)
+___Local_Train , g_epoch  38, l_epoch   1, local model 83,  Average loss: 1.2811, Accuracy: 256/438 (58.4475%)
+___Local_Train , g_epoch  38, l_epoch   2, local model 83,  Average loss: 1.1853, Accuracy: 263/438 (60.0457%)
+___Local_Train , g_epoch  38, l_epoch   1, local model 43,  Average loss: 1.2436, Accuracy: 327/591 (55.3299%)
+___Local_Train , g_epoch  38, l_epoch   2, local model 43,  Average loss: 1.0660, Accuracy: 370/591 (62.6058%)
+___Local_Train , g_epoch  38, l_epoch   1, local model 24,  Average loss: 1.2843, Accuracy: 268/513 (52.2417%)
+___Local_Train , g_epoch  38, l_epoch   2, local model 24,  Average loss: 1.2021, Accuracy: 289/513 (56.3353%)
+9, 1, 0.6259034276008606
+68, 0, 0.2956189513206482
+74, 4, 0.3609442412853241
+98, 4, 0.38221460580825806
+66, 4, 0.3352945148944855
+26, 7, 0.39016294479370117
+97, 4, 0.343438982963562
+83, 7, 0.7908986806869507
+43, 7, 0.31574341654777527
+24, 1, 0.49880266189575195
+count_all_attack: 45, count_all_defense: 47, count_correct_defense: 45
+___Global_Test_Poison:False  Average loss: 1.5175 Accuracy: 4427/10000 (44.27%)
+___Global_Test_Poison:True  Average loss: 4.4427 Accuracy: 617/9000 (6.86%)
+Epoch 38 completed in 51.43 seconds
+Server Epoch:39 choose agents : [64, 12, 66, 51, 31, 74, 87, 54, 28, 72].
+___Local_Train , g_epoch  39, l_epoch   1, local model 64,  Average loss: 1.5986, Accuracy: 235/552 (42.5725%)
+___Local_Train , g_epoch  39, l_epoch   2, local model 64,  Average loss: 1.2511, Accuracy: 314/552 (56.8841%)
+___Local_Train , g_epoch  39, l_epoch   1, local model 12,  Average loss: 1.2516, Accuracy: 308/534 (57.6779%)
+___Local_Train , g_epoch  39, l_epoch   2, local model 12,  Average loss: 1.0589, Accuracy: 338/534 (63.2959%)
+___Local_Train , g_epoch  39, l_epoch   1, local model 66,  Average loss: 1.4885, Accuracy: 380/799 (47.5594%)
+___Local_Train , g_epoch  39, l_epoch   2, local model 66,  Average loss: 1.3619, Accuracy: 420/799 (52.5657%)
+___Local_Train , g_epoch  39, l_epoch   1, local model 51,  Average loss: 1.3344, Accuracy: 357/678 (52.6549%)
+___Local_Train , g_epoch  39, l_epoch   2, local model 51,  Average loss: 1.1449, Accuracy: 404/678 (59.5870%)
+___Local_Train , g_epoch  39, l_epoch   1, local model 31,  Average loss: 1.2680, Accuracy: 274/506 (54.1502%)
+___Local_Train , g_epoch  39, l_epoch   2, local model 31,  Average loss: 1.0520, Accuracy: 307/506 (60.6719%)
+___Local_Train , g_epoch  39, l_epoch   1, local model 74,  Average loss: 1.4339, Accuracy: 294/611 (48.1178%)
+___Local_Train , g_epoch  39, l_epoch   2, local model 74,  Average loss: 1.2841, Accuracy: 311/611 (50.9002%)
+___Local_Train , g_epoch  39, l_epoch   1, local model 87,  Average loss: 1.3592, Accuracy: 247/455 (54.2857%)
+___Local_Train , g_epoch  39, l_epoch   2, local model 87,  Average loss: 1.1390, Accuracy: 274/455 (60.2198%)
+___Local_Train , g_epoch  39, l_epoch   1, local model 54,  Average loss: 2.3154, Accuracy: 163/497 (32.7968%)
+___Local_Train , g_epoch  39, l_epoch   2, local model 54,  Average loss: 1.3494, Accuracy: 274/497 (55.1308%)
+___Local_Train , g_epoch  39, l_epoch   3, local model 54,  Average loss: 1.3204, Accuracy: 305/497 (61.3682%)
+___Local_Train , g_epoch  39, l_epoch   4, local model 54,  Average loss: 1.1672, Accuracy: 302/497 (60.7646%)
+___Local_Train , g_epoch  39, l_epoch   5, local model 54,  Average loss: 1.0144, Accuracy: 332/497 (66.8008%)
+___Local_Train , g_epoch  39, l_epoch   6, local model 54,  Average loss: 0.9235, Accuracy: 343/497 (69.0141%)
+___Local_Train , g_epoch  39, l_epoch   1, local model 28,  Average loss: 1.4791, Accuracy: 159/371 (42.8571%)
+___Local_Train , g_epoch  39, l_epoch   2, local model 28,  Average loss: 1.2556, Accuracy: 196/371 (52.8302%)
+___Local_Train , g_epoch  39, l_epoch   1, local model 72,  Average loss: 1.4275, Accuracy: 193/388 (49.7423%)
+___Local_Train , g_epoch  39, l_epoch   2, local model 72,  Average loss: 1.3620, Accuracy: 200/388 (51.5464%)
+64, 3, 0.3331131935119629
+12, 1, 0.3826044201850891
+66, 3, 0.39185255765914917
+51, 2, 0.2795088291168213
+31, 1, 0.44594109058380127
+74, 4, 0.3449218273162842
+87, 0, 0.6753008365631104
+54, 0, 0.7414337396621704
+28, 2, 0.43864691257476807
+72, 5, 0.4078391194343567
+87
+54
+count_all_attack: 46, count_all_defense: 49, count_correct_defense: 46
+___Global_Test_Poison:False  Average loss: 1.6278 Accuracy: 3975/10000 (39.75%)
+___Global_Test_Poison:True  Average loss: 4.8682 Accuracy: 24/9000 (0.27%)
+Epoch 39 completed in 75.59 seconds
+Server Epoch:40 choose agents : [96, 26, 29, 81, 42, 92, 48, 30, 63, 8].
+___Local_Train , g_epoch  40, l_epoch   1, local model 96,  Average loss: 1.3591, Accuracy: 231/445 (51.9101%)
+___Local_Train , g_epoch  40, l_epoch   2, local model 96,  Average loss: 1.1482, Accuracy: 261/445 (58.6517%)
+___Local_Train , g_epoch  40, l_epoch   1, local model 26,  Average loss: 1.5095, Accuracy: 185/373 (49.5979%)
+___Local_Train , g_epoch  40, l_epoch   2, local model 26,  Average loss: 0.9625, Accuracy: 247/373 (66.2198%)
+___Local_Train , g_epoch  40, l_epoch   1, local model 29,  Average loss: 1.4063, Accuracy: 309/645 (47.9070%)
+___Local_Train , g_epoch  40, l_epoch   2, local model 29,  Average loss: 1.6427, Accuracy: 275/645 (42.6357%)
+___Local_Train , g_epoch  40, l_epoch   1, local model 81,  Average loss: 1.4761, Accuracy: 261/552 (47.2826%)
+___Local_Train , g_epoch  40, l_epoch   2, local model 81,  Average loss: 1.2983, Accuracy: 298/552 (53.9855%)
+___Local_Train , g_epoch  40, l_epoch   1, local model 42,  Average loss: 1.4602, Accuracy: 135/302 (44.7020%)
+___Local_Train , g_epoch  40, l_epoch   2, local model 42,  Average loss: 1.2370, Accuracy: 168/302 (55.6291%)
+___Local_Train , g_epoch  40, l_epoch   1, local model 92,  Average loss: 1.2906, Accuracy: 245/456 (53.7281%)
+___Local_Train , g_epoch  40, l_epoch   2, local model 92,  Average loss: 1.1574, Accuracy: 286/456 (62.7193%)
+___Local_Train , g_epoch  40, l_epoch   1, local model 48,  Average loss: 1.3806, Accuracy: 268/515 (52.0388%)
+___Local_Train , g_epoch  40, l_epoch   2, local model 48,  Average loss: 1.3900, Accuracy: 285/515 (55.3398%)
+___Local_Train , g_epoch  40, l_epoch   1, local model 30,  Average loss: 1.2520, Accuracy: 245/423 (57.9196%)
+___Local_Train , g_epoch  40, l_epoch   2, local model 30,  Average loss: 1.0171, Accuracy: 290/423 (68.5579%)
+___Local_Train , g_epoch  40, l_epoch   1, local model 63,  Average loss: 1.3722, Accuracy: 238/449 (53.0067%)
+___Local_Train , g_epoch  40, l_epoch   2, local model 63,  Average loss: 1.0084, Accuracy: 281/449 (62.5835%)
+___Local_Train , g_epoch  40, l_epoch   1, local model 8,  Average loss: 1.2212, Accuracy: 254/456 (55.7018%)
+___Local_Train , g_epoch  40, l_epoch   2, local model 8,  Average loss: 1.1149, Accuracy: 275/456 (60.3070%)
+96, 0, 0.36397215723991394
+26, 7, 0.4264009892940521
+29, 0, 0.2481679469347
+81, 7, 0.31338265538215637
+42, 3, 0.5356267690658569
+92, 6, 0.31199342012405396
+48, 5, 0.5882595777511597
+30, 5, 0.7923325896263123
+63, 9, 0.46294406056404114
+8, 2, 0.39502352476119995
+count_all_attack: 46, count_all_defense: 49, count_correct_defense: 46
+___Global_Test_Poison:False  Average loss: 1.3490 Accuracy: 4991/10000 (49.91%)
+___Global_Test_Poison:True  Average loss: 3.9880 Accuracy: 711/9000 (7.90%)
+Epoch 40 completed in 76.97 seconds
+Server Epoch:41 choose agents : [30, 2, 37, 10, 87, 56, 76, 98, 15, 79].
+___Local_Train , g_epoch  41, l_epoch   1, local model 30,  Average loss: 1.1714, Accuracy: 261/423 (61.7021%)
+___Local_Train , g_epoch  41, l_epoch   2, local model 30,  Average loss: 0.9835, Accuracy: 292/423 (69.0307%)
+___Local_Train , g_epoch  41, l_epoch   1, local model 2,  Average loss: 1.1680, Accuracy: 238/398 (59.7990%)
+___Local_Train , g_epoch  41, l_epoch   2, local model 2,  Average loss: 0.9605, Accuracy: 261/398 (65.5779%)
+___Local_Train , g_epoch  41, l_epoch   1, local model 37,  Average loss: 1.2966, Accuracy: 258/450 (57.3333%)
+___Local_Train , g_epoch  41, l_epoch   2, local model 37,  Average loss: 1.1860, Accuracy: 254/450 (56.4444%)
+___Local_Train , g_epoch  41, l_epoch   1, local model 10,  Average loss: 1.4574, Accuracy: 145/323 (44.8916%)
+___Local_Train , g_epoch  41, l_epoch   2, local model 10,  Average loss: 1.1266, Accuracy: 188/323 (58.2043%)
+___Local_Train , g_epoch  41, l_epoch   1, local model 87,  Average loss: 1.2979, Accuracy: 255/455 (56.0440%)
+___Local_Train , g_epoch  41, l_epoch   2, local model 87,  Average loss: 1.0662, Accuracy: 286/455 (62.8571%)
+___Local_Train , g_epoch  41, l_epoch   1, local model 56,  Average loss: 1.3580, Accuracy: 315/612 (51.4706%)
+___Local_Train , g_epoch  41, l_epoch   2, local model 56,  Average loss: 1.1468, Accuracy: 362/612 (59.1503%)
+___Local_Train , g_epoch  41, l_epoch   1, local model 76,  Average loss: 1.3912, Accuracy: 231/455 (50.7692%)
+___Local_Train , g_epoch  41, l_epoch   2, local model 76,  Average loss: 1.1808, Accuracy: 277/455 (60.8791%)
+___Local_Train , g_epoch  41, l_epoch   1, local model 98,  Average loss: 1.2983, Accuracy: 314/598 (52.5084%)
+___Local_Train , g_epoch  41, l_epoch   2, local model 98,  Average loss: 1.0826, Accuracy: 343/598 (57.3579%)
+___Local_Train , g_epoch  41, l_epoch   1, local model 15,  Average loss: 1.2003, Accuracy: 308/515 (59.8058%)
+___Local_Train , g_epoch  41, l_epoch   2, local model 15,  Average loss: 1.1185, Accuracy: 319/515 (61.9417%)
+___Local_Train , g_epoch  41, l_epoch   1, local model 79,  Average loss: 1.3026, Accuracy: 253/465 (54.4086%)
+___Local_Train , g_epoch  41, l_epoch   2, local model 79,  Average loss: 1.0967, Accuracy: 273/465 (58.7097%)
+30, 5, 0.8058632016181946
+2, 2, 0.4311937391757965
+37, 3, 0.3012267053127289
+10, 3, 0.7212663292884827
+87, 0, 0.6303969621658325
+56, 4, 0.3025786876678467
+76, 0, 0.42993029952049255
+98, 2, 0.4325230121612549
+15, 6, 0.5667119026184082
+79, 2, 0.3092954754829407
+87
+count_all_attack: 46, count_all_defense: 50, count_correct_defense: 46
+___Global_Test_Poison:False  Average loss: 1.3157 Accuracy: 5083/10000 (50.83%)
+___Global_Test_Poison:True  Average loss: 4.2256 Accuracy: 265/9000 (2.94%)
+Epoch 41 completed in 72.24 seconds
+Server Epoch:42 choose agents : [54, 92, 3, 10, 14, 13, 27, 47, 96, 33].
+___Local_Train , g_epoch  42, l_epoch   1, local model 54,  Average loss: 2.2368, Accuracy: 157/497 (31.5895%)
+___Local_Train , g_epoch  42, l_epoch   2, local model 54,  Average loss: 1.3889, Accuracy: 276/497 (55.5332%)
+___Local_Train , g_epoch  42, l_epoch   3, local model 54,  Average loss: 1.3643, Accuracy: 274/497 (55.1308%)
+___Local_Train , g_epoch  42, l_epoch   4, local model 54,  Average loss: 1.0901, Accuracy: 304/497 (61.1670%)
+___Local_Train , g_epoch  42, l_epoch   5, local model 54,  Average loss: 1.0101, Accuracy: 330/497 (66.3984%)
+___Local_Train , g_epoch  42, l_epoch   6, local model 54,  Average loss: 0.9208, Accuracy: 330/497 (66.3984%)
+___Local_Train , g_epoch  42, l_epoch   1, local model 92,  Average loss: 1.1948, Accuracy: 260/456 (57.0175%)
+___Local_Train , g_epoch  42, l_epoch   2, local model 92,  Average loss: 1.1111, Accuracy: 288/456 (63.1579%)
+___Local_Train , g_epoch  42, l_epoch   1, local model 3,  Average loss: 1.2385, Accuracy: 307/512 (59.9609%)
+___Local_Train , g_epoch  42, l_epoch   2, local model 3,  Average loss: 1.0580, Accuracy: 331/512 (64.6484%)
+___Local_Train , g_epoch  42, l_epoch   1, local model 10,  Average loss: 1.3931, Accuracy: 171/323 (52.9412%)
+___Local_Train , g_epoch  42, l_epoch   2, local model 10,  Average loss: 1.1178, Accuracy: 184/323 (56.9659%)
+___Local_Train , g_epoch  42, l_epoch   1, local model 14,  Average loss: 1.3276, Accuracy: 237/450 (52.6667%)
+___Local_Train , g_epoch  42, l_epoch   2, local model 14,  Average loss: 0.8960, Accuracy: 304/450 (67.5556%)
+___Local_Train , g_epoch  42, l_epoch   1, local model 13,  Average loss: 1.3810, Accuracy: 293/565 (51.8584%)
+___Local_Train , g_epoch  42, l_epoch   2, local model 13,  Average loss: 1.0943, Accuracy: 357/565 (63.1858%)
+___Local_Train , g_epoch  42, l_epoch   1, local model 27,  Average loss: 1.2491, Accuracy: 239/424 (56.3679%)
+___Local_Train , g_epoch  42, l_epoch   2, local model 27,  Average loss: 1.0253, Accuracy: 254/424 (59.9057%)
+___Local_Train , g_epoch  42, l_epoch   1, local model 47,  Average loss: 2.4442, Accuracy: 92/344 (26.7442%)
+___Local_Train , g_epoch  42, l_epoch   2, local model 47,  Average loss: 1.4437, Accuracy: 165/344 (47.9651%)
+___Local_Train , g_epoch  42, l_epoch   3, local model 47,  Average loss: 1.4739, Accuracy: 189/344 (54.9419%)
+___Local_Train , g_epoch  42, l_epoch   4, local model 47,  Average loss: 1.3070, Accuracy: 201/344 (58.4302%)
+___Local_Train , g_epoch  42, l_epoch   5, local model 47,  Average loss: 1.2099, Accuracy: 182/344 (52.9070%)
+___Local_Train , g_epoch  42, l_epoch   6, local model 47,  Average loss: 1.0966, Accuracy: 205/344 (59.5930%)
+___Local_Train , g_epoch  42, l_epoch   1, local model 96,  Average loss: 1.3217, Accuracy: 242/445 (54.3820%)
+___Local_Train , g_epoch  42, l_epoch   2, local model 96,  Average loss: 1.1599, Accuracy: 271/445 (60.8989%)
+___Local_Train , g_epoch  42, l_epoch   1, local model 33,  Average loss: 1.5443, Accuracy: 122/273 (44.6886%)
+___Local_Train , g_epoch  42, l_epoch   2, local model 33,  Average loss: 1.1925, Accuracy: 157/273 (57.5092%)
+54, 0, 0.766390860080719
+92, 6, 0.30057990550994873
+3, 9, 0.5528735518455505
+10, 3, 0.6506586670875549
+14, 9, 0.42569103837013245
+13, 9, 0.4486076235771179
+27, 2, 0.3556881248950958
+47, 0, 0.6801904439926147
+96, 4, 0.3413616120815277
+33, 5, 0.4662454128265381
+54
+47
+count_all_attack: 48, count_all_defense: 52, count_correct_defense: 48
+___Global_Test_Poison:False  Average loss: 1.3468 Accuracy: 4922/10000 (49.22%)
+___Global_Test_Poison:True  Average loss: 4.5406 Accuracy: 333/9000 (3.70%)
+Epoch 42 completed in 80.29 seconds
+Server Epoch:43 choose agents : [2, 0, 90, 1, 35, 38, 78, 46, 71, 21].
+___Local_Train , g_epoch  43, l_epoch   1, local model 2,  Average loss: 1.4266, Accuracy: 181/398 (45.4774%)
+___Local_Train , g_epoch  43, l_epoch   2, local model 2,  Average loss: 0.9593, Accuracy: 258/398 (64.8241%)
+___Local_Train , g_epoch  43, l_epoch   1, local model 0,  Average loss: 1.3785, Accuracy: 308/621 (49.5974%)
+___Local_Train , g_epoch  43, l_epoch   2, local model 0,  Average loss: 1.1468, Accuracy: 352/621 (56.6828%)
+___Local_Train , g_epoch  43, l_epoch   1, local model 90,  Average loss: 1.1817, Accuracy: 144/249 (57.8313%)
+___Local_Train , g_epoch  43, l_epoch   2, local model 90,  Average loss: 1.0047, Accuracy: 164/249 (65.8634%)
+___Local_Train , g_epoch  43, l_epoch   1, local model 1,  Average loss: 1.1794, Accuracy: 342/574 (59.5819%)
+___Local_Train , g_epoch  43, l_epoch   2, local model 1,  Average loss: 1.1421, Accuracy: 354/574 (61.6725%)
+___Local_Train , g_epoch  43, l_epoch   1, local model 35,  Average loss: 1.0854, Accuracy: 313/484 (64.6694%)
+___Local_Train , g_epoch  43, l_epoch   2, local model 35,  Average loss: 0.8889, Accuracy: 344/484 (71.0744%)
+___Local_Train , g_epoch  43, l_epoch   1, local model 38,  Average loss: 1.2988, Accuracy: 256/469 (54.5842%)
+___Local_Train , g_epoch  43, l_epoch   2, local model 38,  Average loss: 1.0907, Accuracy: 299/469 (63.7527%)
+___Local_Train , g_epoch  43, l_epoch   1, local model 78,  Average loss: 1.2948, Accuracy: 254/461 (55.0976%)
+___Local_Train , g_epoch  43, l_epoch   2, local model 78,  Average loss: 1.0124, Accuracy: 303/461 (65.7267%)
+___Local_Train , g_epoch  43, l_epoch   1, local model 46,  Average loss: 1.3542, Accuracy: 268/532 (50.3759%)
+___Local_Train , g_epoch  43, l_epoch   2, local model 46,  Average loss: 1.3161, Accuracy: 261/532 (49.0602%)
+___Local_Train , g_epoch  43, l_epoch   1, local model 71,  Average loss: 1.2064, Accuracy: 353/606 (58.2508%)
+___Local_Train , g_epoch  43, l_epoch   2, local model 71,  Average loss: 0.9320, Accuracy: 412/606 (67.9868%)
+___Local_Train , g_epoch  43, l_epoch   1, local model 21,  Average loss: 1.2305, Accuracy: 305/527 (57.8748%)
+___Local_Train , g_epoch  43, l_epoch   2, local model 21,  Average loss: 1.0540, Accuracy: 346/527 (65.6546%)
+2, 2, 0.4021826386451721
+0, 4, 0.4513588547706604
+90, 9, 0.3460479974746704
+1, 3, 0.24774685502052307
+35, 9, 0.5674148201942444
+38, 3, 0.31585410237312317
+78, 6, 0.39436691999435425
+46, 7, 0.2373862862586975
+71, 9, 0.4001729190349579
+21, 0, 0.44047972559928894
+count_all_attack: 48, count_all_defense: 52, count_correct_defense: 48
+___Global_Test_Poison:False  Average loss: 1.3393 Accuracy: 5017/10000 (50.17%)
+___Global_Test_Poison:True  Average loss: 4.4207 Accuracy: 200/9000 (2.22%)
+Epoch 43 completed in 71.91 seconds
+Server Epoch:44 choose agents : [93, 79, 20, 4, 40, 88, 97, 59, 56, 24].
+___Local_Train , g_epoch  44, l_epoch   1, local model 93,  Average loss: 1.2322, Accuracy: 169/304 (55.5921%)
+___Local_Train , g_epoch  44, l_epoch   2, local model 93,  Average loss: 0.9922, Accuracy: 209/304 (68.7500%)
+___Local_Train , g_epoch  44, l_epoch   1, local model 79,  Average loss: 1.3072, Accuracy: 248/465 (53.3333%)
+___Local_Train , g_epoch  44, l_epoch   2, local model 79,  Average loss: 1.1257, Accuracy: 268/465 (57.6344%)
+___Local_Train , g_epoch  44, l_epoch   1, local model 20,  Average loss: 1.3239, Accuracy: 169/329 (51.3678%)
+___Local_Train , g_epoch  44, l_epoch   2, local model 20,  Average loss: 1.0087, Accuracy: 208/329 (63.2219%)
+___Local_Train , g_epoch  44, l_epoch   1, local model 4,  Average loss: 1.2286, Accuracy: 203/354 (57.3446%)
+___Local_Train , g_epoch  44, l_epoch   2, local model 4,  Average loss: 1.0057, Accuracy: 232/354 (65.5367%)
+___Local_Train , g_epoch  44, l_epoch   1, local model 40,  Average loss: 1.1465, Accuracy: 444/719 (61.7524%)
+___Local_Train , g_epoch  44, l_epoch   2, local model 40,  Average loss: 1.0781, Accuracy: 457/719 (63.5605%)
+___Local_Train , g_epoch  44, l_epoch   1, local model 88,  Average loss: 1.3377, Accuracy: 206/394 (52.2843%)
+___Local_Train , g_epoch  44, l_epoch   2, local model 88,  Average loss: 1.3338, Accuracy: 227/394 (57.6142%)
+___Local_Train , g_epoch  44, l_epoch   1, local model 97,  Average loss: 1.3199, Accuracy: 268/497 (53.9235%)
+___Local_Train , g_epoch  44, l_epoch   2, local model 97,  Average loss: 1.0976, Accuracy: 309/497 (62.1730%)
+___Local_Train , g_epoch  44, l_epoch   1, local model 59,  Average loss: 1.0663, Accuracy: 390/584 (66.7808%)
+___Local_Train , g_epoch  44, l_epoch   2, local model 59,  Average loss: 1.0448, Accuracy: 378/584 (64.7260%)
+___Local_Train , g_epoch  44, l_epoch   1, local model 56,  Average loss: 1.2653, Accuracy: 341/612 (55.7190%)
+___Local_Train , g_epoch  44, l_epoch   2, local model 56,  Average loss: 1.1612, Accuracy: 360/612 (58.8235%)
+___Local_Train , g_epoch  44, l_epoch   1, local model 24,  Average loss: 1.1734, Accuracy: 298/513 (58.0897%)
+___Local_Train , g_epoch  44, l_epoch   2, local model 24,  Average loss: 1.0887, Accuracy: 314/513 (61.2086%)
+93, 1, 0.26303690671920776
+79, 2, 0.32714417576789856
+20, 5, 0.38352274894714355
+4, 1, 0.4192413091659546
+40, 7, 0.4494061768054962
+88, 9, 0.3997841775417328
+97, 4, 0.39332136511802673
+59, 3, 0.5043245553970337
+56, 4, 0.29732513427734375
+24, 0, 0.18709862232208252
+count_all_attack: 48, count_all_defense: 52, count_correct_defense: 48
+___Global_Test_Poison:False  Average loss: 1.3176 Accuracy: 5236/10000 (52.36%)
+___Global_Test_Poison:True  Average loss: 3.7846 Accuracy: 937/9000 (10.41%)
+Epoch 44 completed in 56.60 seconds
+Server Epoch:45 choose agents : [99, 89, 82, 86, 76, 11, 50, 52, 16, 39].
+___Local_Train , g_epoch  45, l_epoch   1, local model 99,  Average loss: 1.9472, Accuracy: 175/472 (37.0763%)
+___Local_Train , g_epoch  45, l_epoch   2, local model 99,  Average loss: 1.2894, Accuracy: 250/472 (52.9661%)
+___Local_Train , g_epoch  45, l_epoch   3, local model 99,  Average loss: 1.2730, Accuracy: 250/472 (52.9661%)
+___Local_Train , g_epoch  45, l_epoch   4, local model 99,  Average loss: 1.1094, Accuracy: 259/472 (54.8729%)
+___Local_Train , g_epoch  45, l_epoch   5, local model 99,  Average loss: 1.0288, Accuracy: 278/472 (58.8983%)
+___Local_Train , g_epoch  45, l_epoch   6, local model 99,  Average loss: 0.9176, Accuracy: 298/472 (63.1356%)
+___Local_Train , g_epoch  45, l_epoch   1, local model 89,  Average loss: 1.2148, Accuracy: 389/689 (56.4586%)
+___Local_Train , g_epoch  45, l_epoch   2, local model 89,  Average loss: 1.1922, Accuracy: 392/689 (56.8941%)
+___Local_Train , g_epoch  45, l_epoch   1, local model 82,  Average loss: 1.2643, Accuracy: 438/794 (55.1637%)
+___Local_Train , g_epoch  45, l_epoch   2, local model 82,  Average loss: 1.2511, Accuracy: 442/794 (55.6675%)
+___Local_Train , g_epoch  45, l_epoch   1, local model 86,  Average loss: 1.3728, Accuracy: 260/495 (52.5253%)
+___Local_Train , g_epoch  45, l_epoch   2, local model 86,  Average loss: 1.1413, Accuracy: 296/495 (59.7980%)
+___Local_Train , g_epoch  45, l_epoch   1, local model 76,  Average loss: 1.2248, Accuracy: 249/455 (54.7253%)
+___Local_Train , g_epoch  45, l_epoch   2, local model 76,  Average loss: 1.1441, Accuracy: 277/455 (60.8791%)
+___Local_Train , g_epoch  45, l_epoch   1, local model 11,  Average loss: 1.5436, Accuracy: 270/610 (44.2623%)
+___Local_Train , g_epoch  45, l_epoch   2, local model 11,  Average loss: 1.2502, Accuracy: 327/610 (53.6066%)
+___Local_Train , g_epoch  45, l_epoch   1, local model 50,  Average loss: 2.1569, Accuracy: 94/297 (31.6498%)
+___Local_Train , g_epoch  45, l_epoch   2, local model 50,  Average loss: 1.3932, Accuracy: 144/297 (48.4848%)
+___Local_Train , g_epoch  45, l_epoch   3, local model 50,  Average loss: 1.3926, Accuracy: 154/297 (51.8519%)
+___Local_Train , g_epoch  45, l_epoch   4, local model 50,  Average loss: 1.2558, Accuracy: 152/297 (51.1785%)
+___Local_Train , g_epoch  45, l_epoch   5, local model 50,  Average loss: 1.1277, Accuracy: 170/297 (57.2391%)
+___Local_Train , g_epoch  45, l_epoch   6, local model 50,  Average loss: 1.1547, Accuracy: 157/297 (52.8619%)
+___Local_Train , g_epoch  45, l_epoch   1, local model 52,  Average loss: 1.2785, Accuracy: 319/548 (58.2117%)
+___Local_Train , g_epoch  45, l_epoch   2, local model 52,  Average loss: 1.0765, Accuracy: 342/548 (62.4088%)
+___Local_Train , g_epoch  45, l_epoch   1, local model 16,  Average loss: 1.3731, Accuracy: 247/463 (53.3477%)
+___Local_Train , g_epoch  45, l_epoch   2, local model 16,  Average loss: 1.1810, Accuracy: 244/463 (52.6998%)
+___Local_Train , g_epoch  45, l_epoch   1, local model 39,  Average loss: 1.2080, Accuracy: 223/416 (53.6058%)
+___Local_Train , g_epoch  45, l_epoch   2, local model 39,  Average loss: 1.1035, Accuracy: 250/416 (60.0962%)
+99, 0, 0.7435928583145142
+89, 9, 0.27645301818847656
+82, 3, 0.2462378442287445
+86, 7, 0.2797648310661316
+76, 0, 0.35601532459259033
+11, 2, 0.34159427881240845
+50, 0, 0.6904221773147583
+52, 4, 0.41336971521377563
+16, 7, 0.22726094722747803
+39, 2, 0.24704250693321228
+99
+50
+count_all_attack: 50, count_all_defense: 54, count_correct_defense: 50
+___Global_Test_Poison:False  Average loss: 1.2434 Accuracy: 5503/10000 (55.03%)
+___Global_Test_Poison:True  Average loss: 4.3835 Accuracy: 747/9000 (8.30%)
+Epoch 45 completed in 50.75 seconds
+Server Epoch:46 choose agents : [49, 29, 27, 12, 26, 56, 99, 18, 4, 17].
+___Local_Train , g_epoch  46, l_epoch   1, local model 49,  Average loss: 1.4120, Accuracy: 123/283 (43.4629%)
+___Local_Train , g_epoch  46, l_epoch   2, local model 49,  Average loss: 0.9185, Accuracy: 196/283 (69.2579%)
+___Local_Train , g_epoch  46, l_epoch   1, local model 29,  Average loss: 1.3035, Accuracy: 349/645 (54.1085%)
+___Local_Train , g_epoch  46, l_epoch   2, local model 29,  Average loss: 1.5374, Accuracy: 287/645 (44.4961%)
+___Local_Train , g_epoch  46, l_epoch   1, local model 27,  Average loss: 1.2972, Accuracy: 221/424 (52.1226%)
+___Local_Train , g_epoch  46, l_epoch   2, local model 27,  Average loss: 1.0161, Accuracy: 258/424 (60.8491%)
+___Local_Train , g_epoch  46, l_epoch   1, local model 12,  Average loss: 1.1277, Accuracy: 336/534 (62.9213%)
+___Local_Train , g_epoch  46, l_epoch   2, local model 12,  Average loss: 1.0035, Accuracy: 352/534 (65.9176%)
+___Local_Train , g_epoch  46, l_epoch   1, local model 26,  Average loss: 1.2529, Accuracy: 217/373 (58.1769%)
+___Local_Train , g_epoch  46, l_epoch   2, local model 26,  Average loss: 0.9692, Accuracy: 245/373 (65.6836%)
+___Local_Train , g_epoch  46, l_epoch   1, local model 56,  Average loss: 1.2229, Accuracy: 355/612 (58.0065%)
+___Local_Train , g_epoch  46, l_epoch   2, local model 56,  Average loss: 1.1044, Accuracy: 369/612 (60.2941%)
+___Local_Train , g_epoch  46, l_epoch   1, local model 99,  Average loss: 2.1848, Accuracy: 174/472 (36.8644%)
+___Local_Train , g_epoch  46, l_epoch   2, local model 99,  Average loss: 1.4222, Accuracy: 237/472 (50.2119%)
+___Local_Train , g_epoch  46, l_epoch   3, local model 99,  Average loss: 1.4374, Accuracy: 252/472 (53.3898%)
+___Local_Train , g_epoch  46, l_epoch   4, local model 99,  Average loss: 1.2062, Accuracy: 258/472 (54.6610%)
+___Local_Train , g_epoch  46, l_epoch   5, local model 99,  Average loss: 1.0490, Accuracy: 284/472 (60.1695%)
+___Local_Train , g_epoch  46, l_epoch   6, local model 99,  Average loss: 1.0135, Accuracy: 285/472 (60.3814%)
+___Local_Train , g_epoch  46, l_epoch   1, local model 18,  Average loss: 1.2454, Accuracy: 280/475 (58.9474%)
+___Local_Train , g_epoch  46, l_epoch   2, local model 18,  Average loss: 1.0760, Accuracy: 287/475 (60.4211%)
+___Local_Train , g_epoch  46, l_epoch   1, local model 4,  Average loss: 1.2229, Accuracy: 200/354 (56.4972%)
+___Local_Train , g_epoch  46, l_epoch   2, local model 4,  Average loss: 0.9860, Accuracy: 235/354 (66.3842%)
+___Local_Train , g_epoch  46, l_epoch   1, local model 17,  Average loss: 1.2653, Accuracy: 282/478 (58.9958%)
+___Local_Train , g_epoch  46, l_epoch   2, local model 17,  Average loss: 1.0266, Accuracy: 302/478 (63.1799%)
+49, 2, 0.7089425921440125
+29, 2, 0.24662378430366516
+27, 2, 0.29811686277389526
+12, 8, 0.34462547302246094
+26, 9, 0.4118747115135193
+56, 4, 0.3106050491333008
+99, 0, 0.7821049690246582
+18, 4, 0.3128957152366638
+4, 1, 0.44173842668533325
+17, 2, 0.31638363003730774
+99
+count_all_attack: 51, count_all_defense: 55, count_correct_defense: 51
+___Global_Test_Poison:False  Average loss: 1.3810 Accuracy: 4779/10000 (47.79%)
+___Global_Test_Poison:True  Average loss: 5.5554 Accuracy: 3/9000 (0.03%)
+Epoch 46 completed in 45.19 seconds
+Server Epoch:47 choose agents : [47, 89, 12, 52, 97, 15, 5, 8, 3, 36].
+___Local_Train , g_epoch  47, l_epoch   1, local model 47,  Average loss: 2.6032, Accuracy: 88/344 (25.5814%)
+___Local_Train , g_epoch  47, l_epoch   2, local model 47,  Average loss: 1.4768, Accuracy: 164/344 (47.6744%)
+___Local_Train , g_epoch  47, l_epoch   3, local model 47,  Average loss: 1.5374, Accuracy: 193/344 (56.1047%)
+___Local_Train , g_epoch  47, l_epoch   4, local model 47,  Average loss: 1.3566, Accuracy: 206/344 (59.8837%)
+___Local_Train , g_epoch  47, l_epoch   5, local model 47,  Average loss: 1.2515, Accuracy: 193/344 (56.1047%)
+___Local_Train , g_epoch  47, l_epoch   6, local model 47,  Average loss: 1.2012, Accuracy: 202/344 (58.7209%)
+___Local_Train , g_epoch  47, l_epoch   1, local model 89,  Average loss: 1.1753, Accuracy: 392/689 (56.8941%)
+___Local_Train , g_epoch  47, l_epoch   2, local model 89,  Average loss: 1.1400, Accuracy: 402/689 (58.3454%)
+___Local_Train , g_epoch  47, l_epoch   1, local model 12,  Average loss: 0.9997, Accuracy: 340/534 (63.6704%)
+___Local_Train , g_epoch  47, l_epoch   2, local model 12,  Average loss: 0.9789, Accuracy: 344/534 (64.4195%)
+___Local_Train , g_epoch  47, l_epoch   1, local model 52,  Average loss: 1.2923, Accuracy: 312/548 (56.9343%)
+___Local_Train , g_epoch  47, l_epoch   2, local model 52,  Average loss: 1.0366, Accuracy: 355/548 (64.7810%)
+___Local_Train , g_epoch  47, l_epoch   1, local model 97,  Average loss: 1.3473, Accuracy: 255/497 (51.3078%)
+___Local_Train , g_epoch  47, l_epoch   2, local model 97,  Average loss: 1.0447, Accuracy: 312/497 (62.7767%)
+___Local_Train , g_epoch  47, l_epoch   1, local model 15,  Average loss: 1.2881, Accuracy: 284/515 (55.1456%)
+___Local_Train , g_epoch  47, l_epoch   2, local model 15,  Average loss: 1.5674, Accuracy: 269/515 (52.2330%)
+___Local_Train , g_epoch  47, l_epoch   1, local model 5,  Average loss: 1.1617, Accuracy: 343/607 (56.5074%)
+___Local_Train , g_epoch  47, l_epoch   2, local model 5,  Average loss: 1.0681, Accuracy: 388/607 (63.9209%)
+___Local_Train , g_epoch  47, l_epoch   1, local model 8,  Average loss: 1.2744, Accuracy: 255/456 (55.9211%)
+___Local_Train , g_epoch  47, l_epoch   2, local model 8,  Average loss: 1.0529, Accuracy: 286/456 (62.7193%)
+___Local_Train , g_epoch  47, l_epoch   1, local model 3,  Average loss: 1.1185, Accuracy: 303/512 (59.1797%)
+___Local_Train , g_epoch  47, l_epoch   2, local model 3,  Average loss: 0.9398, Accuracy: 340/512 (66.4062%)
+___Local_Train , g_epoch  47, l_epoch   1, local model 36,  Average loss: 2.2480, Accuracy: 194/591 (32.8257%)
+___Local_Train , g_epoch  47, l_epoch   2, local model 36,  Average loss: 1.4534, Accuracy: 333/591 (56.3452%)
+___Local_Train , g_epoch  47, l_epoch   3, local model 36,  Average loss: 1.1891, Accuracy: 359/591 (60.7445%)
+___Local_Train , g_epoch  47, l_epoch   4, local model 36,  Average loss: 1.0384, Accuracy: 382/591 (64.6362%)
+___Local_Train , g_epoch  47, l_epoch   5, local model 36,  Average loss: 0.8770, Accuracy: 396/591 (67.0051%)
+___Local_Train , g_epoch  47, l_epoch   6, local model 36,  Average loss: 0.8353, Accuracy: 414/591 (70.0508%)
+47, 0, 0.5938712358474731
+89, 9, 0.2857964038848877
+12, 8, 0.33745449781417847
+52, 4, 0.38965243101119995
+97, 4, 0.34587568044662476
+15, 6, 0.5695940852165222
+5, 4, 0.4817969799041748
+8, 2, 0.3742271065711975
+3, 9, 0.5110922455787659
+36, 0, 0.695618748664856
+47
+36
+count_all_attack: 53, count_all_defense: 57, count_correct_defense: 53
+___Global_Test_Poison:False  Average loss: 1.3567 Accuracy: 5220/10000 (52.20%)
+___Global_Test_Poison:True  Average loss: 5.1542 Accuracy: 224/9000 (2.49%)
+Epoch 47 completed in 48.46 seconds
+Server Epoch:48 choose agents : [25, 17, 89, 88, 13, 71, 38, 83, 41, 57].
+___Local_Train , g_epoch  48, l_epoch   1, local model 25,  Average loss: 1.4436, Accuracy: 204/423 (48.2270%)
+___Local_Train , g_epoch  48, l_epoch   2, local model 25,  Average loss: 1.0313, Accuracy: 269/423 (63.5934%)
+___Local_Train , g_epoch  48, l_epoch   1, local model 17,  Average loss: 1.2954, Accuracy: 264/478 (55.2301%)
+___Local_Train , g_epoch  48, l_epoch   2, local model 17,  Average loss: 1.0164, Accuracy: 311/478 (65.0628%)
+___Local_Train , g_epoch  48, l_epoch   1, local model 89,  Average loss: 1.1205, Accuracy: 423/689 (61.3933%)
+___Local_Train , g_epoch  48, l_epoch   2, local model 89,  Average loss: 1.1023, Accuracy: 418/689 (60.6676%)
+___Local_Train , g_epoch  48, l_epoch   1, local model 88,  Average loss: 1.2580, Accuracy: 228/394 (57.8680%)
+___Local_Train , g_epoch  48, l_epoch   2, local model 88,  Average loss: 1.3129, Accuracy: 220/394 (55.8376%)
+___Local_Train , g_epoch  48, l_epoch   1, local model 13,  Average loss: 1.1968, Accuracy: 342/565 (60.5310%)
+___Local_Train , g_epoch  48, l_epoch   2, local model 13,  Average loss: 1.0591, Accuracy: 348/565 (61.5929%)
+___Local_Train , g_epoch  48, l_epoch   1, local model 71,  Average loss: 1.0970, Accuracy: 395/606 (65.1815%)
+___Local_Train , g_epoch  48, l_epoch   2, local model 71,  Average loss: 0.9250, Accuracy: 414/606 (68.3168%)
+___Local_Train , g_epoch  48, l_epoch   1, local model 38,  Average loss: 1.1964, Accuracy: 279/469 (59.4883%)
+___Local_Train , g_epoch  48, l_epoch   2, local model 38,  Average loss: 0.9386, Accuracy: 317/469 (67.5906%)
+___Local_Train , g_epoch  48, l_epoch   1, local model 83,  Average loss: 1.2911, Accuracy: 257/438 (58.6758%)
+___Local_Train , g_epoch  48, l_epoch   2, local model 83,  Average loss: 1.0976, Accuracy: 279/438 (63.6986%)
+___Local_Train , g_epoch  48, l_epoch   1, local model 41,  Average loss: 1.5286, Accuracy: 249/554 (44.9458%)
+___Local_Train , g_epoch  48, l_epoch   2, local model 41,  Average loss: 1.1362, Accuracy: 319/554 (57.5812%)
+___Local_Train , g_epoch  48, l_epoch   1, local model 57,  Average loss: 1.3435, Accuracy: 192/351 (54.7009%)
+___Local_Train , g_epoch  48, l_epoch   2, local model 57,  Average loss: 1.0982, Accuracy: 219/351 (62.3932%)
+25, 2, 0.4738016128540039
+17, 2, 0.40269625186920166
+89, 9, 0.30879297852516174
+88, 9, 0.3753834068775177
+13, 9, 0.43643325567245483
+71, 1, 0.41255271434783936
+38, 3, 0.2929956316947937
+83, 7, 0.7893170118331909
+41, 2, 0.3110097050666809
+57, 7, 0.19817332923412323
+count_all_attack: 53, count_all_defense: 57, count_correct_defense: 53
+___Global_Test_Poison:False  Average loss: 1.3660 Accuracy: 4807/10000 (48.07%)
+___Global_Test_Poison:True  Average loss: 3.8250 Accuracy: 1010/9000 (11.22%)
+Epoch 48 completed in 36.62 seconds
+Server Epoch:49 choose agents : [13, 76, 2, 42, 64, 9, 88, 44, 22, 75].
+___Local_Train , g_epoch  49, l_epoch   1, local model 13,  Average loss: 1.0971, Accuracy: 356/565 (63.0089%)
+___Local_Train , g_epoch  49, l_epoch   2, local model 13,  Average loss: 0.8946, Accuracy: 380/565 (67.2566%)
+___Local_Train , g_epoch  49, l_epoch   1, local model 76,  Average loss: 1.3816, Accuracy: 233/455 (51.2088%)
+___Local_Train , g_epoch  49, l_epoch   2, local model 76,  Average loss: 1.1802, Accuracy: 276/455 (60.6593%)
+___Local_Train , g_epoch  49, l_epoch   1, local model 2,  Average loss: 1.1552, Accuracy: 235/398 (59.0452%)
+___Local_Train , g_epoch  49, l_epoch   2, local model 2,  Average loss: 0.8577, Accuracy: 266/398 (66.8342%)
+___Local_Train , g_epoch  49, l_epoch   1, local model 42,  Average loss: 1.6824, Accuracy: 116/302 (38.4106%)
+___Local_Train , g_epoch  49, l_epoch   2, local model 42,  Average loss: 1.2606, Accuracy: 167/302 (55.2980%)
+___Local_Train , g_epoch  49, l_epoch   1, local model 64,  Average loss: 1.6165, Accuracy: 231/552 (41.8478%)
+___Local_Train , g_epoch  49, l_epoch   2, local model 64,  Average loss: 1.1044, Accuracy: 328/552 (59.4203%)
+___Local_Train , g_epoch  49, l_epoch   1, local model 9,  Average loss: 0.9953, Accuracy: 436/670 (65.0746%)
+___Local_Train , g_epoch  49, l_epoch   2, local model 9,  Average loss: 0.9410, Accuracy: 457/670 (68.2090%)
+___Local_Train , g_epoch  49, l_epoch   1, local model 88,  Average loss: 1.1952, Accuracy: 222/394 (56.3452%)
+___Local_Train , g_epoch  49, l_epoch   2, local model 88,  Average loss: 1.1909, Accuracy: 237/394 (60.1523%)
+___Local_Train , g_epoch  49, l_epoch   1, local model 44,  Average loss: 1.7453, Accuracy: 141/369 (38.2114%)
+___Local_Train , g_epoch  49, l_epoch   2, local model 44,  Average loss: 0.9902, Accuracy: 251/369 (68.0217%)
+___Local_Train , g_epoch  49, l_epoch   1, local model 22,  Average loss: 1.5124, Accuracy: 178/373 (47.7212%)
+___Local_Train , g_epoch  49, l_epoch   2, local model 22,  Average loss: 0.9295, Accuracy: 270/373 (72.3861%)
+___Local_Train , g_epoch  49, l_epoch   1, local model 75,  Average loss: 1.4162, Accuracy: 251/456 (55.0439%)
+___Local_Train , g_epoch  49, l_epoch   2, local model 75,  Average loss: 0.9745, Accuracy: 312/456 (68.4211%)

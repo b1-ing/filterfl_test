@@ -1,0 +1,64 @@
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+sampled clients (column order below): [68, 88, 21, 24, 47, 13, 73, 46, 82, 55]
+attacker = client 47, at index 4
+
+A) random-init degenerate   seed=123
+  preds : [9, 9, 0, 1, 7, 9, 9, 0, 3, 8]
+  confs : [0.233, 0.303, 0.243, 0.225, 0.708, 0.323, 0.258, 0.244, 0.279, 0.241]
+  flagged clients: [47]
+
+A) random-init degenerate   seed=456
+  preds : [9, 9, 0, 1, 7, 9, 9, 0, 3, 8]
+  confs : [0.234, 0.304, 0.245, 0.223, 0.706, 0.323, 0.259, 0.244, 0.278, 0.245]
+  flagged clients: [47]
+
+A) random-init degenerate   seed=789
+  preds : [9, 9, 0, 1, 7, 9, 9, 0, 3, 8]
+  confs : [0.237, 0.302, 0.244, 0.225, 0.707, 0.325, 0.258, 0.245, 0.277, 0.249]
+  flagged clients: [47]
+
+B) clean-trained degenerate seed=123
+  preds : [9, 9, 0, 1, 7, 9, 9, 0, 3, 8]
+  confs : [0.23, 0.299, 0.244, 0.223, 0.704, 0.318, 0.254, 0.243, 0.276, 0.242]
+  flagged clients: [47]
+
+B) clean-trained degenerate seed=456
+  preds : [9, 9, 0, 1, 7, 9, 9, 0, 3, 8]
+  confs : [0.23, 0.3, 0.245, 0.22, 0.703, 0.316, 0.254, 0.244, 0.273, 0.241]
+  flagged clients: [47]
+
+B) clean-trained degenerate seed=789
+  preds : [9, 9, 0, 1, 7, 9, 9, 0, 3, 8]
+  confs : [0.235, 0.3, 0.242, 0.225, 0.707, 0.322, 0.256, 0.244, 0.279, 0.247]
+  flagged clients: [47]
+
+C) TRUE ORACLE (non-degen)  seed=123
+  preds : [9, 9, 0, 1, 7, 9, 9, 0, 3, 8]
+  confs : [0.232, 0.3, 0.243, 0.225, 0.707, 0.321, 0.256, 0.243, 0.277, 0.241]
+  flagged clients: [47]
+
+C) TRUE ORACLE (non-degen)  seed=456
+  preds : [9, 9, 0, 1, 7, 9, 9, 0, 3, 8]
+  confs : [0.232, 0.301, 0.244, 0.223, 0.706, 0.318, 0.255, 0.243, 0.274, 0.247]
+  flagged clients: [47]
+
+C) TRUE ORACLE (non-degen)  seed=789
+  preds : [9, 9, 0, 1, 7, 9, 9, 0, 3, 8]
+  confs : [0.242, 0.302, 0.243, 0.23, 0.707, 0.323, 0.259, 0.243, 0.276, 0.259]
+  flagged clients: [47]
+
+=== flagged-set summary across all 9 runs ===
+  A) random-init degenerate   seed=123: (47,)
+  A) random-init degenerate   seed=456: (47,)
+  A) random-init degenerate   seed=789: (47,)
+  B) clean-trained degenerate seed=123: (47,)
+  B) clean-trained degenerate seed=456: (47,)
+  B) clean-trained degenerate seed=789: (47,)
+  C) TRUE ORACLE (non-degen)  seed=123: (47,)
+  C) TRUE ORACLE (non-degen)  seed=456: (47,)
+  C) TRUE ORACLE (non-degen)  seed=789: (47,)
+
+ distinct flagged-sets seen: 1 -> {(47,)}

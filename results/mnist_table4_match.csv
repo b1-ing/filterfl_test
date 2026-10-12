@@ -1,0 +1,1 @@
+epoch,ma,asr,active_rho,is_detection_round,sampled_clients,adversarial_sampled,detected_count,detection_tp,detection_fp,per_client_confidence,per_client_trust,malicious_local_ma

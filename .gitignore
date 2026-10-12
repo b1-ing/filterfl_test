@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtual environment
+.venv/
+
+# IDE
+.idea/
+
+# Claude Code local settings
+.claude/
+
+# Dataset (large binary)
+data/
+
+# Model checkpoints and tensors (large binary)
+*.pt
+
+# Compiled outputs
+*.o
+*.so

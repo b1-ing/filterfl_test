@@ -1,0 +1,83 @@
+D:\filterfl_test_claude\reference\filterfl\gan.py:144: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\builder\windows\pytorch\torch\csrc\tensor\python_tensor.cpp:80.)
+  z = Variable(Tensor(np.random.normal(0, 1, (image_num, latent_dim))))
+Files already downloaded and verified
+Files already downloaded and verified
+G_old loaded from results/stage2_full_a05_snap_e00100_ckpt.pt (epoch 100)
+trigger images generated from one real round, reused for every probe below
+
+=== BENIGN population (natural variance: client identity x local_epochs x lr) ===
+  benign cid=0 epochs=2 lr=0.01            ASR=  0.22 CleanAcc= 26.07 c_stage3=0.4834 pred=5 ||dw||=   1.172 flagged=False
+  benign cid=0 epochs=4 lr=0.01            ASR=  5.82 CleanAcc= 33.47 c_stage3=0.3027 pred=3 ||dw||=   2.534 flagged=False
+  benign cid=0 epochs=2 lr=0.02            ASR=  0.28 CleanAcc= 25.70 c_stage3=0.3943 pred=2 ||dw||=   1.531 flagged=False
+  benign cid=1 epochs=2 lr=0.01            ASR=  0.00 CleanAcc= 28.13 c_stage3=0.3419 pred=8 ||dw||=   1.727 flagged=False
+  benign cid=1 epochs=4 lr=0.01            ASR=  0.00 CleanAcc= 31.03 c_stage3=0.3223 pred=9 ||dw||=   4.929 flagged=False
+  benign cid=1 epochs=2 lr=0.02            ASR=  0.00 CleanAcc= 27.00 c_stage3=0.5164 pred=8 ||dw||=   3.446 flagged=False
+  benign cid=2 epochs=2 lr=0.01            ASR=  0.00 CleanAcc= 20.13 c_stage3=0.8581 pred=2 ||dw||=   1.470 flagged=False
+  benign cid=2 epochs=4 lr=0.01            ASR=  0.00 CleanAcc= 30.22 c_stage3=0.6658 pred=2 ||dw||=   2.900 flagged=False
+  benign cid=2 epochs=2 lr=0.02            ASR=  0.00 CleanAcc= 32.48 c_stage3=0.5967 pred=2 ||dw||=   1.843 flagged=False
+  benign cid=3 epochs=2 lr=0.01            ASR=  0.00 CleanAcc= 26.34 c_stage3=0.4391 pred=7 ||dw||=   2.604 flagged=False
+  benign cid=3 epochs=4 lr=0.01            ASR=  0.03 CleanAcc= 31.14 c_stage3=0.5818 pred=7 ||dw||=   5.964 flagged=False
+  benign cid=3 epochs=2 lr=0.02            ASR=  0.00 CleanAcc= 15.09 c_stage3=0.6331 pred=7 ||dw||=   4.239 flagged=False
+  benign cid=4 epochs=2 lr=0.01            ASR=  4.21 CleanAcc= 41.80 c_stage3=0.4417 pred=4 ||dw||=   1.433 flagged=False
+  benign cid=4 epochs=4 lr=0.01            ASR=  3.03 CleanAcc= 41.83 c_stage3=0.4875 pred=3 ||dw||=   2.589 flagged=False
+  benign cid=4 epochs=2 lr=0.02            ASR=  8.02 CleanAcc= 35.38 c_stage3=0.4311 pred=3 ||dw||=   1.844 flagged=False
+  benign cid=5 epochs=2 lr=0.01            ASR=  2.59 CleanAcc= 38.48 c_stage3=0.4391 pred=5 ||dw||=   0.811 flagged=False
+  benign cid=5 epochs=4 lr=0.01            ASR=  2.91 CleanAcc= 35.39 c_stage3=0.3335 pred=3 ||dw||=   1.590 flagged=False
+  benign cid=5 epochs=2 lr=0.02            ASR=  5.97 CleanAcc= 30.67 c_stage3=0.4100 pred=5 ||dw||=   1.059 flagged=False
+
+=== POISONED population (poison_rate x poison_epochs x post-hoc scale-down) ===
+  poisoned rate=0.2 epochs=2 scale=1.0     ASR= 39.72 CleanAcc= 25.99 c_stage3=0.6656 pred=0 ||dw||=   1.480 flagged=True
+  poisoned rate=0.2 epochs=2 scale=0.5     ASR=  5.74 CleanAcc= 49.80 c_stage3=0.1829 pred=0 ||dw||=   0.800 flagged=False
+  poisoned rate=0.2 epochs=2 scale=0.25    ASR=  1.00 CleanAcc= 54.51 c_stage3=0.1784 pred=4 ||dw||=   0.364 flagged=False
+  poisoned rate=0.2 epochs=2 scale=0.1     ASR=  0.12 CleanAcc= 52.03 c_stage3=0.2227 pred=4 ||dw||=   0.158 flagged=False
+  poisoned rate=0.2 epochs=6 scale=1.0     ASR= 67.42 CleanAcc= 32.23 c_stage3=0.3965 pred=0 ||dw||=   4.158 flagged=False
+  poisoned rate=0.2 epochs=6 scale=0.5     ASR=  9.40 CleanAcc= 47.68 c_stage3=0.1609 pred=7 ||dw||=   2.147 flagged=False
+  poisoned rate=0.2 epochs=6 scale=0.25    ASR=  0.58 CleanAcc= 49.80 c_stage3=0.1842 pred=4 ||dw||=   0.955 flagged=False
+  poisoned rate=0.2 epochs=6 scale=0.1     ASR=  0.13 CleanAcc= 50.72 c_stage3=0.2322 pred=4 ||dw||=   0.383 flagged=False
+  poisoned rate=0.5 epochs=2 scale=1.0     ASR= 73.56 CleanAcc= 17.45 c_stage3=0.9515 pred=0 ||dw||=   1.646 flagged=True
+  poisoned rate=0.5 epochs=2 scale=0.5     ASR= 51.03 CleanAcc= 38.84 c_stage3=0.5110 pred=0 ||dw||=   0.879 flagged=True
+  poisoned rate=0.5 epochs=2 scale=0.25    ASR=  1.78 CleanAcc= 53.69 c_stage3=0.1686 pred=3 ||dw||=   0.442 flagged=False
+  poisoned rate=0.5 epochs=2 scale=0.1     ASR=  0.23 CleanAcc= 52.42 c_stage3=0.2278 pred=4 ||dw||=   0.170 flagged=False
+  poisoned rate=0.5 epochs=6 scale=1.0     ASR= 97.38 CleanAcc= 14.62 c_stage3=0.7308 pred=0 ||dw||=   6.361 flagged=True
+  poisoned rate=0.5 epochs=6 scale=0.5     ASR= 29.60 CleanAcc= 48.20 c_stage3=0.3248 pred=0 ||dw||=   2.870 flagged=False
+  poisoned rate=0.5 epochs=6 scale=0.25    ASR=  1.50 CleanAcc= 48.94 c_stage3=0.1607 pred=9 ||dw||=   1.605 flagged=False
+  poisoned rate=0.5 epochs=6 scale=0.1     ASR=  0.18 CleanAcc= 50.58 c_stage3=0.2094 pred=4 ||dw||=   0.587 flagged=False
+  poisoned rate=1.0 epochs=2 scale=1.0     ASR=100.00 CleanAcc= 10.00 c_stage3=1.0000 pred=0 ||dw||=   2.475 flagged=True
+  poisoned rate=1.0 epochs=2 scale=0.5     ASR= 99.98 CleanAcc= 10.08 c_stage3=0.9793 pred=0 ||dw||=   1.243 flagged=True
+  poisoned rate=1.0 epochs=2 scale=0.25    ASR= 38.83 CleanAcc= 42.46 c_stage3=0.4967 pred=0 ||dw||=   0.630 flagged=False
+  poisoned rate=1.0 epochs=2 scale=0.1     ASR=  0.92 CleanAcc= 52.58 c_stage3=0.2167 pred=4 ||dw||=   0.246 flagged=False
+  poisoned rate=1.0 epochs=6 scale=1.0     ASR=100.00 CleanAcc= 10.00 c_stage3=1.0000 pred=0 ||dw||=   8.053 flagged=True
+  poisoned rate=1.0 epochs=6 scale=0.5     ASR=100.00 CleanAcc= 10.00 c_stage3=0.9998 pred=0 ||dw||=   3.959 flagged=True
+  poisoned rate=1.0 epochs=6 scale=0.25    ASR= 97.19 CleanAcc= 12.41 c_stage3=0.9126 pred=0 ||dw||=   1.991 flagged=True
+  poisoned rate=1.0 epochs=6 scale=0.1     ASR=  4.40 CleanAcc= 52.87 c_stage3=0.1955 pred=0 ||dw||=   0.794 flagged=False
+
+wrote 42 rows to results/separability_scatter_ckpt100.csv
+
+benign confidence band: (0.3027059733867645, 0.8581137657165527)
+benign clean-acc band: (15.09, 41.83)
+
+=== all poisoned points, sorted by ASR descending (full tuple, no pre-filtering) ===
+  poisoned rate=1.0 epochs=2 scale=1.0     ASR=100.00 CleanAcc= 10.00 c_stage3=1.0000 ||dw||=   2.475 flagged=True in_benign_conf_band=False in_benign_acc_band=False
+  poisoned rate=1.0 epochs=6 scale=1.0     ASR=100.00 CleanAcc= 10.00 c_stage3=1.0000 ||dw||=   8.053 flagged=True in_benign_conf_band=False in_benign_acc_band=False
+  poisoned rate=1.0 epochs=6 scale=0.5     ASR=100.00 CleanAcc= 10.00 c_stage3=0.9998 ||dw||=   3.959 flagged=True in_benign_conf_band=False in_benign_acc_band=False
+  poisoned rate=1.0 epochs=2 scale=0.5     ASR= 99.98 CleanAcc= 10.08 c_stage3=0.9793 ||dw||=   1.243 flagged=True in_benign_conf_band=False in_benign_acc_band=False
+  poisoned rate=0.5 epochs=6 scale=1.0     ASR= 97.38 CleanAcc= 14.62 c_stage3=0.7308 ||dw||=   6.361 flagged=True in_benign_conf_band=True in_benign_acc_band=False
+  poisoned rate=1.0 epochs=6 scale=0.25    ASR= 97.19 CleanAcc= 12.41 c_stage3=0.9126 ||dw||=   1.991 flagged=True in_benign_conf_band=False in_benign_acc_band=False
+  poisoned rate=0.5 epochs=2 scale=1.0     ASR= 73.56 CleanAcc= 17.45 c_stage3=0.9515 ||dw||=   1.646 flagged=True in_benign_conf_band=False in_benign_acc_band=True
+  poisoned rate=0.2 epochs=6 scale=1.0     ASR= 67.42 CleanAcc= 32.23 c_stage3=0.3965 ||dw||=   4.158 flagged=False in_benign_conf_band=True in_benign_acc_band=True
+  poisoned rate=0.5 epochs=2 scale=0.5     ASR= 51.03 CleanAcc= 38.84 c_stage3=0.5110 ||dw||=   0.879 flagged=True in_benign_conf_band=True in_benign_acc_band=True
+  poisoned rate=0.2 epochs=2 scale=1.0     ASR= 39.72 CleanAcc= 25.99 c_stage3=0.6656 ||dw||=   1.480 flagged=True in_benign_conf_band=True in_benign_acc_band=True
+  poisoned rate=1.0 epochs=2 scale=0.25    ASR= 38.83 CleanAcc= 42.46 c_stage3=0.4967 ||dw||=   0.630 flagged=False in_benign_conf_band=True in_benign_acc_band=False
+  poisoned rate=0.5 epochs=6 scale=0.5     ASR= 29.60 CleanAcc= 48.20 c_stage3=0.3248 ||dw||=   2.870 flagged=False in_benign_conf_band=True in_benign_acc_band=False
+  poisoned rate=0.2 epochs=6 scale=0.5     ASR=  9.40 CleanAcc= 47.68 c_stage3=0.1609 ||dw||=   2.147 flagged=False in_benign_conf_band=False in_benign_acc_band=False
+  poisoned rate=0.2 epochs=2 scale=0.5     ASR=  5.74 CleanAcc= 49.80 c_stage3=0.1829 ||dw||=   0.800 flagged=False in_benign_conf_band=False in_benign_acc_band=False
+  poisoned rate=1.0 epochs=6 scale=0.1     ASR=  4.40 CleanAcc= 52.87 c_stage3=0.1955 ||dw||=   0.794 flagged=False in_benign_conf_band=False in_benign_acc_band=False
+  poisoned rate=0.5 epochs=2 scale=0.25    ASR=  1.78 CleanAcc= 53.69 c_stage3=0.1686 ||dw||=   0.442 flagged=False in_benign_conf_band=False in_benign_acc_band=False
+  poisoned rate=0.5 epochs=6 scale=0.25    ASR=  1.50 CleanAcc= 48.94 c_stage3=0.1607 ||dw||=   1.605 flagged=False in_benign_conf_band=False in_benign_acc_band=False
+  poisoned rate=0.2 epochs=2 scale=0.25    ASR=  1.00 CleanAcc= 54.51 c_stage3=0.1784 ||dw||=   0.364 flagged=False in_benign_conf_band=False in_benign_acc_band=False
+  poisoned rate=1.0 epochs=2 scale=0.1     ASR=  0.92 CleanAcc= 52.58 c_stage3=0.2167 ||dw||=   0.246 flagged=False in_benign_conf_band=False in_benign_acc_band=False
+  poisoned rate=0.2 epochs=6 scale=0.25    ASR=  0.58 CleanAcc= 49.80 c_stage3=0.1842 ||dw||=   0.955 flagged=False in_benign_conf_band=False in_benign_acc_band=False
+  poisoned rate=0.5 epochs=2 scale=0.1     ASR=  0.23 CleanAcc= 52.42 c_stage3=0.2278 ||dw||=   0.170 flagged=False in_benign_conf_band=False in_benign_acc_band=False
+  poisoned rate=0.5 epochs=6 scale=0.1     ASR=  0.18 CleanAcc= 50.58 c_stage3=0.2094 ||dw||=   0.587 flagged=False in_benign_conf_band=False in_benign_acc_band=False
+  poisoned rate=0.2 epochs=6 scale=0.1     ASR=  0.13 CleanAcc= 50.72 c_stage3=0.2322 ||dw||=   0.383 flagged=False in_benign_conf_band=False in_benign_acc_band=False
+  poisoned rate=0.2 epochs=2 scale=0.1     ASR=  0.12 CleanAcc= 52.03 c_stage3=0.2227 ||dw||=   0.158 flagged=False in_benign_conf_band=False in_benign_acc_band=False

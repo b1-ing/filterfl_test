@@ -1,0 +1,43 @@
+loaded 30 rounds from scripts/probe_fidelity_rounds_n30.pt
+
+  t  excl?  atk |   oracle(p,c,rank) |    stale(p,c,rank) |   linear(p,c,rank) |  mse(stale)  mse(linear)
+  2   True   47 | p=0 c=0.670 r= 1   | p=0 c=0.670 r= 1   | p=0 c=0.670 r= 1   |    0.000099     0.000059
+  3  False none | (no attacker sampled this round) mse(stale)=0.000051 mse(linear)=0.000657
+  4   True   69 | p=0 c=0.648 r= 1   | p=0 c=0.649 r= 1   | p=0 c=0.649 r= 1   |    0.000488     0.000568
+  5   True   69 | p=0 c=0.629 r= 1   | p=0 c=0.627 r= 1   | p=0 c=0.627 r= 1   |    0.001132     0.000705
+  6   True   45 | p=0 c=0.582 r= 2   | p=0 c=0.582 r= 2   | p=0 c=0.582 r= 2   |    0.000860     0.000617
+  6   True   84 | p=0 c=0.683 r= 1   | p=0 c=0.682 r= 1   | p=0 c=0.682 r= 1   |    0.000860     0.000617
+  7   True   84 | p=0 c=0.712 r= 1   | p=0 c=0.713 r= 1   | p=0 c=0.712 r= 1   |    0.001557     0.000163
+  8  False none | (no attacker sampled this round) mse(stale)=0.000826 mse(linear)=0.000450
+  9   True   84 | p=0 c=0.728 r= 1   | p=0 c=0.728 r= 1   | p=0 c=0.728 r= 1   |    0.000910     0.000346
+ 10  False none | (no attacker sampled this round) mse(stale)=0.000553 mse(linear)=0.000892
+ 11  False none | (no attacker sampled this round) mse(stale)=0.001440 mse(linear)=0.001547
+ 12   True   84 | p=0 c=0.720 r= 2   | p=0 c=0.718 r= 2   | p=0 c=0.719 r= 2   |    0.000754     0.001855
+ 13  False none | (no attacker sampled this round) mse(stale)=0.000508 mse(linear)=0.000218
+ 14  False none | (no attacker sampled this round) mse(stale)=0.000772 mse(linear)=0.000332
+ 15   True   54 | p=0 c=0.618 r= 3   | p=0 c=0.617 r= 3   | p=0 c=0.617 r= 3   |    0.001135     0.000341
+ 16  False none | (no attacker sampled this round) mse(stale)=0.000782 mse(linear)=0.000449
+ 17   True   69 | p=0 c=0.604 r= 3   | p=0 c=0.603 r= 3   | p=0 c=0.604 r= 3   |    0.000359     0.000296
+ 17   True   84 | p=0 c=0.740 r= 1   | p=0 c=0.738 r= 1   | p=0 c=0.740 r= 1   |    0.000359     0.000296
+ 18   True   54 | p=0 c=0.677 r= 2   | p=0 c=0.679 r= 2   | p=0 c=0.677 r= 2   |    0.000459     0.000120
+ 18   True   45 | p=0 c=0.692 r= 1   | p=0 c=0.693 r= 1   | p=0 c=0.692 r= 1   |    0.000459     0.000120
+ 18   True   34 | p=0 c=0.624 r= 3   | p=0 c=0.625 r= 3   | p=0 c=0.623 r= 3   |    0.000459     0.000120
+ 19   True   50 | p=0 c=0.760 r= 2   | p=0 c=0.761 r= 2   | p=0 c=0.762 r= 2   |    0.000151     0.000224
+ 20   True   99 | p=0 c=0.760 r= 1   | p=0 c=0.758 r= 1   | p=0 c=0.757 r= 1   |    0.000266     0.000664
+ 20   True   69 | p=0 c=0.516 r= 3   | p=0 c=0.515 r= 3   | p=0 c=0.514 r= 3   |    0.000266     0.000664
+ 21   True   99 | p=0 c=0.744 r= 2   | p=0 c=0.743 r= 2   | p=0 c=0.745 r= 2   |    0.000237     0.000266
+ 21   True   34 | p=0 c=0.634 r= 3   | p=0 c=0.630 r= 3   | p=0 c=0.630 r= 3   |    0.000237     0.000266
+ 22  False none | (no attacker sampled this round) mse(stale)=0.000233 mse(linear)=0.000431
+ 23   True   50 | p=0 c=0.740 r= 1   | p=0 c=0.740 r= 1   | p=0 c=0.740 r= 1   |    0.000519     0.000608
+ 23   True   69 | p=0 c=0.574 r= 3   | p=0 c=0.573 r= 3   | p=0 c=0.577 r= 3   |    0.000519     0.000608
+ 23   True   84 | p=0 c=0.692 r= 2   | p=0 c=0.692 r= 2   | p=0 c=0.693 r= 2   |    0.000519     0.000608
+ 24   True   54 | p=0 c=0.637 r= 1   | p=0 c=0.631 r= 2   | p=0 c=0.633 r= 2   |    0.001493     0.001469
+ 25  False none | (no attacker sampled this round) mse(stale)=0.001250 mse(linear)=0.001497
+ 26  False none | (no attacker sampled this round) mse(stale)=0.000468 mse(linear)=0.000476
+ 27   True   60 | p=0 c=0.547 r= 3   | p=0 c=0.548 r= 3   | p=0 c=0.548 r= 3   |    0.000233     0.000192
+ 27   True   34 | p=0 c=0.624 r= 1   | p=0 c=0.624 r= 1   | p=0 c=0.627 r= 1   |    0.000233     0.000192
+ 28   True   69 | p=0 c=0.577 r= 2   | p=0 c=0.575 r= 2   | p=0 c=0.578 r= 2   |    0.000324     0.000382
+ 29   True   50 | p=0 c=0.713 r= 2   | p=0 c=0.714 r= 2   | p=0 c=0.706 r= 2   |    0.000231     0.001336
+ 29   True   99 | p=0 c=0.740 r= 1   | p=0 c=0.739 r= 1   | p=0 c=0.736 r= 1   |    0.000231     0.001336
+ 29   True   69 | p=0 c=0.550 r= 5   | p=0 c=0.552 r= 5   | p=0 c=0.548 r= 5   |    0.000231     0.001336
+ 30  False none | (no attacker sampled this round) mse(stale)=0.000600 mse(linear)=0.004151

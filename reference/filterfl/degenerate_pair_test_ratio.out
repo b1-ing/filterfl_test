@@ -1,0 +1,78 @@
+current path: saved_models/model_CIFAR10_degentest_degenerate_pair_test
+Loading data
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+reading data done
+build_classes_dict done
+train loaders done
+get poison test loader
+Server Epoch:1 choose agents : [68, 88, 21, 24, 47, 13, 73, 46, 82, 55].
+D:\filterfl_test_claude\reference\filterfl\train.py:125: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = torch.cuda.amp.GradScaler() if use_amp else None
+D:\filterfl_test_claude\reference\filterfl\train.py:181: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast():
+___Local_Train , g_epoch   1, l_epoch   1, local model 68,  Average loss: 2.2900, Accuracy: 91/416 (21.8750%)
+___Local_Train , g_epoch   1, l_epoch   2, local model 68,  Average loss: 1.7471, Accuracy: 154/416 (37.0192%)
+___Local_Train , g_epoch   1, l_epoch   1, local model 88,  Average loss: 2.0541, Accuracy: 131/447 (29.3065%)
+___Local_Train , g_epoch   1, l_epoch   2, local model 88,  Average loss: 1.5317, Accuracy: 263/447 (58.8367%)
+___Local_Train , g_epoch   1, l_epoch   1, local model 21,  Average loss: 2.2038, Accuracy: 58/262 (22.1374%)
+___Local_Train , g_epoch   1, l_epoch   2, local model 21,  Average loss: 1.4742, Accuracy: 120/262 (45.8015%)
+___Local_Train , g_epoch   1, l_epoch   1, local model 24,  Average loss: 2.3072, Accuracy: 51/320 (15.9375%)
+___Local_Train , g_epoch   1, l_epoch   2, local model 24,  Average loss: 1.8381, Accuracy: 132/320 (41.2500%)
+___Local_Train , g_epoch   1, l_epoch   1, local model 47,  Average loss: 1.9618, Accuracy: 222/654 (33.9450%)
+___Local_Train , g_epoch   1, l_epoch   2, local model 47,  Average loss: 1.6510, Accuracy: 321/654 (49.0826%)
+___Local_Train , g_epoch   1, l_epoch   3, local model 47,  Average loss: 1.4651, Accuracy: 336/654 (51.3761%)
+___Local_Train , g_epoch   1, l_epoch   4, local model 47,  Average loss: 1.3116, Accuracy: 357/654 (54.5872%)
+___Local_Train , g_epoch   1, l_epoch   5, local model 47,  Average loss: 1.1996, Accuracy: 392/654 (59.9388%)
+___Local_Train , g_epoch   1, l_epoch   6, local model 47,  Average loss: 1.0717, Accuracy: 413/654 (63.1498%)
+___Local_Train , g_epoch   1, l_epoch   1, local model 13,  Average loss: 1.9194, Accuracy: 252/620 (40.6452%)
+___Local_Train , g_epoch   1, l_epoch   2, local model 13,  Average loss: 1.5388, Accuracy: 289/620 (46.6129%)
+___Local_Train , g_epoch   1, l_epoch   1, local model 73,  Average loss: 1.7547, Accuracy: 251/500 (50.2000%)
+___Local_Train , g_epoch   1, l_epoch   2, local model 73,  Average loss: 1.4471, Accuracy: 337/500 (67.4000%)
+___Local_Train , g_epoch   1, l_epoch   1, local model 46,  Average loss: 2.0412, Accuracy: 160/601 (26.6223%)
+___Local_Train , g_epoch   1, l_epoch   2, local model 46,  Average loss: 1.6051, Accuracy: 265/601 (44.0932%)
+___Local_Train , g_epoch   1, l_epoch   1, local model 82,  Average loss: 1.8938, Accuracy: 230/601 (38.2696%)
+___Local_Train , g_epoch   1, l_epoch   2, local model 82,  Average loss: 1.3834, Accuracy: 312/601 (51.9135%)
+___Local_Train , g_epoch   1, l_epoch   1, local model 55,  Average loss: 2.1913, Accuracy: 46/299 (15.3846%)
+___Local_Train , g_epoch   1, l_epoch   2, local model 55,  Average loss: 1.3085, Accuracy: 153/299 (51.1706%)
+sampled: [68, 88, 21, 24, 47, 13, 73, 46, 82, 55]
+adversarial (ground truth): [47]
+
+fingerprint(ori_weight / G_old) = 5387.781485
+fingerprint(w_glob / G_agg)     = 4058.895183
+G_old == G_agg (normal pair)?     NO -- different, as expected (real training happened)
+degenerate pair loads d1=d2=ori_weight explicitly (gan.py's `discriminator2.load_state_dict(d1 if degenerate_pair else d2)`), so by construction d1==d2 exactly in that condition regardless of what G_agg is.
+
+D:\filterfl_test_claude\reference\filterfl\gan.py:126: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\builder\windows\pytorch\torch\csrc\tensor\python_tensor.cpp:80.)
+  z = Variable(Tensor(np.random.normal(0, 1, (image_num, latent_dim))))
+=== NORMAL pair (d1=ori_weight, d2=w_glob) -- Stage 2 (trigger) output ===
+  preds   : [3, 3, 9, 1, 0, 7, 0, 9, 3, 9]
+  confs   : [0.287, 0.51, 0.574, 0.631, 0.602, 0.63, 0.817, 0.231, 0.291, 0.665]
+  flagged : [47, 73]
+
+=== DEGENERATE pair (d1=d2=ori_weight) -- Stage 2 (trigger) output ===
+  preds   : [3, 3, 9, 1, 0, 7, 0, 9, 3, 9]
+  confs   : [0.29, 0.516, 0.578, 0.632, 0.603, 0.633, 0.818, 0.231, 0.291, 0.668]
+  flagged : [47, 73]
+
+MSE(T_normal, T_degenerate) = 0.000799
+
+=== CGAN 1 (Stage 1) raw output for class 0, NORMAL pair ===
+  mean=0.0214 std=0.1144
+=== CGAN 1 (Stage 1) raw output for class 0, DEGENERATE pair ===
+  mean=0.0242 std=0.1169
+  pixel MSE (normal vs degenerate): 0.005904
+
+MSE(T_normal, T_degenerate) / MSE(I_normal, I_degenerate) = 0.1353
+
+=== NORMAL pair -- CGAN1 output fed DIRECTLY to Stage 3 (skip_stage2) ===
+  preds   : [5, 3, 9, 1, 0, 7, 0, 9, 3, 9]
+  confs   : [0.295, 0.542, 0.57, 0.635, 0.597, 0.638, 0.823, 0.221, 0.285, 0.672]
+  flagged : [47, 73]
+
+=== DEGENERATE pair -- CGAN1 output fed DIRECTLY to Stage 3 (skip_stage2) ===
+  preds   : [3, 3, 9, 1, 0, 7, 0, 9, 3, 9]
+  confs   : [0.295, 0.544, 0.576, 0.636, 0.598, 0.64, 0.839, 0.224, 0.289, 0.675]
+  flagged : [47, 73]
+

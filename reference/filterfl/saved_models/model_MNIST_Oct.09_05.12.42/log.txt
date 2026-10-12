@@ -1,0 +1,7 @@
+current path: saved_models/model_MNIST_Oct.09_05.12.42
+Loading data
+reading data done
+build_classes_dict done
+train loaders done
+get poison test loader
+load data done

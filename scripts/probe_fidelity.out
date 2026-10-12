@@ -1,0 +1,24 @@
+Files already downloaded and verified
+Files already downloaded and verified
+round 1: sampled=[68, 88, 21, 24, 47, 13, 73, 46, 82, 55] malicious=[47] excluded=[47]
+round 2: sampled=[7, 97, 25, 11, 71, 48, 20, 52, 92, 47] malicious=[47] excluded=[47]
+round 3: sampled=[66, 76, 53, 28, 18, 16, 35, 61, 80, 74] malicious=[] excluded=[]
+round 4: sampled=[63, 71, 46, 28, 92, 59, 57, 69, 58, 51] malicious=[69] excluded=[69]
+round 5: sampled=[53, 13, 92, 78, 69, 88, 85, 65, 81, 24] malicious=[69] excluded=[69]
+round 6: sampled=[61, 51, 68, 52, 73, 81, 38, 45, 70, 84] malicious=[45, 84] excluded=[45, 84]
+round 7: sampled=[44, 7, 29, 56, 1, 26, 73, 41, 84, 0] malicious=[84] excluded=[84]
+round 8: sampled=[4, 76, 22, 39, 94, 91, 28, 66, 7, 81] malicious=[] excluded=[]
+saved scripts/probe_fidelity_rounds.pt
+
+  t  excl?  atk |     oracle(p,c,rank) |      stale(p,c,rank) |     linear(p,c,rank) |  mse(stale)  mse(linear)
+Traceback (most recent call last):
+  File "D:\filterfl_test_claude\scripts\probe_fidelity.py", line 177, in <module>
+    main()
+  File "D:\filterfl_test_claude\scripts\probe_fidelity.py", line 143, in main
+    det_linear = run_detection(G_old_cur, g_linear, cfg, num_classes, in_channels, device)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\filterfl_test_claude\filterfl\defense.py", line 89, in run_detection
+    gen.load_state_dict(best_state)
+  File "D:\filterfl_test_claude\.venv\Lib\site-packages\torch\nn\modules\module.py", line 2516, in load_state_dict
+    raise TypeError(
+TypeError: Expected state_dict to be dict-like, got <class 'NoneType'>.

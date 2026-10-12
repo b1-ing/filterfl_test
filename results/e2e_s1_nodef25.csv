@@ -1,0 +1,2 @@
+epoch,ma,asr,active_rho,is_detection_round,sampled_clients,adversarial_sampled,detected_count,detection_tp,detection_fp,per_client_confidence,per_client_trust,malicious_local_ma
+1,11.37,0.0,,False,"68,88,21,24,47,13,73,46,82,55",47,0,0,0,,,47:18.40

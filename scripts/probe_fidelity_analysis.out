@@ -1,0 +1,9 @@
+  t  excl?  atk |   oracle(p,c,rank) |    stale(p,c,rank) |   linear(p,c,rank) |  mse(stale)  mse(linear)
+  2   True   47 | p=0 c=0.671 r= 1   | p=0 c=0.671 r= 1   | p=0 c=0.670 r= 1   |    0.000099     0.000059
+  3  False none | (no attacker sampled this round) mse(stale)=0.000048 mse(linear)=0.000657
+  4   True   69 | p=0 c=0.647 r= 1   | p=0 c=0.648 r= 1   | p=0 c=0.649 r= 1   |    0.000490     0.000579
+  5   True   69 | p=0 c=0.628 r= 1   | p=0 c=0.626 r= 1   | p=0 c=0.627 r= 1   |    0.001166     0.000715
+  6   True   45 | p=0 c=0.583 r= 2   | p=0 c=0.584 r= 2   | p=0 c=0.584 r= 2   |    0.000987     0.000798
+  6   True   84 | p=0 c=0.683 r= 1   | p=0 c=0.682 r= 1   | p=0 c=0.681 r= 1   |    0.000987     0.000798
+  7   True   84 | p=0 c=0.711 r= 1   | p=0 c=0.710 r= 1   | p=0 c=0.710 r= 1   |    0.001548     0.000168
+  8  False none | (no attacker sampled this round) mse(stale)=0.000843 mse(linear)=0.000578

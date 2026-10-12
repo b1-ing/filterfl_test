@@ -1,0 +1,60 @@
+D:\filterfl_test_claude\reference\filterfl\gan.py:144: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\builder\windows\pytorch\torch\csrc\tensor\python_tensor.cpp:80.)
+  z = Variable(Tensor(np.random.normal(0, 1, (image_num, latent_dim))))
+Files already downloaded and verified
+Files already downloaded and verified
+trigger images generated from one real round, reused for every probe below
+
+=== BENIGN population (natural variance: client identity x local_epochs x lr) ===
+  benign cid=0 epochs=2 lr=0.01            ASR=  0.00 CleanAcc= 11.34 c_stage3=0.3613 pred=5 ||dw||=  20.846 flagged=False
+  benign cid=0 epochs=4 lr=0.01            ASR=  0.00 CleanAcc= 11.25 c_stage3=0.3416 pred=5 ||dw||=  31.600 flagged=False
+  benign cid=0 epochs=2 lr=0.02            ASR=  0.00 CleanAcc= 12.53 c_stage3=0.2747 pred=3 ||dw||=  20.781 flagged=False
+  benign cid=1 epochs=2 lr=0.01            ASR=  0.00 CleanAcc= 16.05 c_stage3=0.5897 pred=3 ||dw||=  31.680 flagged=False
+  benign cid=1 epochs=4 lr=0.01            ASR=  0.00 CleanAcc= 21.41 c_stage3=0.4302 pred=9 ||dw||=  38.838 flagged=False
+  benign cid=1 epochs=2 lr=0.02            ASR=  0.00 CleanAcc= 14.47 c_stage3=0.7505 pred=8 ||dw||=  30.921 flagged=False
+  benign cid=2 epochs=2 lr=0.01            ASR=  0.00 CleanAcc=  9.98 c_stage3=0.4160 pred=2 ||dw||=  25.362 flagged=False
+  benign cid=2 epochs=4 lr=0.01            ASR=  0.00 CleanAcc=  9.97 c_stage3=0.5906 pred=2 ||dw||=  36.046 flagged=False
+  benign cid=2 epochs=2 lr=0.02            ASR=  0.00 CleanAcc= 10.00 c_stage3=0.7655 pred=2 ||dw||=  25.255 flagged=False
+  benign cid=3 epochs=2 lr=0.01            ASR=  0.00 CleanAcc= 16.51 c_stage3=0.6858 pred=7 ||dw||=  33.977 flagged=False
+  benign cid=3 epochs=4 lr=0.01            ASR=  0.00 CleanAcc= 21.19 c_stage3=0.4934 pred=7 ||dw||=  40.240 flagged=False
+  benign cid=3 epochs=2 lr=0.02            ASR=  0.00 CleanAcc= 19.29 c_stage3=0.6135 pred=7 ||dw||=  33.525 flagged=False
+  benign cid=4 epochs=2 lr=0.01            ASR=  0.00 CleanAcc= 10.02 c_stage3=0.4152 pred=4 ||dw||=  28.709 flagged=False
+  benign cid=4 epochs=4 lr=0.01            ASR=  0.10 CleanAcc= 14.40 c_stage3=0.4960 pred=3 ||dw||=  38.306 flagged=False
+  benign cid=4 epochs=2 lr=0.02            ASR=  0.00 CleanAcc= 13.94 c_stage3=0.3444 pred=3 ||dw||=  28.305 flagged=False
+  benign cid=5 epochs=2 lr=0.01            ASR=  0.00 CleanAcc= 13.19 c_stage3=0.3668 pred=9 ||dw||=  20.893 flagged=False
+  benign cid=5 epochs=4 lr=0.01            ASR=  0.32 CleanAcc= 12.12 c_stage3=0.3461 pred=9 ||dw||=  31.737 flagged=False
+  benign cid=5 epochs=2 lr=0.02            ASR=  0.00 CleanAcc=  9.99 c_stage3=0.3262 pred=3 ||dw||=  20.820 flagged=False
+
+=== POISONED population (poison_rate x poison_epochs x post-hoc scale-down) ===
+  poisoned rate=0.2 epochs=2 scale=1.0     ASR=  8.68 CleanAcc= 14.81 c_stage3=0.3111 pred=7 ||dw||=  29.032 flagged=False
+  poisoned rate=0.2 epochs=2 scale=0.5     ASR=  0.00 CleanAcc= 10.09 c_stage3=0.2463 pred=7 ||dw||=  14.527 flagged=False
+  poisoned rate=0.2 epochs=2 scale=0.25    ASR=  0.00 CleanAcc=  9.99 c_stage3=0.2204 pred=6 ||dw||=   7.257 flagged=False
+  poisoned rate=0.2 epochs=2 scale=0.1     ASR=  0.00 CleanAcc= 10.00 c_stage3=0.1899 pred=6 ||dw||=   2.904 flagged=False
+  poisoned rate=0.2 epochs=6 scale=1.0     ASR= 56.19 CleanAcc= 19.22 c_stage3=0.3109 pred=0 ||dw||=  42.265 flagged=False
+  poisoned rate=0.2 epochs=6 scale=0.5     ASR=  0.00 CleanAcc= 10.00 c_stage3=0.2152 pred=7 ||dw||=  21.180 flagged=False
+  poisoned rate=0.2 epochs=6 scale=0.25    ASR=  0.00 CleanAcc= 10.00 c_stage3=0.2145 pred=6 ||dw||=  10.581 flagged=False
+  poisoned rate=0.2 epochs=6 scale=0.1     ASR=  0.00 CleanAcc= 10.03 c_stage3=0.1973 pred=6 ||dw||=   4.246 flagged=False
+  poisoned rate=0.5 epochs=2 scale=1.0     ASR=100.00 CleanAcc= 10.00 c_stage3=0.5058 pred=0 ||dw||=  29.047 flagged=True
+  poisoned rate=0.5 epochs=2 scale=0.5     ASR= 15.88 CleanAcc= 13.26 c_stage3=0.3297 pred=0 ||dw||=  14.522 flagged=False
+  poisoned rate=0.5 epochs=2 scale=0.25    ASR=  0.00 CleanAcc= 10.17 c_stage3=0.2018 pred=6 ||dw||=   7.269 flagged=False
+  poisoned rate=0.5 epochs=2 scale=0.1     ASR=  0.00 CleanAcc= 10.10 c_stage3=0.1879 pred=6 ||dw||=   2.902 flagged=False
+  poisoned rate=0.5 epochs=6 scale=1.0     ASR= 99.91 CleanAcc= 11.78 c_stage3=0.6719 pred=0 ||dw||=  42.301 flagged=True
+  poisoned rate=0.5 epochs=6 scale=0.5     ASR=  0.03 CleanAcc= 10.25 c_stage3=0.3386 pred=0 ||dw||=  21.137 flagged=False
+  poisoned rate=0.5 epochs=6 scale=0.25    ASR=  0.00 CleanAcc= 10.00 c_stage3=0.1915 pred=0 ||dw||=  10.576 flagged=False
+  poisoned rate=0.5 epochs=6 scale=0.1     ASR=  0.00 CleanAcc= 10.00 c_stage3=0.1890 pred=6 ||dw||=   4.218 flagged=False
+  poisoned rate=1.0 epochs=2 scale=1.0     ASR=100.00 CleanAcc= 10.00 c_stage3=1.0000 pred=0 ||dw||=  29.047 flagged=True
+  poisoned rate=1.0 epochs=2 scale=0.5     ASR=100.00 CleanAcc= 10.00 c_stage3=0.9835 pred=0 ||dw||=  14.523 flagged=True
+  poisoned rate=1.0 epochs=2 scale=0.25    ASR=100.00 CleanAcc= 10.00 c_stage3=0.7080 pred=0 ||dw||=   7.257 flagged=True
+  poisoned rate=1.0 epochs=2 scale=0.1     ASR=  1.09 CleanAcc=  9.79 c_stage3=0.2541 pred=0 ||dw||=   2.904 flagged=False
+  poisoned rate=1.0 epochs=6 scale=1.0     ASR=100.00 CleanAcc= 10.00 c_stage3=1.0000 pred=0 ||dw||=  42.522 flagged=True
+  poisoned rate=1.0 epochs=6 scale=0.5     ASR=100.00 CleanAcc= 10.00 c_stage3=0.9995 pred=0 ||dw||=  21.240 flagged=True
+  poisoned rate=1.0 epochs=6 scale=0.25    ASR=100.00 CleanAcc= 10.00 c_stage3=0.9369 pred=0 ||dw||=  10.632 flagged=True
+  poisoned rate=1.0 epochs=6 scale=0.1     ASR= 82.92 CleanAcc=  7.56 c_stage3=0.4161 pred=0 ||dw||=   4.247 flagged=False
+
+wrote 42 rows to results/separability_scatter.csv
+
+benign confidence band: (0.2747398912906647, 0.7655037045478821)
+benign clean-acc band: (9.97, 21.41)
+
+=== attack-feasible candidates: high ASR, acceptable clean acc, NOT flagged ===
+  poisoned rate=0.2 epochs=6 scale=1.0: ASR=56.19 CleanAcc=19.22 c_stage3=0.3109 ||dw||=42.265
+  poisoned rate=1.0 epochs=6 scale=0.1: ASR=82.92 CleanAcc=7.56 c_stage3=0.4161 ||dw||=4.247

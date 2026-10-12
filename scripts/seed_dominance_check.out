@@ -1,0 +1,16 @@
+Files already downloaded and verified
+Files already downloaded and verified
+fingerprint(random-init G_old(1))      = 5387.781485
+fingerprint(trained class7_test ckpt)   = 3237.881146
+these are DIFFERENT
+
+=== degenerate(random-init, random-init) ===
+  seed=123: T mean=-0.0210 std=0.0658 | attacker pred=7 conf=0.7085
+  seed=456: T mean=0.0302 std=0.0714 | attacker pred=7 conf=0.7060
+  seed=789: T mean=-0.0436 std=0.0671 | attacker pred=7 conf=0.7073
+
+=== degenerate(trained-ckpt, trained-ckpt) ===
+  seed=123: T mean=-0.0115 std=0.0934 | attacker pred=7 conf=0.7043
+  seed=456: T mean=0.0313 std=0.0929 | attacker pred=7 conf=0.7048
+  seed=789: T mean=-0.0823 std=0.1029 | attacker pred=7 conf=0.7078
+

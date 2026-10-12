@@ -1,0 +1,66 @@
+config: configs/cifar_alpha0.1_class7.yaml  dirichlet_alpha=0.1  target_class=7
+
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+sampled clients (column order below): [68, 88, 21, 24, 47, 13, 73, 46, 82, 55]
+attacker = client 47, at index 4
+
+A) random-init degenerate   seed=123
+  preds : [5, 9, 9, 3, 7, 7, 4, 9, 1, 0]
+  confs : [0.563, 0.327, 0.961, 0.765, 0.876, 0.825, 0.631, 1.0, 0.802, 0.805]
+  flagged clients: [47, 13]
+
+A) random-init degenerate   seed=456
+  preds : [5, 9, 9, 3, 7, 7, 4, 9, 1, 0]
+  confs : [0.559, 0.33, 0.962, 0.767, 0.875, 0.828, 0.627, 1.0, 0.803, 0.804]
+  flagged clients: [47, 13]
+
+A) random-init degenerate   seed=789
+  preds : [5, 9, 9, 3, 7, 7, 4, 9, 1, 0]
+  confs : [0.559, 0.326, 0.959, 0.767, 0.876, 0.826, 0.624, 1.0, 0.798, 0.806]
+  flagged clients: [47, 13]
+
+B) clean-trained degenerate seed=123
+  preds : [5, 9, 9, 3, 7, 7, 4, 9, 1, 0]
+  confs : [0.561, 0.328, 0.957, 0.763, 0.873, 0.821, 0.627, 1.0, 0.797, 0.801]
+  flagged clients: [47, 13]
+
+B) clean-trained degenerate seed=456
+  preds : [5, 9, 9, 3, 7, 7, 4, 9, 1, 0]
+  confs : [0.56, 0.33, 0.962, 0.764, 0.876, 0.825, 0.628, 1.0, 0.804, 0.803]
+  flagged clients: [47, 13]
+
+B) clean-trained degenerate seed=789
+  preds : [5, 9, 9, 3, 7, 7, 4, 9, 1, 0]
+  confs : [0.56, 0.327, 0.96, 0.766, 0.874, 0.825, 0.625, 1.0, 0.801, 0.805]
+  flagged clients: [47, 13]
+
+C) TRUE ORACLE (non-degen)  seed=123
+  preds : [5, 9, 9, 3, 7, 7, 4, 9, 1, 0]
+  confs : [0.56, 0.329, 0.957, 0.761, 0.875, 0.821, 0.632, 1.0, 0.8, 0.801]
+  flagged clients: [47, 13]
+
+C) TRUE ORACLE (non-degen)  seed=456
+  preds : [5, 9, 9, 3, 7, 7, 4, 9, 1, 0]
+  confs : [0.56, 0.331, 0.96, 0.763, 0.877, 0.822, 0.625, 1.0, 0.804, 0.804]
+  flagged clients: [47, 13]
+
+C) TRUE ORACLE (non-degen)  seed=789
+  preds : [5, 9, 9, 3, 7, 7, 4, 9, 1, 0]
+  confs : [0.561, 0.328, 0.957, 0.766, 0.877, 0.825, 0.624, 1.0, 0.797, 0.804]
+  flagged clients: [47, 13]
+
+=== flagged-set summary across all 9 runs ===
+  A) random-init degenerate   seed=123: (47, 13)
+  A) random-init degenerate   seed=456: (47, 13)
+  A) random-init degenerate   seed=789: (47, 13)
+  B) clean-trained degenerate seed=123: (47, 13)
+  B) clean-trained degenerate seed=456: (47, 13)
+  B) clean-trained degenerate seed=789: (47, 13)
+  C) TRUE ORACLE (non-degen)  seed=123: (47, 13)
+  C) TRUE ORACLE (non-degen)  seed=456: (47, 13)
+  C) TRUE ORACLE (non-degen)  seed=789: (47, 13)
+
+ distinct flagged-sets seen: 1 -> {(47, 13)}

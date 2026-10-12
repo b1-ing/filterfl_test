@@ -1,0 +1,12 @@
+2026-10-11 06:20:26,413 epoch 1 MA=15.21 ASR=21.49 rho=0.5 detected=0 tp=0 fp=0 (33.9s)
+2026-10-11 06:21:37,060 epoch 2 MA=15.80 ASR=0.32 rho=0.5 detected=0 tp=0 fp=0 (70.6s)
+2026-10-11 06:23:17,118 epoch 3 MA=20.63 ASR=24.89 rho=0.5 detected=0 tp=0 fp=0 (100.1s)
+2026-10-11 06:24:57,480 epoch 4 MA=21.43 ASR=0.00 rho=0.5 detected=0 tp=0 fp=0 (100.4s)
+2026-10-11 06:26:37,497 epoch 5 MA=26.09 ASR=44.78 rho=0.5 detected=1 tp=1 fp=0 (100.0s)
+2026-10-11 06:27:55,425 epoch 6 MA=26.85 ASR=37.01 rho=0.5 detected=0 tp=0 fp=0 (77.9s)
+2026-10-11 06:31:08,574 epoch 7 MA=27.32 ASR=0.36 rho=0.5 detected=0 tp=0 fp=0 (193.1s)
+2026-10-11 06:34:02,273 epoch 8 MA=27.13 ASR=35.54 rho=0.5 detected=0 tp=0 fp=0 (173.7s)
+2026-10-11 06:36:49,304 epoch 9 MA=27.04 ASR=0.09 rho=0.5 detected=0 tp=0 fp=0 (167.0s)
+2026-10-11 06:40:42,763 epoch 10 MA=28.63 ASR=44.66 rho=0.5 detected=1 tp=1 fp=0 (233.5s)
+Files already downloaded and verified
+Files already downloaded and verified

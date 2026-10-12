@@ -1,0 +1,61 @@
+D:\filterfl_test_claude\reference\filterfl\gan.py:144: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\builder\windows\pytorch\torch\csrc\tensor\python_tensor.cpp:80.)
+  z = Variable(Tensor(np.random.normal(0, 1, (image_num, latent_dim))))
+Files already downloaded and verified
+Files already downloaded and verified
+
+=== baseline (poison_client_num=10) ===
+  sampled=[86, 10, 72, 73, 68, 62, 61, 16, 82, 40]
+  malicious among sampled=[10, 68]  (2/10)
+  pixel MSE(normal, degenerate) = 0.001030
+  NORMAL     preds=[3, 0, 6, 0, 0, 9, 9, 0, 3, 2]
+             confs=[0.2229, 0.6336, 0.65, 0.7996, 0.5517, 0.3697, 0.4657, 0.416, 0.2425, 0.6388]
+             flagged=[10, 73, 68]
+  DEGENERATE preds=[3, 0, 6, 0, 0, 9, 9, 0, 3, 2]
+             confs=[0.2244, 0.6316, 0.6484, 0.7964, 0.55, 0.3693, 0.4665, 0.4163, 0.2442, 0.6385]
+             flagged=[10, 73, 68]
+  predicted-class vectors identical: True
+  attacker 10: normal conf=0.6336 pred=0 | degenerate conf=0.6316 pred=0
+  attacker 68: normal conf=0.5517 pred=0 | degenerate conf=0.5500 pred=0
+Files already downloaded and verified
+Files already downloaded and verified
+
+=== 40pct (poison_client_num=40) ===
+  sampled=[86, 10, 72, 73, 68, 62, 61, 16, 82, 40]
+  malicious among sampled=[86, 72, 40]  (3/10)
+  pixel MSE(normal, degenerate) = 0.000916
+  NORMAL     preds=[0, 9, 0, 0, 3, 9, 9, 1, 6, 0]
+             confs=[0.3187, 0.7284, 0.6768, 0.8225, 0.2954, 0.3434, 0.3559, 0.2329, 0.2509, 0.6148]
+             flagged=[72, 73, 40]
+  DEGENERATE preds=[0, 9, 0, 0, 3, 9, 9, 1, 6, 0]
+             confs=[0.3193, 0.7285, 0.6782, 0.8206, 0.2987, 0.3461, 0.355, 0.2342, 0.2489, 0.615]
+             flagged=[72, 73, 40]
+  predicted-class vectors identical: True
+  attacker 86: normal conf=0.3187 pred=0 | degenerate conf=0.3193 pred=0
+  attacker 72: normal conf=0.6768 pred=0 | degenerate conf=0.6782 pred=0
+  attacker 40: normal conf=0.6148 pred=0 | degenerate conf=0.6150 pred=0
+Files already downloaded and verified
+Files already downloaded and verified
+
+=== 70pct (poison_client_num=70) ===
+  sampled=[86, 10, 72, 73, 68, 62, 61, 16, 82, 40]
+  malicious among sampled=[10, 72, 62, 61, 16, 40]  (6/10)
+  pixel MSE(normal, degenerate) = 0.001046
+  NORMAL     preds=[3, 0, 0, 0, 3, 0, 0, 0, 3, 0]
+             confs=[0.223, 0.6326, 0.6602, 0.8024, 0.3406, 0.7171, 0.6156, 0.8074, 0.2542, 0.5843]
+             flagged=[10, 72, 73, 62, 61, 16, 40]
+  DEGENERATE preds=[3, 0, 0, 0, 3, 0, 0, 0, 3, 0]
+             confs=[0.223, 0.6316, 0.6601, 0.8038, 0.3425, 0.7194, 0.6169, 0.8072, 0.2553, 0.5821]
+             flagged=[10, 72, 73, 62, 61, 16, 40]
+  predicted-class vectors identical: True
+  attacker 10: normal conf=0.6326 pred=0 | degenerate conf=0.6316 pred=0
+  attacker 72: normal conf=0.6602 pred=0 | degenerate conf=0.6601 pred=0
+  attacker 62: normal conf=0.7171 pred=0 | degenerate conf=0.7194 pred=0
+  attacker 61: normal conf=0.6156 pred=0 | degenerate conf=0.6169 pred=0
+  attacker 16: normal conf=0.8074 pred=0 | degenerate conf=0.8072 pred=0
+  attacker 40: normal conf=0.5843 pred=0 | degenerate conf=0.5821 pred=0
+
+########## SUMMARY ##########
+     label   pcn  n_atk_sampled    pixel_mse  preds_identical            flagged_n            flagged_d
+  baseline    10              2     0.001030             True         [10, 73, 68]         [10, 73, 68]
+     40pct    40              3     0.000916             True         [72, 73, 40]         [72, 73, 40]
+     70pct    70              6     0.001046             True [10, 72, 73, 62, 61, 16, 40] [10, 72, 73, 62, 61, 16, 40]

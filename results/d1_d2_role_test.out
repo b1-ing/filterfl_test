@@ -1,0 +1,45 @@
+D:\filterfl_test_claude\reference\filterfl\gan.py:134: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\builder\windows\pytorch\torch\csrc\tensor\python_tensor.cpp:80.)
+  z = Variable(Tensor(np.random.normal(0, 1, (image_num, latent_dim))))
+sampled: [68, 88, 21, 24, 47, 13, 73, 46, 82, 55]
+malicious (ground truth): [47]  (attacker index 4)
+sanity check -- sum|G_old(t) - G_old(t+1)| = 2465.26 (confirms these are genuinely different models)
+
+=== A) degenerate at t:    d1=d2=G_old(t) ===
+  preds=[9, 9, 0, 1, 0, 9, 9, 0, 3, 8]
+  confs=[0.23, 0.2986, 0.2445, 0.2174, 0.6724, 0.3158, 0.2566, 0.2459, 0.2718, 0.2434]
+  flagged=[47]
+  attacker(47) pred=0 conf=0.6724
+
+=== B) degenerate at t+1:  d1=d2=G_old(t+1) ===
+  preds=[9, 9, 0, 1, 0, 9, 9, 0, 3, 8]
+  confs=[0.2309, 0.2988, 0.2451, 0.2175, 0.6722, 0.3155, 0.2568, 0.2454, 0.2729, 0.24]
+  flagged=[47]
+  attacker(47) pred=0 conf=0.6722
+
+=== C) normal order:       d1=G_old(t),   d2=G_old(t+1) ===
+  preds=[9, 9, 0, 1, 0, 9, 9, 0, 3, 8]
+  confs=[0.227, 0.2957, 0.246, 0.2159, 0.6721, 0.3116, 0.2524, 0.2471, 0.267, 0.2474]
+  flagged=[47]
+  attacker(47) pred=0 conf=0.6721
+
+=== D) swapped order:      d1=G_old(t+1), d2=G_old(t) ===
+  preds=[9, 9, 0, 1, 0, 9, 9, 0, 3, 8]
+  confs=[0.2313, 0.2985, 0.2451, 0.2185, 0.6712, 0.3157, 0.2574, 0.2443, 0.2708, 0.2428]
+  flagged=[47]
+  attacker(47) pred=0 conf=0.6712
+
+########## A vs B: does the degenerate output track WHICH model is fed in? ##########
+  A preds: (9, 9, 0, 1, 0, 9, 9, 0, 3, 8)
+  B preds: (9, 9, 0, 1, 0, 9, 9, 0, 3, 8)
+  identical vector: True
+  pixel MSE(T_A, T_B) = 0.001387
+
+########## C vs D: does swapping d1/d2 ROLE change anything? ##########
+  C preds: (9, 9, 0, 1, 0, 9, 9, 0, 3, 8)
+  D preds: (9, 9, 0, 1, 0, 9, 9, 0, 3, 8)
+  identical vector: True
+  pixel MSE(T_C, T_D) = 0.002763
+
+########## cross-reference: does C (real pairing) differ from A/B (degenerate)? ##########
+  pixel MSE(T_C, T_A) = 0.001251
+  pixel MSE(T_C, T_B) = 0.002280

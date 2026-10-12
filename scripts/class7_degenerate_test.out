@@ -1,0 +1,31 @@
+Files already downloaded and verified
+Files already downloaded and verified
+sampled: [68, 88, 21, 24, 47, 13, 73, 46, 82, 55]
+malicious (ground truth): [47]
+
+=== ORACLE  (G_old(1), G_temp(1)) ===
+  client  68         : pred=9 conf=0.232 
+  client  88         : pred=9 conf=0.300 
+  client  21         : pred=0 conf=0.243 
+  client  24         : pred=1 conf=0.225 
+  client  47 ATTACKER: pred=7 conf=0.707 FLAGGED
+  client  13         : pred=9 conf=0.321 
+  client  73         : pred=9 conf=0.256 
+  client  46         : pred=0 conf=0.243 
+  client  82         : pred=3 conf=0.279 
+  client  55         : pred=8 conf=0.241 
+  predicted-class distribution: [0, 0, 1, 3, 7, 8, 9, 9, 9, 9]
+
+=== DEGENERATE  (G_old(1), G_old(1)) ===
+  client  68         : pred=9 conf=0.233 
+  client  88         : pred=9 conf=0.303 
+  client  21         : pred=0 conf=0.243 
+  client  24         : pred=1 conf=0.225 
+  client  47 ATTACKER: pred=7 conf=0.708 FLAGGED
+  client  13         : pred=9 conf=0.323 
+  client  73         : pred=9 conf=0.258 
+  client  46         : pred=0 conf=0.244 
+  client  82         : pred=3 conf=0.280 
+  client  55         : pred=8 conf=0.241 
+  predicted-class distribution: [0, 0, 1, 3, 7, 8, 9, 9, 9, 9]
+

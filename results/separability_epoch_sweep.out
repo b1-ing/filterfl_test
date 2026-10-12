@@ -1,0 +1,90 @@
+D:\filterfl_test_claude\reference\filterfl\gan.py:144: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\builder\windows\pytorch\torch\csrc\tensor\python_tensor.cpp:80.)
+  z = Variable(Tensor(np.random.normal(0, 1, (image_num, latent_dim))))
+Files already downloaded and verified
+Files already downloaded and verified
+G_old loaded from results/stage2_full_a05_snap_e00200_ckpt.pt (epoch 200)
+trigger images generated from one real round, reused for every probe below
+
+=== benign reference set ===
+  benign cid=0: ||dw||=0.927 layer_fractions={'stem_conv': 0.093, 'stem_bn': 0.329, 'stage1': 0.325, 'stage2': 0.378, 'stage3': 0.753, 'fc': 0.258}
+  benign cid=1: ||dw||=2.060 layer_fractions={'stem_conv': 0.077, 'stem_bn': 0.212, 'stage1': 0.344, 'stage2': 0.393, 'stage3': 0.784, 'fc': 0.251}
+  benign cid=2: ||dw||=1.234 layer_fractions={'stem_conv': 0.083, 'stem_bn': 0.262, 'stage1': 0.351, 'stage2': 0.396, 'stage3': 0.717, 'fc': 0.361}
+  benign cid=3: ||dw||=2.813 layer_fractions={'stem_conv': 0.072, 'stem_bn': 0.074, 'stage1': 0.289, 'stage2': 0.369, 'stage3': 0.843, 'fc': 0.241}
+  benign cid=4: ||dw||=1.642 layer_fractions={'stem_conv': 0.089, 'stem_bn': 0.309, 'stage1': 0.301, 'stage2': 0.388, 'stage3': 0.723, 'fc': 0.365}
+  benign cid=5: ||dw||=0.770 layer_fractions={'stem_conv': 0.118, 'stem_bn': 0.208, 'stage1': 0.342, 'stage2': 0.41, 'stage3': 0.745, 'fc': 0.319}
+
+--- epochs=1 (rate=0.2 scale=1.0) ---
+  ASR=29.09 CleanAcc=49.82 flagged=False
+  ||dw||=0.584  layer_fractions={'stem_conv': 0.087, 'stem_bn': 0.616, 'stage1': 0.286, 'stage2': 0.334, 'stage3': 0.607, 'fc': 0.226}
+  cos(w, G_old)=0.999957  cos(delta_w, mean_benign_delta)=0.1816
+  c_stage3 (mean)=0.3576 pred_class(mean)=0
+  per-image target-class prob: std=0.1485 min=0.1324 max=0.8036 frac_of_32_predicting_target=0.719
+
+--- epochs=2 (rate=0.2 scale=1.0) ---
+  ASR=16.94 CleanAcc=26.83 flagged=False
+  ||dw||=1.213  layer_fractions={'stem_conv': 0.092, 'stem_bn': 0.36, 'stage1': 0.323, 'stage2': 0.442, 'stage3': 0.704, 'fc': 0.258}
+  cos(w, G_old)=0.999812  cos(delta_w, mean_benign_delta)=0.1242
+  c_stage3 (mean)=0.4896 pred_class(mean)=0
+  per-image target-class prob: std=0.1931 min=0.0543 max=0.8538 frac_of_32_predicting_target=0.719
+
+--- epochs=3 (rate=0.2 scale=1.0) ---
+  ASR=9.99 CleanAcc=37.32 flagged=False
+  ||dw||=1.775  layer_fractions={'stem_conv': 0.084, 'stem_bn': 0.296, 'stage1': 0.382, 'stage2': 0.441, 'stage3': 0.721, 'fc': 0.213}
+  cos(w, G_old)=0.999598  cos(delta_w, mean_benign_delta)=0.1028
+  c_stage3 (mean)=0.4710 pred_class(mean)=0
+  per-image target-class prob: std=0.2053 min=0.1506 max=0.9280 frac_of_32_predicting_target=0.594
+
+--- epochs=4 (rate=0.2 scale=1.0) ---
+  ASR=21.62 CleanAcc=36.29 flagged=False
+  ||dw||=2.500  layer_fractions={'stem_conv': 0.076, 'stem_bn': 0.219, 'stage1': 0.38, 'stage2': 0.502, 'stage3': 0.725, 'fc': 0.159}
+  cos(w, G_old)=0.999203  cos(delta_w, mean_benign_delta)=0.1166
+  c_stage3 (mean)=0.4938 pred_class(mean)=0
+  per-image target-class prob: std=0.2509 min=0.0749 max=0.9154 frac_of_32_predicting_target=0.688
+
+--- epochs=5 (rate=0.2 scale=1.0) ---
+  ASR=34.23 CleanAcc=33.67 flagged=False
+  ||dw||=3.587  layer_fractions={'stem_conv': 0.057, 'stem_bn': 0.197, 'stage1': 0.379, 'stage2': 0.501, 'stage3': 0.74, 'fc': 0.124}
+  cos(w, G_old)=0.998376  cos(delta_w, mean_benign_delta)=0.1496
+  c_stage3 (mean)=0.4228 pred_class(mean)=0
+  per-image target-class prob: std=0.2185 min=0.0504 max=0.8293 frac_of_32_predicting_target=0.562
+
+--- epochs=6 (rate=0.2 scale=1.0) ---
+  ASR=56.61 CleanAcc=31.36 flagged=False
+  ||dw||=3.859  layer_fractions={'stem_conv': 0.058, 'stem_bn': 0.164, 'stage1': 0.434, 'stage2': 0.486, 'stage3': 0.73, 'fc': 0.114}
+  cos(w, G_old)=0.998119  cos(delta_w, mean_benign_delta)=0.1546
+  c_stage3 (mean)=0.3797 pred_class(mean)=0
+  per-image target-class prob: std=0.2475 min=0.0381 max=0.8146 frac_of_32_predicting_target=0.500
+
+--- epochs=7 (rate=0.2 scale=1.0) ---
+  ASR=48.63 CleanAcc=41.75 flagged=False
+  ||dw||=4.201  layer_fractions={'stem_conv': 0.057, 'stem_bn': 0.142, 'stage1': 0.404, 'stage2': 0.506, 'stage3': 0.738, 'fc': 0.11}
+  cos(w, G_old)=0.997777  cos(delta_w, mean_benign_delta)=0.1582
+  c_stage3 (mean)=0.4103 pred_class(mean)=0
+  per-image target-class prob: std=0.2620 min=0.0985 max=0.9335 frac_of_32_predicting_target=0.531
+
+--- epochs=8 (rate=0.2 scale=1.0) ---
+  ASR=84.26 CleanAcc=34.41 flagged=False
+  ||dw||=4.443  layer_fractions={'stem_conv': 0.058, 'stem_bn': 0.171, 'stage1': 0.391, 'stage2': 0.496, 'stage3': 0.747, 'fc': 0.106}
+  cos(w, G_old)=0.997511  cos(delta_w, mean_benign_delta)=0.1406
+  c_stage3 (mean)=0.4748 pred_class(mean)=0
+  per-image target-class prob: std=0.2895 min=0.0394 max=0.9598 frac_of_32_predicting_target=0.562
+
+--- epochs=10 (rate=0.2 scale=1.0) ---
+  ASR=83.47 CleanAcc=30.17 flagged=False
+  ||dw||=5.933  layer_fractions={'stem_conv': 0.045, 'stem_bn': 0.137, 'stage1': 0.385, 'stage2': 0.508, 'stage3': 0.752, 'fc': 0.084}
+  cos(w, G_old)=0.995627  cos(delta_w, mean_benign_delta)=0.1613
+  c_stage3 (mean)=0.3739 pred_class(mean)=0
+  per-image target-class prob: std=0.2462 min=0.0231 max=0.9300 frac_of_32_predicting_target=0.500
+
+wrote 9 rows to results/separability_epoch_sweep.csv
+
+########## SUMMARY (sorted by poison_epochs) ##########
+epochs= 1 ASR= 29.09 flagged=False ||dw||=  0.584 cos_gold=0.99996 cos_benign_dir= 0.182 c_mean=0.358 frac32_target=0.719 sigma_probe=0.148
+epochs= 2 ASR= 16.94 flagged=False ||dw||=  1.213 cos_gold=0.99981 cos_benign_dir= 0.124 c_mean=0.490 frac32_target=0.719 sigma_probe=0.193
+epochs= 3 ASR=  9.99 flagged=False ||dw||=  1.775 cos_gold=0.99960 cos_benign_dir= 0.103 c_mean=0.471 frac32_target=0.594 sigma_probe=0.205
+epochs= 4 ASR= 21.62 flagged=False ||dw||=  2.500 cos_gold=0.99920 cos_benign_dir= 0.117 c_mean=0.494 frac32_target=0.688 sigma_probe=0.251
+epochs= 5 ASR= 34.23 flagged=False ||dw||=  3.587 cos_gold=0.99838 cos_benign_dir= 0.150 c_mean=0.423 frac32_target=0.562 sigma_probe=0.218
+epochs= 6 ASR= 56.61 flagged=False ||dw||=  3.859 cos_gold=0.99812 cos_benign_dir= 0.155 c_mean=0.380 frac32_target=0.500 sigma_probe=0.248
+epochs= 7 ASR= 48.63 flagged=False ||dw||=  4.201 cos_gold=0.99778 cos_benign_dir= 0.158 c_mean=0.410 frac32_target=0.531 sigma_probe=0.262
+epochs= 8 ASR= 84.26 flagged=False ||dw||=  4.443 cos_gold=0.99751 cos_benign_dir= 0.141 c_mean=0.475 frac32_target=0.562 sigma_probe=0.289
+epochs=10 ASR= 83.47 flagged=False ||dw||=  5.933 cos_gold=0.99563 cos_benign_dir= 0.161 c_mean=0.374 frac32_target=0.500 sigma_probe=0.246

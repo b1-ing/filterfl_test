@@ -1,0 +1,58 @@
+D:\filterfl_test_claude\reference\filterfl\gan.py:134: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\builder\windows\pytorch\torch\csrc\tensor\python_tensor.cpp:80.)
+  z = Variable(Tensor(np.random.normal(0, 1, (image_num, latent_dim))))
+Files already downloaded and verified
+Files already downloaded and verified
+round 1: sampled=[68, 88, 21, 24, 47, 13, 73, 46, 82, 55] malicious=[47]
+round 2: sampled=[6, 90, 58, 96, 68, 8, 66, 85, 61, 35] malicious=[]
+round 3: sampled=[98, 61, 27, 21, 79, 40, 53, 42, 1, 47] malicious=[47]
+round 4: sampled=[15, 11, 41, 82, 18, 47, 46, 40, 26, 48] malicious=[47]
+round 5: sampled=[4, 93, 81, 96, 56, 48, 12, 54, 73, 76] malicious=[54]
+round 6: sampled=[81, 86, 22, 60, 1, 49, 29, 56, 64, 68] malicious=[60]
+round 7: sampled=[63, 73, 92, 76, 77, 20, 69, 61, 42, 51] malicious=[69]
+round 8: sampled=[41, 32, 65, 23, 4, 75, 40, 60, 46, 8] malicious=[60]
+round 9: sampled=[11, 16, 90, 54, 79, 34, 20, 35, 62, 27] malicious=[54, 34]
+round 10: sampled=[16, 50, 14, 7, 27, 82, 57, 77, 8, 26] malicious=[50]
+round 11: sampled=[98, 1, 89, 50, 11, 47, 10, 16, 36, 59] malicious=[50, 47, 36]
+round 12: sampled=[62, 83, 11, 71, 4, 7, 32, 96, 28, 69] malicious=[69]
+round 13: sampled=[48, 60, 43, 51, 91, 24, 2, 78, 42, 0] malicious=[60]
+
+sanity check -- sum|G_old(1) - G_old(13)| = 4636.02
+probing with round 1's client set: [68, 88, 21, 24, 47, 13, 73, 46, 82, 55], attacker=[47] (index 4)
+
+=== A) degenerate @ round 1:   d1=d2=G_old(1) ===
+  preds=[9, 9, 0, 1, 0, 9, 9, 0, 3, 8]
+  confs=[0.2287, 0.2986, 0.244, 0.2149, 0.6711, 0.3149, 0.2559, 0.2462, 0.2697, 0.2438]
+  flagged=[47]
+  attacker(47) pred=0 conf=0.6711
+
+=== B) degenerate @ round 13:  d1=d2=G_old(13) ===
+  preds=[9, 9, 0, 1, 0, 9, 9, 0, 3, 8]
+  confs=[0.2293, 0.2961, 0.2431, 0.2165, 0.671, 0.3136, 0.257, 0.2451, 0.2686, 0.2399]
+  flagged=[47]
+  attacker(47) pred=0 conf=0.6710
+
+=== C) normal order:           d1=G_old(1),  d2=G_old(13) ===
+  preds=[9, 9, 0, 1, 0, 9, 9, 0, 3, 8]
+  confs=[0.2294, 0.2985, 0.2443, 0.216, 0.6711, 0.3152, 0.256, 0.2465, 0.2711, 0.2448]
+  flagged=[47]
+  attacker(47) pred=0 conf=0.6711
+
+=== D) swapped order:          d1=G_old(13), d2=G_old(1) ===
+  preds=[9, 9, 0, 1, 0, 9, 9, 0, 3, 8]
+  confs=[0.2294, 0.2967, 0.2437, 0.2163, 0.671, 0.3143, 0.2562, 0.2453, 0.2694, 0.2396]
+  flagged=[47]
+  attacker(47) pred=0 conf=0.6710
+
+########## A vs B: do the two degenerate cases actually land on different basins at this distance? ##########
+  A preds: (9, 9, 0, 1, 0, 9, 9, 0, 3, 8)
+  B preds: (9, 9, 0, 1, 0, 9, 9, 0, 3, 8)
+  identical: True
+
+########## C vs D: which model does the mixed pair track? ##########
+  C preds: (9, 9, 0, 1, 0, 9, 9, 0, 3, 8)
+  D preds: (9, 9, 0, 1, 0, 9, 9, 0, 3, 8)
+  C == A (tracks d1=G_old(1))?   True
+  C == B (tracks d2=G_old(13))?  True
+  D == A (tracks d2=G_old(1))?   True
+  D == B (tracks d1=G_old(13))?  True
+  C == D (role swap has no effect)? True

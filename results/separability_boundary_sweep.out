@@ -1,0 +1,335 @@
+D:\filterfl_test_claude\reference\filterfl\gan.py:144: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\builder\windows\pytorch\torch\csrc\tensor\python_tensor.cpp:80.)
+  z = Variable(Tensor(np.random.normal(0, 1, (image_num, latent_dim))))
+Files already downloaded and verified
+Files already downloaded and verified
+G_old loaded from results/stage2_full_a05_snap_e00200_ckpt.pt (epoch 200)
+trigger images generated from one real round, reused for every probe below
+
+=== benign reference set ===
+  benign cid=0: ||dw||=0.927 layer_fractions={'stem_conv': 0.093, 'stem_bn': 0.329, 'stage1': 0.325, 'stage2': 0.378, 'stage3': 0.753, 'fc': 0.258}
+  benign cid=1: ||dw||=2.061 layer_fractions={'stem_conv': 0.077, 'stem_bn': 0.212, 'stage1': 0.344, 'stage2': 0.393, 'stage3': 0.784, 'fc': 0.251}
+  benign cid=2: ||dw||=1.234 layer_fractions={'stem_conv': 0.083, 'stem_bn': 0.262, 'stage1': 0.351, 'stage2': 0.396, 'stage3': 0.717, 'fc': 0.361}
+  benign cid=3: ||dw||=2.812 layer_fractions={'stem_conv': 0.072, 'stem_bn': 0.074, 'stage1': 0.289, 'stage2': 0.369, 'stage3': 0.843, 'fc': 0.241}
+  benign cid=4: ||dw||=1.642 layer_fractions={'stem_conv': 0.088, 'stem_bn': 0.309, 'stage1': 0.302, 'stage2': 0.388, 'stage3': 0.723, 'fc': 0.365}
+  benign cid=5: ||dw||=0.770 layer_fractions={'stem_conv': 0.118, 'stem_bn': 0.208, 'stage1': 0.342, 'stage2': 0.41, 'stage3': 0.745, 'fc': 0.319}
+
+########## BOUNDARY SWEEP (3 seeds/cell) ##########
+
+
+--- rate=0.2 epochs=6 seed=2001 ---
+  ASR=69.13 CleanAcc=30.61 flagged=False
+  ||dw||=3.479  layer_fractions={'stem_conv': 0.067, 'stem_bn': 0.201, 'stage1': 0.422, 'stage2': 0.482, 'stage3': 0.726, 'fc': 0.13}
+  cos(w, G_old)=0.998463  cos(delta_w, mean_benign_delta)=0.1479
+  c_stage3 (mean)=0.3927 pred_class(mean)=0
+  per-image target-class prob: std=0.2358 min=0.0499 max=0.8289 frac_of_32_predicting_target=0.531
+
+--- rate=0.2 epochs=6 seed=2002 ---
+  ASR=55.67 CleanAcc=40.18 flagged=False
+  ||dw||=3.655  layer_fractions={'stem_conv': 0.056, 'stem_bn': 0.194, 'stage1': 0.411, 'stage2': 0.493, 'stage3': 0.73, 'fc': 0.118}
+  cos(w, G_old)=0.998316  cos(delta_w, mean_benign_delta)=0.1751
+  c_stage3 (mean)=0.4407 pred_class(mean)=0
+  per-image target-class prob: std=0.2349 min=0.0745 max=0.8096 frac_of_32_predicting_target=0.656
+
+--- rate=0.2 epochs=6 seed=2003 ---
+  ASR=62.39 CleanAcc=37.74 flagged=False
+  ||dw||=3.924  layer_fractions={'stem_conv': 0.055, 'stem_bn': 0.146, 'stage1': 0.439, 'stage2': 0.479, 'stage3': 0.736, 'fc': 0.111}
+  cos(w, G_old)=0.998057  cos(delta_w, mean_benign_delta)=0.1610
+  c_stage3 (mean)=0.3949 pred_class(mean)=0
+  per-image target-class prob: std=0.2476 min=0.0738 max=0.9042 frac_of_32_predicting_target=0.531
+
+--- rate=0.22 epochs=6 seed=2001 ---
+  ASR=70.64 CleanAcc=28.30 flagged=False
+  ||dw||=3.660  layer_fractions={'stem_conv': 0.065, 'stem_bn': 0.192, 'stage1': 0.417, 'stage2': 0.477, 'stage3': 0.737, 'fc': 0.125}
+  cos(w, G_old)=0.998298  cos(delta_w, mean_benign_delta)=0.1423
+  c_stage3 (mean)=0.4349 pred_class(mean)=0
+  per-image target-class prob: std=0.2455 min=0.0571 max=0.9009 frac_of_32_predicting_target=0.562
+
+--- rate=0.22 epochs=6 seed=2002 ---
+  ASR=57.26 CleanAcc=40.74 flagged=False
+  ||dw||=3.847  layer_fractions={'stem_conv': 0.058, 'stem_bn': 0.186, 'stage1': 0.398, 'stage2': 0.474, 'stage3': 0.752, 'fc': 0.115}
+  cos(w, G_old)=0.998137  cos(delta_w, mean_benign_delta)=0.1690
+  c_stage3 (mean)=0.4768 pred_class(mean)=0
+  per-image target-class prob: std=0.2238 min=0.0893 max=0.8316 frac_of_32_predicting_target=0.750
+
+--- rate=0.22 epochs=6 seed=2003 ---
+  ASR=68.88 CleanAcc=36.90 flagged=False
+  ||dw||=3.973  layer_fractions={'stem_conv': 0.054, 'stem_bn': 0.145, 'stage1': 0.428, 'stage2': 0.489, 'stage3': 0.736, 'fc': 0.113}
+  cos(w, G_old)=0.998008  cos(delta_w, mean_benign_delta)=0.1526
+  c_stage3 (mean)=0.4504 pred_class(mean)=0
+  per-image target-class prob: std=0.2499 min=0.1110 max=0.9378 frac_of_32_predicting_target=0.594
+
+--- rate=0.24 epochs=6 seed=2001 ---
+  ASR=74.16 CleanAcc=26.24 flagged=False
+  ||dw||=3.768  layer_fractions={'stem_conv': 0.065, 'stem_bn': 0.186, 'stage1': 0.414, 'stage2': 0.476, 'stage3': 0.741, 'fc': 0.123}
+  cos(w, G_old)=0.998199  cos(delta_w, mean_benign_delta)=0.1452
+  c_stage3 (mean)=0.4558 pred_class(mean)=0
+  per-image target-class prob: std=0.2595 min=0.0496 max=0.9050 frac_of_32_predicting_target=0.562
+
+--- rate=0.24 epochs=6 seed=2002 ---
+  ASR=62.86 CleanAcc=38.76 flagged=False
+  ||dw||=3.899  layer_fractions={'stem_conv': 0.056, 'stem_bn': 0.184, 'stage1': 0.391, 'stage2': 0.473, 'stage3': 0.757, 'fc': 0.114}
+  cos(w, G_old)=0.998087  cos(delta_w, mean_benign_delta)=0.1534
+  c_stage3 (mean)=0.4875 pred_class(mean)=0
+  per-image target-class prob: std=0.2349 min=0.0940 max=0.8582 frac_of_32_predicting_target=0.719
+
+--- rate=0.24 epochs=6 seed=2003 ---
+  ASR=75.18 CleanAcc=34.57 flagged=False
+  ||dw||=4.009  layer_fractions={'stem_conv': 0.055, 'stem_bn': 0.145, 'stage1': 0.414, 'stage2': 0.482, 'stage3': 0.748, 'fc': 0.113}
+  cos(w, G_old)=0.997971  cos(delta_w, mean_benign_delta)=0.1447
+  c_stage3 (mean)=0.4689 pred_class(mean)=0
+  per-image target-class prob: std=0.2547 min=0.1325 max=0.9375 frac_of_32_predicting_target=0.625
+
+--- rate=0.25 epochs=6 seed=2001 ---
+  ASR=80.24 CleanAcc=26.10 flagged=False
+  ||dw||=3.821  layer_fractions={'stem_conv': 0.061, 'stem_bn': 0.183, 'stage1': 0.413, 'stage2': 0.479, 'stage3': 0.74, 'fc': 0.121}
+  cos(w, G_old)=0.998147  cos(delta_w, mean_benign_delta)=0.1425
+  c_stage3 (mean)=0.4615 pred_class(mean)=0
+  per-image target-class prob: std=0.2635 min=0.0486 max=0.9120 frac_of_32_predicting_target=0.594
+
+--- rate=0.25 epochs=6 seed=2002 ---
+  ASR=61.67 CleanAcc=36.71 flagged=False
+  ||dw||=4.005  layer_fractions={'stem_conv': 0.056, 'stem_bn': 0.18, 'stage1': 0.386, 'stage2': 0.478, 'stage3': 0.758, 'fc': 0.111}
+  cos(w, G_old)=0.997985  cos(delta_w, mean_benign_delta)=0.1454
+  c_stage3 (mean)=0.4825 pred_class(mean)=0
+  per-image target-class prob: std=0.2298 min=0.1023 max=0.8758 frac_of_32_predicting_target=0.719
+
+--- rate=0.25 epochs=6 seed=2003 ---
+  ASR=74.61 CleanAcc=34.51 flagged=False
+  ||dw||=4.019  layer_fractions={'stem_conv': 0.056, 'stem_bn': 0.144, 'stage1': 0.415, 'stage2': 0.482, 'stage3': 0.748, 'fc': 0.113}
+  cos(w, G_old)=0.997960  cos(delta_w, mean_benign_delta)=0.1450
+  c_stage3 (mean)=0.4713 pred_class(mean)=0
+  per-image target-class prob: std=0.2581 min=0.1258 max=0.9395 frac_of_32_predicting_target=0.656
+
+--- rate=0.26 epochs=6 seed=2001 ---
+  ASR=80.24 CleanAcc=25.08 flagged=False
+  ||dw||=3.883  layer_fractions={'stem_conv': 0.061, 'stem_bn': 0.181, 'stage1': 0.412, 'stage2': 0.478, 'stage3': 0.742, 'fc': 0.12}
+  cos(w, G_old)=0.998089  cos(delta_w, mean_benign_delta)=0.1474
+  c_stage3 (mean)=0.4688 pred_class(mean)=0
+  per-image target-class prob: std=0.2728 min=0.0460 max=0.9167 frac_of_32_predicting_target=0.625
+
+--- rate=0.26 epochs=6 seed=2002 ---
+  ASR=66.60 CleanAcc=36.52 flagged=False
+  ||dw||=4.021  layer_fractions={'stem_conv': 0.056, 'stem_bn': 0.179, 'stage1': 0.391, 'stage2': 0.476, 'stage3': 0.757, 'fc': 0.111}
+  cos(w, G_old)=0.997969  cos(delta_w, mean_benign_delta)=0.1370
+  c_stage3 (mean)=0.4994 pred_class(mean)=0
+  per-image target-class prob: std=0.2324 min=0.1186 max=0.8667 frac_of_32_predicting_target=0.719
+
+--- rate=0.26 epochs=6 seed=2003 ---
+  ASR=76.51 CleanAcc=34.09 flagged=False
+  ||dw||=4.006  layer_fractions={'stem_conv': 0.055, 'stem_bn': 0.143, 'stage1': 0.417, 'stage2': 0.485, 'stage3': 0.744, 'fc': 0.114}
+  cos(w, G_old)=0.997973  cos(delta_w, mean_benign_delta)=0.1399
+  c_stage3 (mean)=0.4666 pred_class(mean)=0
+  per-image target-class prob: std=0.2556 min=0.1284 max=0.9416 frac_of_32_predicting_target=0.656
+
+--- rate=0.28 epochs=6 seed=2001 ---
+  ASR=83.87 CleanAcc=25.26 flagged=False
+  ||dw||=3.942  layer_fractions={'stem_conv': 0.059, 'stem_bn': 0.179, 'stage1': 0.419, 'stage2': 0.479, 'stage3': 0.738, 'fc': 0.119}
+  cos(w, G_old)=0.998032  cos(delta_w, mean_benign_delta)=0.1465
+  c_stage3 (mean)=0.4728 pred_class(mean)=0
+  per-image target-class prob: std=0.2813 min=0.0463 max=0.9266 frac_of_32_predicting_target=0.594
+
+--- rate=0.28 epochs=6 seed=2002 ---
+  ASR=71.43 CleanAcc=35.87 flagged=False
+  ||dw||=4.106  layer_fractions={'stem_conv': 0.056, 'stem_bn': 0.176, 'stage1': 0.389, 'stage2': 0.479, 'stage3': 0.757, 'fc': 0.11}
+  cos(w, G_old)=0.997882  cos(delta_w, mean_benign_delta)=0.1323
+  c_stage3 (mean)=0.4936 pred_class(mean)=0
+  per-image target-class prob: std=0.2275 min=0.1307 max=0.8806 frac_of_32_predicting_target=0.719
+
+--- rate=0.28 epochs=6 seed=2003 ---
+  ASR=83.91 CleanAcc=30.44 flagged=False
+  ||dw||=4.033  layer_fractions={'stem_conv': 0.056, 'stem_bn': 0.141, 'stage1': 0.406, 'stage2': 0.488, 'stage3': 0.749, 'fc': 0.113}
+  cos(w, G_old)=0.997947  cos(delta_w, mean_benign_delta)=0.1346
+  c_stage3 (mean)=0.4888 pred_class(mean)=0
+  per-image target-class prob: std=0.2525 min=0.1447 max=0.9437 frac_of_32_predicting_target=0.688
+
+--- rate=0.3 epochs=6 seed=2001 ---
+  ASR=84.79 CleanAcc=24.07 flagged=True
+  ||dw||=3.935  layer_fractions={'stem_conv': 0.056, 'stem_bn': 0.18, 'stage1': 0.405, 'stage2': 0.485, 'stage3': 0.742, 'fc': 0.118}
+  cos(w, G_old)=0.998037  cos(delta_w, mean_benign_delta)=0.1292
+  c_stage3 (mean)=0.5150 pred_class(mean)=0
+  per-image target-class prob: std=0.2897 min=0.0693 max=0.9564 frac_of_32_predicting_target=0.656
+
+--- rate=0.3 epochs=6 seed=2002 ---
+  ASR=66.09 CleanAcc=35.51 flagged=True
+  ||dw||=4.015  layer_fractions={'stem_conv': 0.055, 'stem_bn': 0.178, 'stage1': 0.404, 'stage2': 0.467, 'stage3': 0.756, 'fc': 0.113}
+  cos(w, G_old)=0.997966  cos(delta_w, mean_benign_delta)=0.1005
+  c_stage3 (mean)=0.5425 pred_class(mean)=0
+  per-image target-class prob: std=0.2436 min=0.1679 max=0.9242 frac_of_32_predicting_target=0.719
+
+--- rate=0.3 epochs=6 seed=2003 ---
+  ASR=81.01 CleanAcc=33.21 flagged=True
+  ||dw||=4.202  layer_fractions={'stem_conv': 0.056, 'stem_bn': 0.136, 'stage1': 0.406, 'stage2': 0.502, 'stage3': 0.742, 'fc': 0.109}
+  cos(w, G_old)=0.997773  cos(delta_w, mean_benign_delta)=0.1292
+  c_stage3 (mean)=0.5134 pred_class(mean)=0
+  per-image target-class prob: std=0.2423 min=0.1706 max=0.9621 frac_of_32_predicting_target=0.688
+
+--- rate=0.2 epochs=10 seed=2001 ---
+  ASR=73.83 CleanAcc=33.80 flagged=False
+  ||dw||=5.369  layer_fractions={'stem_conv': 0.051, 'stem_bn': 0.133, 'stage1': 0.391, 'stage2': 0.487, 'stage3': 0.763, 'fc': 0.092}
+  cos(w, G_old)=0.996396  cos(delta_w, mean_benign_delta)=0.1131
+  c_stage3 (mean)=0.4348 pred_class(mean)=0
+  per-image target-class prob: std=0.2624 min=0.0751 max=0.9336 frac_of_32_predicting_target=0.531
+
+--- rate=0.2 epochs=10 seed=2002 ---
+  ASR=75.93 CleanAcc=39.60 flagged=False
+  ||dw||=4.781  layer_fractions={'stem_conv': 0.045, 'stem_bn': 0.174, 'stage1': 0.396, 'stage2': 0.488, 'stage3': 0.75, 'fc': 0.099}
+  cos(w, G_old)=0.997126  cos(delta_w, mean_benign_delta)=0.1427
+  c_stage3 (mean)=0.4170 pred_class(mean)=0
+  per-image target-class prob: std=0.2879 min=0.0677 max=0.9665 frac_of_32_predicting_target=0.531
+
+--- rate=0.2 epochs=10 seed=2003 ---
+  ASR=89.90 CleanAcc=30.25 flagged=True
+  ||dw||=5.578  layer_fractions={'stem_conv': 0.044, 'stem_bn': 0.12, 'stage1': 0.381, 'stage2': 0.485, 'stage3': 0.772, 'fc': 0.087}
+  cos(w, G_old)=0.996123  cos(delta_w, mean_benign_delta)=0.0878
+  c_stage3 (mean)=0.5321 pred_class(mean)=0
+  per-image target-class prob: std=0.2484 min=0.1569 max=0.9163 frac_of_32_predicting_target=0.719
+
+--- rate=0.22 epochs=10 seed=2001 ---
+  ASR=68.88 CleanAcc=30.88 flagged=False
+  ||dw||=5.785  layer_fractions={'stem_conv': 0.053, 'stem_bn': 0.134, 'stage1': 0.367, 'stage2': 0.46, 'stage3': 0.791, 'fc': 0.087}
+  cos(w, G_old)=0.995824  cos(delta_w, mean_benign_delta)=0.0962
+  c_stage3 (mean)=0.4678 pred_class(mean)=0
+  per-image target-class prob: std=0.2654 min=0.0883 max=0.9510 frac_of_32_predicting_target=0.562
+
+--- rate=0.22 epochs=10 seed=2002 ---
+  ASR=79.76 CleanAcc=37.32 flagged=False
+  ||dw||=4.976  layer_fractions={'stem_conv': 0.053, 'stem_bn': 0.17, 'stage1': 0.393, 'stage2': 0.472, 'stage3': 0.763, 'fc': 0.097}
+  cos(w, G_old)=0.996893  cos(delta_w, mean_benign_delta)=0.1299
+  c_stage3 (mean)=0.4435 pred_class(mean)=0
+  per-image target-class prob: std=0.2848 min=0.0861 max=0.9674 frac_of_32_predicting_target=0.656
+
+--- rate=0.22 epochs=10 seed=2003 ---
+  ASR=89.58 CleanAcc=32.07 flagged=True
+  ||dw||=5.738  layer_fractions={'stem_conv': 0.045, 'stem_bn': 0.117, 'stage1': 0.379, 'stage2': 0.477, 'stage3': 0.778, 'fc': 0.085}
+  cos(w, G_old)=0.995899  cos(delta_w, mean_benign_delta)=0.0950
+  c_stage3 (mean)=0.5915 pred_class(mean)=0
+  per-image target-class prob: std=0.2361 min=0.2057 max=0.9485 frac_of_32_predicting_target=0.781
+
+--- rate=0.24 epochs=10 seed=2001 ---
+  ASR=66.70 CleanAcc=34.94 flagged=False
+  ||dw||=5.914  layer_fractions={'stem_conv': 0.05, 'stem_bn': 0.126, 'stage1': 0.355, 'stage2': 0.455, 'stage3': 0.801, 'fc': 0.085}
+  cos(w, G_old)=0.995641  cos(delta_w, mean_benign_delta)=0.0940
+  c_stage3 (mean)=0.4884 pred_class(mean)=0
+  per-image target-class prob: std=0.2693 min=0.0813 max=0.9503 frac_of_32_predicting_target=0.562
+
+--- rate=0.24 epochs=10 seed=2002 ---
+  ASR=77.46 CleanAcc=37.89 flagged=False
+  ||dw||=5.110  layer_fractions={'stem_conv': 0.051, 'stem_bn': 0.165, 'stage1': 0.389, 'stage2': 0.468, 'stage3': 0.769, 'fc': 0.095}
+  cos(w, G_old)=0.996727  cos(delta_w, mean_benign_delta)=0.1226
+  c_stage3 (mean)=0.4610 pred_class(mean)=0
+  per-image target-class prob: std=0.2911 min=0.0993 max=0.9767 frac_of_32_predicting_target=0.625
+
+--- rate=0.24 epochs=10 seed=2003 ---
+  ASR=91.98 CleanAcc=30.65 flagged=True
+  ||dw||=5.825  layer_fractions={'stem_conv': 0.046, 'stem_bn': 0.116, 'stage1': 0.373, 'stage2': 0.475, 'stage3': 0.783, 'fc': 0.084}
+  cos(w, G_old)=0.995778  cos(delta_w, mean_benign_delta)=0.1029
+  c_stage3 (mean)=0.6134 pred_class(mean)=0
+  per-image target-class prob: std=0.2398 min=0.2167 max=0.9626 frac_of_32_predicting_target=0.875
+
+--- rate=0.25 epochs=10 seed=2001 ---
+  ASR=70.77 CleanAcc=33.65 flagged=False
+  ||dw||=5.962  layer_fractions={'stem_conv': 0.047, 'stem_bn': 0.119, 'stage1': 0.359, 'stage2': 0.453, 'stage3': 0.801, 'fc': 0.086}
+  cos(w, G_old)=0.995567  cos(delta_w, mean_benign_delta)=0.0869
+  c_stage3 (mean)=0.4955 pred_class(mean)=0
+  per-image target-class prob: std=0.2726 min=0.0915 max=0.9479 frac_of_32_predicting_target=0.594
+
+--- rate=0.25 epochs=10 seed=2002 ---
+  ASR=73.59 CleanAcc=38.09 flagged=False
+  ||dw||=5.256  layer_fractions={'stem_conv': 0.048, 'stem_bn': 0.161, 'stage1': 0.373, 'stage2': 0.469, 'stage3': 0.777, 'fc': 0.093}
+  cos(w, G_old)=0.996546  cos(delta_w, mean_benign_delta)=0.1235
+  c_stage3 (mean)=0.4629 pred_class(mean)=0
+  per-image target-class prob: std=0.2916 min=0.0997 max=0.9773 frac_of_32_predicting_target=0.656
+
+--- rate=0.25 epochs=10 seed=2003 ---
+  ASR=91.78 CleanAcc=30.70 flagged=True
+  ||dw||=5.930  layer_fractions={'stem_conv': 0.047, 'stem_bn': 0.116, 'stage1': 0.379, 'stage2': 0.474, 'stage3': 0.78, 'fc': 0.083}
+  cos(w, G_old)=0.995628  cos(delta_w, mean_benign_delta)=0.1126
+  c_stage3 (mean)=0.6202 pred_class(mean)=0
+  per-image target-class prob: std=0.2424 min=0.2005 max=0.9558 frac_of_32_predicting_target=0.844
+
+--- rate=0.26 epochs=10 seed=2001 ---
+  ASR=70.92 CleanAcc=34.61 flagged=True
+  ||dw||=6.036  layer_fractions={'stem_conv': 0.046, 'stem_bn': 0.119, 'stage1': 0.355, 'stage2': 0.447, 'stage3': 0.807, 'fc': 0.084}
+  cos(w, G_old)=0.995463  cos(delta_w, mean_benign_delta)=0.0915
+  c_stage3 (mean)=0.5087 pred_class(mean)=0
+  per-image target-class prob: std=0.2706 min=0.1197 max=0.9569 frac_of_32_predicting_target=0.594
+
+--- rate=0.26 epochs=10 seed=2002 ---
+  ASR=76.24 CleanAcc=38.18 flagged=False
+  ||dw||=5.301  layer_fractions={'stem_conv': 0.049, 'stem_bn': 0.161, 'stage1': 0.37, 'stage2': 0.465, 'stage3': 0.781, 'fc': 0.092}
+  cos(w, G_old)=0.996488  cos(delta_w, mean_benign_delta)=0.1128
+  c_stage3 (mean)=0.4563 pred_class(mean)=0
+  per-image target-class prob: std=0.2948 min=0.0934 max=0.9768 frac_of_32_predicting_target=0.625
+
+--- rate=0.26 epochs=10 seed=2003 ---
+  ASR=91.52 CleanAcc=30.22 flagged=True
+  ||dw||=5.993  layer_fractions={'stem_conv': 0.047, 'stem_bn': 0.115, 'stage1': 0.383, 'stage2': 0.473, 'stage3': 0.779, 'fc': 0.083}
+  cos(w, G_old)=0.995535  cos(delta_w, mean_benign_delta)=0.1027
+  c_stage3 (mean)=0.6272 pred_class(mean)=0
+  per-image target-class prob: std=0.2349 min=0.2064 max=0.9576 frac_of_32_predicting_target=0.875
+
+--- rate=0.28 epochs=10 seed=2001 ---
+  ASR=74.47 CleanAcc=35.08 flagged=True
+  ||dw||=6.171  layer_fractions={'stem_conv': 0.044, 'stem_bn': 0.115, 'stage1': 0.35, 'stage2': 0.447, 'stage3': 0.81, 'fc': 0.084}
+  cos(w, G_old)=0.995269  cos(delta_w, mean_benign_delta)=0.0910
+  c_stage3 (mean)=0.5206 pred_class(mean)=0
+  per-image target-class prob: std=0.2718 min=0.1183 max=0.9660 frac_of_32_predicting_target=0.625
+
+--- rate=0.28 epochs=10 seed=2002 ---
+  ASR=78.47 CleanAcc=37.13 flagged=False
+  ||dw||=5.439  layer_fractions={'stem_conv': 0.048, 'stem_bn': 0.157, 'stage1': 0.368, 'stage2': 0.468, 'stage3': 0.781, 'fc': 0.09}
+  cos(w, G_old)=0.996304  cos(delta_w, mean_benign_delta)=0.1102
+  c_stage3 (mean)=0.4651 pred_class(mean)=0
+  per-image target-class prob: std=0.2953 min=0.1145 max=0.9801 frac_of_32_predicting_target=0.594
+
+--- rate=0.28 epochs=10 seed=2003 ---
+  ASR=92.20 CleanAcc=29.75 flagged=True
+  ||dw||=6.068  layer_fractions={'stem_conv': 0.045, 'stem_bn': 0.111, 'stage1': 0.376, 'stage2': 0.476, 'stage3': 0.782, 'fc': 0.082}
+  cos(w, G_old)=0.995428  cos(delta_w, mean_benign_delta)=0.0975
+  c_stage3 (mean)=0.6255 pred_class(mean)=0
+  per-image target-class prob: std=0.2338 min=0.1789 max=0.9565 frac_of_32_predicting_target=0.875
+
+--- rate=0.3 epochs=10 seed=2001 ---
+  ASR=75.91 CleanAcc=33.70 flagged=True
+  ||dw||=6.048  layer_fractions={'stem_conv': 0.043, 'stem_bn': 0.117, 'stage1': 0.346, 'stage2': 0.451, 'stage3': 0.809, 'fc': 0.086}
+  cos(w, G_old)=0.995442  cos(delta_w, mean_benign_delta)=0.0797
+  c_stage3 (mean)=0.5745 pred_class(mean)=0
+  per-image target-class prob: std=0.2625 min=0.1636 max=0.9605 frac_of_32_predicting_target=0.750
+
+--- rate=0.3 epochs=10 seed=2002 ---
+  ASR=78.66 CleanAcc=39.14 flagged=True
+  ||dw||=5.592  layer_fractions={'stem_conv': 0.044, 'stem_bn': 0.15, 'stage1': 0.368, 'stage2': 0.443, 'stage3': 0.798, 'fc': 0.088}
+  cos(w, G_old)=0.996083  cos(delta_w, mean_benign_delta)=0.0756
+  c_stage3 (mean)=0.5068 pred_class(mean)=0
+  per-image target-class prob: std=0.2931 min=0.1146 max=0.9821 frac_of_32_predicting_target=0.625
+
+--- rate=0.3 epochs=10 seed=2003 ---
+  ASR=90.57 CleanAcc=32.59 flagged=True
+  ||dw||=6.323  layer_fractions={'stem_conv': 0.043, 'stem_bn': 0.107, 'stage1': 0.368, 'stage2': 0.489, 'stage3': 0.778, 'fc': 0.082}
+  cos(w, G_old)=0.995045  cos(delta_w, mean_benign_delta)=0.0883
+  c_stage3 (mean)=0.6341 pred_class(mean)=0
+  per-image target-class prob: std=0.2435 min=0.1458 max=0.9836 frac_of_32_predicting_target=0.875
+--- epochs=6 ---
+  rate                ASR(3seeds)               c_stage3(3seeds)     flag(3seeds)
+   0.2             69.1,55.7,62.4              0.393,0.441,0.395            F,F,F
+  0.22             70.6,57.3,68.9              0.435,0.477,0.450            F,F,F
+  0.24             74.2,62.9,75.2              0.456,0.487,0.469            F,F,F
+  0.25             80.2,61.7,74.6              0.461,0.482,0.471            F,F,F
+  0.26             80.2,66.6,76.5              0.469,0.499,0.467            F,F,F
+  0.28             83.9,71.4,83.9              0.473,0.494,0.489            F,F,F
+   0.3             84.8,66.1,81.0              0.515,0.543,0.513            T,T,T
+
+--- epochs=10 ---
+  rate                ASR(3seeds)               c_stage3(3seeds)     flag(3seeds)
+   0.2             73.8,75.9,89.9              0.435,0.417,0.532            F,F,T
+  0.22             68.9,79.8,89.6              0.468,0.443,0.591            F,F,T
+  0.24             66.7,77.5,92.0              0.488,0.461,0.613            F,F,T
+  0.25             70.8,73.6,91.8              0.495,0.463,0.620            F,F,T
+  0.26             70.9,76.2,91.5              0.509,0.456,0.627            T,F,T
+  0.28             74.5,78.5,92.2              0.521,0.465,0.626            T,F,T
+   0.3             75.9,78.7,90.6              0.575,0.507,0.634            T,T,T
+
+wrote 42 rows to results/separability_boundary_sweep.csv
+wrote scatter plot to results/separability_asr_vs_confidence.png (78 pooled points)
+
+points with ASR>50% AND c_stage3<rho: 34 / 78 total points

@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "D:\filterfl_test_claude\filterfl\run.py", line 276, in <module>
+    main()
+  File "D:\filterfl_test_claude\filterfl\run.py", line 194, in main
+    det = run_detection(ori_weight, new_state, cfg, num_classes, in_channels, device)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\filterfl_test_claude\filterfl\defense.py", line 45, in run_detection
+    d1.load_state_dict(d1_state)
+  File "D:\filterfl_test_claude\.venv\Lib\site-packages\torch\nn\modules\module.py", line 2584, in load_state_dict
+    raise RuntimeError(
+RuntimeError: Error(s) in loading state_dict for ResNet8:
+	Missing key(s) in state_dict: "stem_conv.weight", "stem_bn.weight", "stem_bn.bias", "stem_bn.running_mean", "stem_bn.running_var", "stage1.c1.weight", "stage1.n1.weight", "stage1.n1.bias", "stage1.n1.running_mean", "stage1.n1.running_var", "stage1.c2.weight", "stage1.n2.weight", "stage1.n2.bias", "stage1.n2.running_mean", "stage1.n2.running_var", "stage2.c1.weight", "stage2.n1.weight", "stage2.n1.bias", "stage2.n1.running_mean", "stage2.n1.running_var", "stage2.c2.weight", "stage2.n2.weight", "stage2.n2.bias", "stage2.n2.running_mean", "stage2.n2.running_var", "stage2.skip.0.weight", "stage2.skip.1.weight", "stage2.skip.1.bias", "stage2.skip.1.running_mean", "stage2.skip.1.running_var", "stage3.c1.weight", "stage3.n1.weight", "stage3.n1.bias", "stage3.n1.running_mean", "stage3.n1.running_var", "stage3.c2.weight", "stage3.n2.weight", "stage3.n2.bias", "stage3.n2.running_mean", "stage3.n2.running_var", "stage3.skip.0.weight", "stage3.skip.1.weight", "stage3.skip.1.bias", "stage3.skip.1.running_mean", "stage3.skip.1.running_var", "fc.weight", "fc.bias". 
+	Unexpected key(s) in state_dict: "c1.weight", "c1.bias", "c2.weight", "c2.bias", "fc1.weight", "fc1.bias", "fc2.weight", "fc2.bias". 
+EXIT_CODE=1
