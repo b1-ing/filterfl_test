@@ -178,6 +178,19 @@ class Config:
     # not the Stage 2 loss formula, accounts for nearly the entire TP-rate
     # gap between this project's detector and the reference's.
     stage3_probe_mode: str = "eval"  # or "train"
+    # 0 (default) = average all trigger images (current behaviour, k=images_per_class).
+    # N > 0 = sort the N trigger images with the highest per-image target-class
+    # probability and average only those N.  Top-16 recovers ~100% TP on the
+    # undetected-poisoned group (see results/separability_topk_curve.csv) with
+    # no added false positives.
+    stage3_pool_topk: int = 0
+    # 0 (default) = off. >0 = cap every BENIGN client's target-class share at this fraction by swapping
+    # target-class samples for non-target samples with low-skew benign clients (shard sizes unchanged).
+    # A constructed intervention for the skew-causality test, not part of the paper's setup. See data.cap_class_share.
+    cap_class_share: float = 0.0
+    # False (default). True = no-attacker control: the adversarial namelist is still DRAWN (so seeded RNG, partition and
+    # client-sampling sequence stay identical to the attacked run) and then discarded, so every sampled client trains benignly.
+    no_attack: bool = False
     schedule: ScheduleConfig = field(default_factory=ScheduleConfig)
     trust: TrustHistoryConfig = field(default_factory=TrustHistoryConfig)
 

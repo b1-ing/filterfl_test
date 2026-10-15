@@ -180,6 +180,8 @@ def run_detection(d1_state: dict, d2_state: dict, cfg, num_classes: int, in_chan
 def stage3_classify_clients(client_states: list, ori_weight: dict, betas: list,
                              trigger_images: torch.Tensor, num_classes: int, in_channels: int,
                              target_class: int, device, probe_mode: str = "eval",
+                             pool_topk: int = 0,
+                             dump: list = None,
                              model_cls=ResNet8) -> list:
     """Returns list of dicts: {pred_class, confidence} per client, in client_states order.
 
@@ -217,7 +219,14 @@ def stage3_classify_clients(client_states: list, ori_weight: dict, betas: list,
                 for k in w_i.keys()
             }
             probe.load_state_dict(params)
-            out = torch.softmax(probe(trigger_images), dim=1).mean(dim=0)
+            probs = torch.softmax(probe(trigger_images), dim=1)  # (N, num_classes)
+            if dump is not None:  # raw per-image responses, for offline pooling analysis (no effect on flagging)
+                dump.append((i, probs.cpu().numpy()))
+            if pool_topk > 0 and pool_topk < probs.shape[0]:
+                _, idx = probs[:, target_class].topk(pool_topk)
+                out = probs[idx].mean(dim=0)
+            else:
+                out = probs.mean(dim=0)
             conf, pred = out.max(dim=0)
             results.append({"pred_class": int(pred.item()), "confidence": float(conf.item())})
     return results
